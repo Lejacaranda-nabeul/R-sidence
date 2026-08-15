@@ -810,10 +810,357 @@ if (canvas) {
   renderParticles();
 }
 
+/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+   MAGNETIC BUTTONS
+â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+document.querySelectorAll('.magnetic').forEach(btn => {
+  btn.addEventListener('mousemove', (e) => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    btn.style.transform = `translate(${x * 0.22}px, ${y * 0.22}px)`;
+  });
+  btn.addEventListener('mouseleave', () => {
+    btn.style.transform = 'translate(0, 0)';
+    btn.style.transition = 'transform 0.3s ease';
+    setTimeout(() => { btn.style.transition = ''; }, 300);
+  });
+});
+
+
+
+/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+   GALLERY FILTERING
+â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+const galFilterBtns = document.querySelectorAll('.gal-filter-btn');
+const galleryItems = document.querySelectorAll('.gallery-item');
+if (galFilterBtns.length > 0) {
+  galFilterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      galFilterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      galleryItems.forEach(item => {
+        if (filter === 'all' || item.dataset.category === filter) {
+          item.style.display = 'block';
+          setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'scale(1)'; }, 20);
+        } else {
+          item.style.opacity = '0';
+          item.style.transform = 'scale(0.95)';
+          setTimeout(() => { item.style.display = 'none'; }, 300);
+        }
+      });
+    });
+  });
+}
+
+/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+   AMBIENCE (DAY / NIGHT) MODE
+â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+const ambienceToggle = document.getElementById('ambienceToggle');
+const ambienceIcon = document.getElementById('ambienceIcon');
+if (ambienceToggle) {
+  ambienceToggle.addEventListener('click', () => {
+    document.body.classList.toggle('theme-day');
+    const isDay = document.body.classList.contains('theme-day');
+    if (ambienceIcon) ambienceIcon.textContent = isDay ? 'âک€ï¸ڈ' : 'ًںŒ™';
+  });
+}
+
+/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+   BACK TO TOP BUTTON
+â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+const backToTop = document.getElementById('backToTop');
+if (backToTop) {
+  window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+   INTERACTIVE RESIDENT SIMULATOR MODAL
+â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+const appDemoModal = document.getElementById('appDemoModal');
+const modalClose = document.getElementById('modalClose');
+const btnTryAppModal = document.getElementById('btnTryAppModal');
+const simClaimBtn = document.getElementById('simClaimBtn');
+const simPropBtn = document.getElementById('simPropBtn');
+const btnSimulateSubmit = document.getElementById('btnSimulateSubmit');
+const demoResult = document.getElementById('demoResult');
+
+function openDemoModal() {
+  if (appDemoModal) appDemoModal.classList.add('open');
+}
+function closeDemoModal() {
+  if (appDemoModal) appDemoModal.classList.remove('open');
+  if (demoResult) demoResult.classList.remove('visible');
+}
+
+[btnTryAppModal, simClaimBtn, simPropBtn].forEach(btn => {
+  if (btn) btn.addEventListener('click', openDemoModal);
+});
+if (modalClose) modalClose.addEventListener('click', closeDemoModal);
+if (appDemoModal) {
+  appDemoModal.addEventListener('click', (e) => {
+    if (e.target === appDemoModal) closeDemoModal();
+  });
+}
+
+document.querySelectorAll('.demo-pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    document.querySelectorAll('.demo-pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+  });
+});
+
+if (btnSimulateSubmit) {
+  btnSimulateSubmit.addEventListener('click', () => {
+    btnSimulateSubmit.textContent = 'Transmission en cours...';
+    setTimeout(() => {
+      btnSimulateSubmit.textContent = 'Transmettre au Syndic (Dأ©mo)';
+      if (demoResult) demoResult.classList.add('visible');
+    }, 600);
+  });
+}
+
+/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+   GPS â€” DIRECTIONS FROM CURRENT POSITION
+   Destination: Rأ©sidence Le Jacaranda, Mrezgua Nabeul
+â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+const DEST_LAT  = 36.4508;
+const DEST_LNG  = 10.7370;
+const DEST_NAME = 'Rأ©sidence Le Jacaranda, Mrezgua, Nabeul, Tunisie';
+
+const btnGps    = document.getElementById('btnGpsDirections');
+const gpsSpinner = document.getElementById('gpsSpinner');
+const gpsIconWrap = document.getElementById('gpsIconWrap');
+const gpsLabel  = document.getElementById('gpsLabel');
+const gpsStatus = document.getElementById('gpsStatus');
+const mapIframe = document.getElementById('googleMap');
+const mapOpenBtn = document.getElementById('mapOpenBtn');
+
+function setGpsState(state, msg) {
+  if (!btnGps) return;
+  btnGps.classList.remove('loading', 'success', 'error');
+  if (gpsSpinner)  gpsSpinner.hidden   = (state !== 'loading');
+  if (gpsIconWrap) gpsIconWrap.hidden  = (state === 'loading');
+  if (state === 'loading') {
+    btnGps.classList.add('loading');
+    if (gpsLabel) gpsLabel.textContent = 'Localisation en coursâ€¦';
+    if (gpsStatus) { gpsStatus.className = 'gps-status'; gpsStatus.textContent = 'Veuillez autoriser l\'accأ¨s أ  votre position.'; }
+  } else if (state === 'success') {
+    btnGps.classList.add('success');
+    if (gpsLabel) gpsLabel.textContent = 'âœ“ Itinأ©raire ouvert dans Google Maps';
+    if (gpsStatus) { gpsStatus.className = 'gps-status ok'; gpsStatus.textContent = msg || ''; }
+    setTimeout(() => {
+      btnGps.classList.remove('success');
+      if (gpsLabel) gpsLabel.textContent = 'M\'y rendre depuis ma position';
+      if (gpsStatus) { gpsStatus.className = 'gps-status'; gpsStatus.textContent = ''; }
+    }, 4000);
+  } else if (state === 'error') {
+    btnGps.classList.add('error');
+    if (gpsLabel) gpsLabel.textContent = 'Impossible de localiser';
+    if (gpsStatus) { gpsStatus.className = 'gps-status err'; gpsStatus.textContent = msg || 'Permission refusأ©e ou GPS indisponible.'; }
+    setTimeout(() => {
+      btnGps.classList.remove('error');
+      if (gpsLabel) gpsLabel.textContent = 'M\'y rendre depuis ma position';
+      if (gpsStatus) { gpsStatus.className = 'gps-status'; gpsStatus.textContent = ''; }
+    }, 5000);
+  } else {
+    if (gpsLabel) gpsLabel.textContent = 'M\'y rendre depuis ma position';
+  }
+}
+
+if (btnGps) {
+  btnGps.addEventListener('click', () => {
+    if (!navigator.geolocation) {
+      setGpsState('error', 'Gأ©olocalisation non supportأ©e par ce navigateur.');
+      return;
+    }
+    setGpsState('loading');
+
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const lat = pos.coords.latitude.toFixed(6);
+        const lng = pos.coords.longitude.toFixed(6);
+
+        /* 1. Update the map iframe to show route */
+        const dirEmbed =
+          `https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d50000!2d${DEST_LNG}!3d${DEST_LAT}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s!2sMA+position!3m2!1d${lat}!2d${lng}!4m5!1s0x12fd4a2b3e8d9f05%3A0x7e1c3a5b4f20a681!2s${encodeURIComponent(DEST_NAME)}!3m2!1d${DEST_LAT}!2d${DEST_LNG}!5e0!3m2!1sfr!2sfr!4v1724000000001!5m2!1sfr!2sfr`;
+
+        if (mapIframe) mapIframe.src = dirEmbed;
+
+        /* 2. Update "Ouvrir dans Maps" link to show walking/driving directions */
+        const dirUrl = `https://www.google.com/maps/dir/${lat},${lng}/${DEST_LAT},${DEST_LNG}`;
+        if (mapOpenBtn) {
+          mapOpenBtn.href = dirUrl;
+          mapOpenBtn.textContent = '';
+          mapOpenBtn.insertAdjacentHTML('afterbegin',
+            `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Voir l'itinأ©raire complet`);
+        }
+
+        setGpsState('success', `Position dأ©tectأ©e آ· Itinأ©raire vers Mrezgua, Nabeul`);
+
+        /* 3. Also open Google Maps directions in a new tab */
+        window.open(dirUrl, '_blank', 'noopener,noreferrer');
+      },
+      (err) => {
+        const msgs = {
+          1: 'Permission d\'accأ¨s أ  la position refusأ©e.',
+          2: 'Position indisponible (GPS hors portأ©e).',
+          3: 'La demande de position a expirأ©.',
+        };
+        setGpsState('error', msgs[err.code] || 'Erreur de gأ©olocalisation.');
+      },
+      { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
+    );
+  });
+}
+
+/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+   INIT
+â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+/* ═══════════════════════════════════════════════════
+   TYPOLOGIES INTERACTIVE HANDLER
+═══════════════════════════════════════════════════ */
+const typoData = {
+  s1: {
+    name: "Appartement S+1 — Grand Confort",
+    area: "65 m²",
+    desc: "Idéal pour un pied-à-terre luxueux ou un investissement locatif à forte rentabilité. Salon lumineux avec baie vitrée ouverte sur terrasse, cuisine contemporaine entièrement équipée, chambre spacieuse avec dressing intégré et salle d'eau à l'italienne.",
+    specArea: "65 m²",
+    specRooms: "1 Chambre + Dressing",
+    specBaths: "1 Italienne en Marbre",
+    specBalcony: "Terrasse vue Jardin / Bassin",
+    svg: `<svg viewBox="0 0 500 350" class="blueprint-svg" xmlns="http://www.w3.org/2000/svg">
+      <defs><pattern id="grid1" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(212,175,55,0.08)" stroke-width="1"/></pattern></defs>
+      <rect width="500" height="350" fill="#13171f"/><rect width="500" height="350" fill="url(#grid1)" />
+      <rect x="40" y="40" width="240" height="180" fill="rgba(212,175,55,0.06)" stroke="#d4af37" stroke-width="2" stroke-dasharray="4 2"/>
+      <text x="160" y="135" fill="#f5d77f" font-family="'Montserrat',sans-serif" font-size="14" text-anchor="middle" font-weight="600">SALON &amp; SÉJOUR (32 m²)</text>
+      <rect x="290" y="40" width="170" height="180" fill="rgba(255,255,255,0.03)" stroke="#d4af37" stroke-width="1.5"/>
+      <text x="375" y="135" fill="#ffffff" font-family="'Montserrat',sans-serif" font-size="13" text-anchor="middle">SUITE PARENTALE (18 m²)</text>
+      <rect x="40" y="230" width="140" height="80" fill="rgba(255,255,255,0.03)" stroke="#d4af37" stroke-width="1.5"/>
+      <text x="110" y="275" fill="#ffffff" font-family="'Montserrat',sans-serif" font-size="12" text-anchor="middle">CUISINE (10 m²)</text>
+      <rect x="190" y="230" width="90" height="80" fill="rgba(255,255,255,0.03)" stroke="#d4af37" stroke-width="1.5"/>
+      <text x="235" y="275" fill="#ffffff" font-family="'Montserrat',sans-serif" font-size="11" text-anchor="middle">S.D.B (5 m²)</text>
+      <rect x="290" y="230" width="170" height="80" fill="rgba(212,175,55,0.12)" stroke="#d4af37" stroke-width="2"/>
+      <text x="375" y="275" fill="#d4af37" font-family="'Montserrat',sans-serif" font-size="12" text-anchor="middle" font-weight="600">TERRASSE (12 m²)</text>
+    </svg>`
+  },
+  s2: {
+    name: "Appartement S+2 — Prestige Familial",
+    area: "115 m²",
+    desc: "Équilibre d'espace et d'intimité. Vaste pièce de réception baignée de lumière avec accès direct sur grande terrasse, suite parentale avec salle d'eau privative, seconde chambre avec placards intégrés, cuisine séparée avec séchoir et salle d'eau invités.",
+    specArea: "115 m²",
+    specRooms: "2 Chambres (Suite parentale + Chambre)",
+    specBaths: "2 Salles d'Eau complètes",
+    specBalcony: "Grande Terrasse vue Mer & Piscine",
+    svg: `<svg viewBox="0 0 500 350" class="blueprint-svg" xmlns="http://www.w3.org/2000/svg">
+      <defs><pattern id="grid2" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(212,175,55,0.08)" stroke-width="1"/></pattern></defs>
+      <rect width="500" height="350" fill="#13171f"/><rect width="500" height="350" fill="url(#grid2)" />
+      <rect x="30" y="30" width="220" height="190" fill="rgba(212,175,55,0.06)" stroke="#d4af37" stroke-width="2"/>
+      <text x="140" y="130" fill="#f5d77f" font-family="'Montserrat',sans-serif" font-size="13" text-anchor="middle" font-weight="600">DOUBLE SALON (42 m²)</text>
+      <rect x="260" y="30" width="120" height="130" fill="rgba(255,255,255,0.03)" stroke="#d4af37" stroke-width="1.5"/>
+      <text x="320" y="100" fill="#ffffff" font-family="'Montserrat',sans-serif" font-size="11" text-anchor="middle">SUITE (20 m²)</text>
+      <rect x="390" y="30" width="80" height="130" fill="rgba(255,255,255,0.03)" stroke="#d4af37" stroke-width="1.5"/>
+      <text x="430" y="100" fill="#ffffff" font-family="'Montserrat',sans-serif" font-size="10" text-anchor="middle">CH. 2 (14 m²)</text>
+      <rect x="30" y="230" width="130" height="90" fill="rgba(255,255,255,0.03)" stroke="#d4af37" stroke-width="1.5"/>
+      <text x="95" y="280" fill="#ffffff" font-family="'Montserrat',sans-serif" font-size="11" text-anchor="middle">CUISINE &amp; SÉCHOIR</text>
+      <rect x="170" y="230" width="80" height="90" fill="rgba(255,255,255,0.03)" stroke="#d4af37" stroke-width="1.5"/>
+      <text x="210" y="280" fill="#ffffff" font-family="'Montserrat',sans-serif" font-size="10" text-anchor="middle">2x S.D.B</text>
+      <rect x="260" y="170" width="210" height="150" fill="rgba(212,175,55,0.12)" stroke="#d4af37" stroke-width="2"/>
+      <text x="365" y="250" fill="#d4af37" font-family="'Montserrat',sans-serif" font-size="13" text-anchor="middle" font-weight="600">TERRASSE PANORAMIQUE (24 m²)</text>
+    </svg>`
+  },
+  s3: {
+    name: "Appartement S+3 — Résidence d'Exception",
+    area: "165 m²",
+    desc: "Le summum du confort familial. Majestueux salon et salle à manger avec triple exposition et terrasse d'angle vue mer, suite parentale royale avec dressing aménagé et salle de bain marbre, deux chambres enfants avec rangements, cuisine gastronomique avec cellier.",
+    specArea: "165 m²",
+    specRooms: "3 Chambres (Master Suite + 2 Chambres)",
+    specBaths: "2 Salles de bain + Salle d'eau invités",
+    specBalcony: "Terrasse d'angle panoramique 38 m²",
+    svg: `<svg viewBox="0 0 500 350" class="blueprint-svg" xmlns="http://www.w3.org/2000/svg">
+      <defs><pattern id="grid3" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(212,175,55,0.08)" stroke-width="1"/></pattern></defs>
+      <rect width="500" height="350" fill="#13171f"/><rect width="500" height="350" fill="url(#grid3)" />
+      <rect x="20" y="20" width="230" height="210" fill="rgba(212,175,55,0.06)" stroke="#d4af37" stroke-width="2"/>
+      <text x="135" y="130" fill="#f5d77f" font-family="'Montserrat',sans-serif" font-size="13" text-anchor="middle" font-weight="600">GRAND SALON &amp; SÉJOUR (55 m²)</text>
+      <rect x="260" y="20" width="110" height="150" fill="rgba(255,255,255,0.03)" stroke="#d4af37" stroke-width="1.5"/>
+      <text x="315" y="100" fill="#ffffff" font-family="'Montserrat',sans-serif" font-size="10" text-anchor="middle">MASTER SUITE (26 m²)</text>
+      <rect x="380" y="20" width="100" height="150" fill="rgba(255,255,255,0.03)" stroke="#d4af37" stroke-width="1.5"/>
+      <text x="430" y="100" fill="#ffffff" font-family="'Montserrat',sans-serif" font-size="10" text-anchor="middle">CH. 2 &amp; 3 (28 m²)</text>
+      <rect x="20" y="240" width="150" height="90" fill="rgba(255,255,255,0.03)" stroke="#d4af37" stroke-width="1.5"/>
+      <text x="95" y="290" fill="#ffffff" font-family="'Montserrat',sans-serif" font-size="11" text-anchor="middle">CUISINE GASTRONOMIQUE</text>
+      <rect x="180" y="240" width="70" height="90" fill="rgba(255,255,255,0.03)" stroke="#d4af37" stroke-width="1.5"/>
+      <text x="215" y="290" fill="#ffffff" font-family="'Montserrat',sans-serif" font-size="9" text-anchor="middle">3x S.D.B</text>
+      <rect x="260" y="180" width="220" height="150" fill="rgba(212,175,55,0.12)" stroke="#d4af37" stroke-width="2"/>
+      <text x="370" y="260" fill="#d4af37" font-family="'Montserrat',sans-serif" font-size="12" text-anchor="middle" font-weight="600">TERRASSE ANGLE MER (38 m²)</text>
+    </svg>`
+  },
+  penthouse: {
+    name: "Penthouse / Duplex — Le Sommet du Luxe",
+    area: "245 m²",
+    desc: "Un joyau suspendu entre ciel et mer. Dernier étage avec ascenseur à accès privé direct, hauteur sous plafond remarquable, salon de réception avec baies vitrées toute hauteur, solarium et rooftop panoramique à 360° sur toute la baie de Nabeul et Hammamet.",
+    specArea: "245 m² (170 m² couvert + 75 m² Roof)",
+    specRooms: "4 Suites Privatives avec Dressing",
+    specBaths: "4 Salles de Bain en Marbre Noir & Doré",
+    specBalcony: "Rooftop Solarium 360° avec Jacuzzi option",
+    svg: `<svg viewBox="0 0 500 350" class="blueprint-svg" xmlns="http://www.w3.org/2000/svg">
+      <defs><pattern id="grid4" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(212,175,55,0.08)" stroke-width="1"/></pattern></defs>
+      <rect width="500" height="350" fill="#13171f"/><rect width="500" height="350" fill="url(#grid4)" />
+      <rect x="20" y="20" width="200" height="160" fill="rgba(212,175,55,0.08)" stroke="#d4af37" stroke-width="2"/>
+      <text x="120" y="105" fill="#f5d77f" font-family="'Montserrat',sans-serif" font-size="12" text-anchor="middle" font-weight="700">SALON CATHÉDRALE (65 m²)</text>
+      <rect x="230" y="20" width="120" height="160" fill="rgba(255,255,255,0.03)" stroke="#d4af37" stroke-width="1.5"/>
+      <text x="290" y="105" fill="#ffffff" font-family="'Montserrat',sans-serif" font-size="10" text-anchor="middle">SUITES ROYAL (45 m²)</text>
+      <rect x="360" y="20" width="120" height="160" fill="rgba(212,175,55,0.04)" stroke="#d4af37" stroke-width="1.5"/>
+      <text x="420" y="105" fill="#f5d77f" font-family="'Montserrat',sans-serif" font-size="10" text-anchor="middle">ACCÈS PRIVÉ ASCENSEUR</text>
+      <rect x="20" y="190" width="460" height="140" fill="rgba(212,175,55,0.18)" stroke="#d4af37" stroke-width="2.5"/>
+      <circle cx="410" cy="260" r="35" fill="rgba(43,68,52,0.3)" stroke="#d4af37" stroke-width="1.5"/>
+      <text x="410" y="265" fill="#d4af37" font-family="'Montserrat',sans-serif" font-size="10" text-anchor="middle">JACUZZI</text>
+      <text x="210" y="265" fill="#f5d77f" font-family="'Montserrat',sans-serif" font-size="14" text-anchor="middle" font-weight="700">ROOFTOP &amp; SOLARIUM PANORAMIQUE 360° (75 m²)</text>
+    </svg>`
+  }
+};
+
+function initTypologies() {
+  const tabs = document.querySelectorAll('.typo-tab-btn');
+  const nameEl = document.getElementById('currentTypoName');
+  const areaEl = document.getElementById('currentTypoArea');
+  const descEl = document.getElementById('currentTypoDesc');
+  const specAreaEl = document.getElementById('specArea');
+  const specRoomsEl = document.getElementById('specRooms');
+  const specBathsEl = document.getElementById('specBaths');
+  const specBalconyEl = document.getElementById('specBalcony');
+  const graphicEl = document.getElementById('blueprintGraphic');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const type = tab.dataset.type;
+      const data = typoData[type];
+      if (!data) return;
+
+      if (nameEl) nameEl.textContent = data.name;
+      if (areaEl) areaEl.textContent = data.area;
+      if (descEl) descEl.textContent = data.desc;
+      if (specAreaEl) specAreaEl.textContent = data.specArea;
+      if (specRoomsEl) specRoomsEl.textContent = data.specRooms;
+      if (specBathsEl) specBathsEl.textContent = data.specBaths;
+      if (specBalconyEl) specBalconyEl.textContent = data.specBalcony;
+      if (graphicEl) graphicEl.innerHTML = data.svg;
+    });
+  });
+}
+
 /* ═══════════════════════════════════════════════════
    INIT ALL
 ═══════════════════════════════════════════════════ */
 applyTranslation('fr');
-
+initTypologies();
 
 

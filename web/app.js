@@ -2,14 +2,14 @@
    Rأ‰SIDENCE LE JACARANDA â€” App Logic (FR آ· AR آ· EN آ· ES)
 â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
 
-/* â”€â”€ Language Config â”€â”€ */
+/* ── Language Config ── */
 const langMeta = {
-  fr: { flag: 'ًں‡«ًں‡·', code: 'FR', label: 'Franأ§ais', dir: 'ltr', fontClass: '' },
-  en: { flag: 'ًں‡¬ًں‡§', code: 'EN', label: 'English',  dir: 'ltr', fontClass: '' },
-  es: { flag: 'ًں‡ھًں‡¸', code: 'ES', label: 'Espaأ±ol',  dir: 'ltr', fontClass: '' },
-  it: { flag: 'ًں‡®ًں‡¹', code: 'IT', label: 'Italiano', dir: 'ltr', fontClass: '' },
-  de: { flag: 'ًں‡©ًں‡ھ', code: 'DE', label: 'Deutsch',  dir: 'ltr', fontClass: '' },
-  ar: { flag: 'ًں‡¸ًں‡¦', code: 'AR', label: 'ط¹ط±ط¨ظٹ',     dir: 'rtl', fontClass: 'rtl' },
+  fr: { flag: '🇫🇷', code: 'FR', label: 'Français', dir: 'ltr', fontClass: '' },
+  en: { flag: '🇬🇧', code: 'EN', label: 'English',  dir: 'ltr', fontClass: '' },
+  es: { flag: '🇪🇸', code: 'ES', label: 'Español',  dir: 'ltr', fontClass: '' },
+  it: { flag: '🇮🇹', code: 'IT', label: 'Italiano', dir: 'ltr', fontClass: '' },
+  de: { flag: '🇩🇪', code: 'DE', label: 'Deutsch',  dir: 'ltr', fontClass: '' },
+  ar: { flag: '🇹🇳', code: 'AR', label: 'عربي',     dir: 'rtl', fontClass: 'rtl' },
 };
 
 /* â”€â”€ Translations â”€â”€ */
@@ -67,11 +67,9 @@ const translations = {
     successMsg: 'Message envoyأ© avec succأ¨s. Nous vous contacterons trأ¨s prochainement.',
     footerTagline: "L'excellence أ  chaque dأ©tail.",
     footerCopy: 'آ© 2024 - 2026 Rأ©sidence Le Jacaranda. Tous droits rأ©servأ©s.',
-    navAbout: 'À Propos', navAmen: 'Prestations', navTypo: 'Logements', navTour: 'Visite 360°', navGal: 'Galerie', navCalc: 'Simulateur', navQuartier: 'Quartier', navApp: 'App Résidents', navFaq: 'FAQ', navLoc: 'Localisation', navCon: 'Contact',
+    navAbout: 'À Propos', navAmen: 'Prestations', navTypo: 'Logements', navTour: 'Visite 360°', navGal: 'Galerie', navQuartier: 'Quartier', navApp: 'App Résidents', navLoc: 'Localisation', navCon: 'Contact',
     typoTag: 'Logements & Plans', typoTitle: 'Espaces de Vie<br /><em>Conçus pour l\'Excellence</em>',
-    calcTag: 'Investissement & Financement', calcTitle: 'Simulez Votre Projet<br /><em>& Rendement Locatif</em>',
     quartierTag: 'Art de Vivre Méditerranéen', quartierTitle: 'Mrezgua & Ses Trésors<br /><em>Entre Mer, Culture & Détente</em>',
-    faqTag: 'Questions Fréquentes', faqTitle: 'Tout ce que vous devez<br /><em>Savoir sur le Projet</em>',
     ctaNav: 'Prendre Rendez-vous',
     heroCta1: 'Découvrir', heroCta2: 'Visite 360°',
   },
@@ -534,9 +532,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
   });
 });
-document.getElementById('ctaNav').addEventListener('click', () => {
-  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-});
+
 
 /* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
    CONTACT FORM

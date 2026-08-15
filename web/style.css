@@ -3263,4 +3263,235 @@ body.theme-day .about-float-card {
   }
 }
 
+/* ═══════════════════════════════════════════════════════
+   MOBILE FIXES — Smartphone Responsive
+═══════════════════════════════════════════════════════ */
 
+/* Prevent any horizontal scroll */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ── Navbar mobile fixes ── */
+@media (max-width: 768px) {
+  .nav-inner {
+    padding: 0 1rem;
+    gap: 0.6rem;
+  }
+
+  .logo-main { font-size: 1.2rem; }
+  .logo-sub  { font-size: 0.45rem; letter-spacing: 0.2em; }
+
+  .nav-actions { gap: 0.5rem; }
+
+  .resort-live-pill { display: none; }
+
+  /* Reduce lang button on very small screens */
+  .lang-current {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.65rem;
+  }
+  .lang-code { display: none; }
+
+  /* Mobile menu full width */
+  .mobile-menu {
+    padding: 5rem 2rem 3rem;
+    gap: 1.4rem;
+  }
+  .mob-link { font-size: 1.4rem; }
+}
+
+/* ── Hero mobile fixes ── */
+@media (max-width: 768px) {
+  .hero { min-height: 100svh; }
+
+  .hero-content {
+    padding: 0 1.2rem;
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 12vw, 5rem);
+    line-height: 1;
+  }
+
+  .hero-tagline {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .btn-primary, .btn-outline {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    padding: 0.9rem 1.5rem;
+  }
+
+  /* Stats ribbon */
+  .hero-stats {
+    padding: 1rem 0.5rem;
+    gap: 0;
+  }
+
+  .stat-item { padding: 0 0.8rem; }
+  .stat-number { font-size: 1.3rem; }
+  .stat-label { font-size: 0.52rem; letter-spacing: 0.15em; }
+
+  .hero-scroll-indicator { bottom: 6rem; }
+}
+
+@media (max-width: 380px) {
+  .hero-title { font-size: 2.6rem; }
+  .stat-item  { padding: 0 0.5rem; }
+  .stat-sep   { display: none; }
+}
+
+/* ── Section containers mobile ── */
+@media (max-width: 768px) {
+  .container  { padding: 0 1rem; }
+  .section-pad { padding: 4rem 0; }
+
+  .section-title {
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
+  }
+}
+
+/* ── About section mobile ── */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .about-text { padding-left: 0; }
+  .about-img-frame {
+    aspect-ratio: 16/9;
+    max-height: 300px;
+  }
+  .about-float-card { display: none; }
+  .img-badge {
+    right: 0.5rem;
+    bottom: -0.8rem;
+    padding: 0.8rem 1rem;
+  }
+}
+
+/* ── Amenities mobile ── */
+@media (max-width: 768px) {
+  .amenities-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .amen-card { padding: 1.5rem 1.2rem; }
+}
+@media (max-width: 400px) {
+  .amenities-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Gallery mobile ── */
+@media (max-width: 768px) {
+  .gallery-strip {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .gallery-item { height: 220px !important; }
+}
+
+/* ── Tour 360 mobile ── */
+@media (max-width: 768px) {
+  .viewer-wrap { height: 280px; border-radius: var(--radius-md); }
+  .tour-tabs   { gap: 0.7rem; }
+  .tour-tab    { padding: 0.6rem 1.1rem; font-size: 0.75rem; }
+}
+
+/* ── App section mobile ── */
+@media (max-width: 768px) {
+  .app-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .app-mockup { max-width: 240px; margin: 0 auto; }
+  .app-store-btns { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
+}
+
+/* ── Location / Map mobile ── */
+@media (max-width: 768px) {
+  .map-wrap { height: 420px; }
+  .loc-badges {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+  }
+}
+
+/* ── Contact section mobile ── */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .form-row { grid-template-columns: 1fr; }
+  .contact-form-wrap { padding: 1.5rem 1rem; border-radius: var(--radius-md); }
+}
+
+/* ── Quartier section mobile ── */
+@media (max-width: 768px) {
+  .quartier-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* ── Typologies section mobile ── */
+@media (max-width: 768px) {
+  .typo-tabs {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: center;
+  }
+  .typo-tab-btn { font-size: 0.72rem; padding: 0.55rem 1rem; }
+
+  .typo-card {
+    grid-template-columns: 1fr;
+  }
+  .typo-card-visual {
+    border-right: none;
+    border-bottom: 1px solid hsla(220, 12%, 25%, 0.5);
+    min-height: 260px;
+    padding: 1.2rem;
+  }
+  .typo-card-info { padding: 1.5rem 1.2rem; }
+  .typo-specs-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ── Footer mobile ── */
+@media (max-width: 768px) {
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 0.6rem 1.2rem;
+    justify-content: center;
+  }
+  .footer-link { font-size: 0.65rem; }
+  .footer-logo .logo-main { font-size: 1.2rem; }
+}
+
+/* ── Fix back-to-top on mobile ── */
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  .floating-concierge {
+    left: 1rem;
+    bottom: 1rem;
+    padding: 0.55rem 0.9rem;
+    font-size: 0.75rem;
+  }
+}

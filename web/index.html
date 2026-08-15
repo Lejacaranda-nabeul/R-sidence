@@ -62,10 +62,8 @@
         <a href="#typologies"  class="nav-link" id="navTypo">Logements</a>
         <a href="#tour360"     class="nav-link" id="navTour">Visite 360°</a>
         <a href="#gallery"     class="nav-link" id="navGal">Galerie</a>
-        <a href="#calculator"  class="nav-link" id="navCalc">Simulateur</a>
         <a href="#quartier"    class="nav-link" id="navQuartier">Quartier</a>
         <a href="#app"         class="nav-link" id="navApp">App Résidents</a>
-        <a href="#faq"         class="nav-link" id="navFaq">FAQ</a>
         <a href="#contact"     class="nav-link" id="navCon">Contact</a>
       </nav>
       <div class="nav-actions">
@@ -132,11 +130,9 @@
     <a href="#typologies"  class="mob-link">Logements &amp; Plans</a>
     <a href="#tour360"     class="mob-link">Visite 360°</a>
     <a href="#gallery"     class="mob-link">Galerie</a>
-    <a href="#calculator"  class="mob-link">Simulateur Investissement</a>
     <a href="#quartier"    class="mob-link">Guide Quartier</a>
     <a href="#app"         class="mob-link">App Résidents</a>
     <a href="#localisation" class="mob-link">Localisation</a>
-    <a href="#faq"         class="mob-link">Questions Fréquentes</a>
     <a href="#contact"     class="mob-link">Contact</a>
     <div class="mob-lang-bar">
       <button class="mob-lang-btn" data-lang="fr">🇫🇷 FR</button>
@@ -467,99 +463,6 @@
                 </a>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════ SIMULATEUR FINANCEMENT & RENDEMENT ═══════════════════ -->
-  <section id="calculator" class="calculator-section section-pad">
-    <div class="container">
-      <div class="section-header centered reveal-up">
-        <p class="section-tag" id="calcTag">Investissement &amp; Financement</p>
-        <h2 class="section-title" id="calcTitle">Simulez Votre Projet<br /><em>&amp; Rendement Locatif</em></h2>
-        <p class="calc-sub" id="calcSub">Évaluez vos mensualités, revenus locatifs estimés et le retour sur investissement dans la zone balnéaire de Mrezgua.</p>
-      </div>
-
-      <div class="calculator-grid reveal-up">
-        <!-- Controls Side -->
-        <div class="calc-controls-card">
-          <div class="calc-type-selector">
-            <label class="calc-lbl" id="calcLblType">Sélectionnez le Logement :</label>
-            <div class="calc-type-pills">
-              <button class="calc-pill-btn active" data-apt="s1">S+1 (65m²)</button>
-              <button class="calc-pill-btn" data-apt="s2">S+2 (115m²)</button>
-              <button class="calc-pill-btn" data-apt="s3">S+3 (165m²)</button>
-              <button class="calc-pill-btn" data-apt="penthouse">Penthouse</button>
-            </div>
-          </div>
-
-          <div class="calc-slider-group">
-            <div class="calc-slider-header">
-              <span class="calc-lbl" id="calcLblDown">Apport Initial (%)</span>
-              <span class="calc-val-display" id="downPaymentVal">30%</span>
-            </div>
-            <input type="range" class="calc-range" id="downPaymentRange" min="10" max="80" step="5" value="30" />
-            <div class="calc-range-labels">
-              <span>10%</span>
-              <span>50%</span>
-              <span>80%</span>
-            </div>
-          </div>
-
-          <div class="calc-slider-group">
-            <div class="calc-slider-header">
-              <span class="calc-lbl" id="calcLblDuration">Durée de Financement (Années)</span>
-              <span class="calc-val-display" id="loanYearsVal">15 ans</span>
-            </div>
-            <input type="range" class="calc-range" id="loanYearsRange" min="5" max="25" step="1" value="15" />
-            <div class="calc-range-labels">
-              <span>5 ans</span>
-              <span>15 ans</span>
-              <span>25 ans</span>
-            </div>
-          </div>
-
-          <div class="calc-currency-group">
-            <span class="calc-lbl" id="calcLblCur">Devise d'Affichage :</span>
-            <div class="currency-toggle-btns">
-              <button class="cur-btn active" data-cur="TND">TND (DT)</button>
-              <button class="cur-btn" data-cur="EUR">EUR (€)</button>
-              <button class="cur-btn" data-cur="USD">USD ($)</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Result KPI Card -->
-        <div class="calc-results-card">
-          <div class="calc-result-badge">
-            <span>◆</span>
-            <span id="calcYieldBadge">Rendement Brut Estimé</span>
-            <span class="yield-pct" id="yieldPct">9.4% / an</span>
-          </div>
-
-          <div class="calc-kpis">
-            <div class="calc-kpi-item">
-              <span class="kpi-label" id="kpiMonthlyLbl">Mensualité Estimée</span>
-              <span class="kpi-number" id="kpiMonthlyVal">1 850 DT <small>/ mois</small></span>
-            </div>
-            <div class="calc-kpi-item">
-              <span class="kpi-label" id="kpiRentLbl">Revenu Locatif Annuel Estimé</span>
-              <span class="kpi-number highlight" id="kpiRentVal">28 500 DT <small>/ an</small></span>
-            </div>
-            <div class="calc-kpi-item">
-              <span class="kpi-label" id="kpiSummerLbl">Revenu Saisonnier Estimé (Été)</span>
-              <span class="kpi-number" id="kpiSummerVal">18 000 DT <small>(10 sem.)</small></span>
-            </div>
-          </div>
-
-          <div class="calc-footer-note">
-            <p id="calcNote">* Simulation indicative basée sur les moyennes locatives de Mrezgua Nabeul. Contactez notre service pour une étude patrimoniale personnalisée.</p>
-            <a href="#contact" class="btn-primary w-full magnetic" id="btnCalcConsult">
-              <span>Étude de Financement Gratuite</span>
-              <span>→</span>
-            </a>
           </div>
         </div>
       </div>
@@ -954,79 +857,6 @@
     </div>
   </section>
 
-  <!-- ═══════════════════ FAQ INTERACTIVE ═══════════════════ -->
-  <section id="faq" class="faq-section section-pad">
-    <div class="container">
-      <div class="section-header centered reveal-up">
-        <p class="section-tag" id="faqTag">Questions Fréquentes</p>
-        <h2 class="section-title" id="faqTitle">Tout ce que vous devez<br /><em>Savoir sur le Projet</em></h2>
-        <p class="faq-sub" id="faqSub">Retrouvez les réponses aux interrogations juridiques, financières et pratiques les plus courantes.</p>
-      </div>
-
-      <div class="faq-accordion reveal-up" id="faqAccordion">
-        <div class="faq-item active">
-          <button class="faq-question" aria-expanded="true">
-            <span class="faq-q-text" id="faqQ1">Le projet dispose-t-il d'un titre foncier individuel ?</span>
-            <span class="faq-arrow">▾</span>
-          </button>
-          <div class="faq-answer">
-            <p id="faqA1">Absolument. Chaque lot et appartement de la Résidence Le Jacaranda fait l'objet d'un titre foncier individuel distinct (Titre Bleu), garantissant une sécurité juridique absolue pour chaque acquéreur et facilitant les démarches notariées et bancaires.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            <span class="faq-q-text" id="faqQ2">Quelles sont les échéances de livraison et de remise des clés ?</span>
-            <span class="faq-arrow">▾</span>
-          </button>
-          <div class="faq-answer">
-            <p id="faqA2">Les travaux sont achevés et les premiers blocs sont d'ores et déjà prêts pour livraison immédiate. La remise des clés s'effectue dès la signature du contrat définitif de vente et le règlement correspondant.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            <span class="faq-q-text" id="faqQ3">Comment fonctionne la conciergerie et la gestion du syndic ?</span>
-            <span class="faq-arrow">▾</span>
-          </button>
-          <div class="faq-answer">
-            <p id="faqA3">Un syndic professionnel agréé assure l'entretien des parties communes, la surveillance 24/7, la maintenance des piscines et des ascenseurs. La conciergerie privée est disponible pour les réservations, transferts aéroport et services sur-mesure via l'application mobile.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            <span class="faq-q-text" id="faqQ4">Les Tunisiens résidents à l'étranger (TRE) ou étrangers peuvent-ils acquérir ?</span>
-            <span class="faq-arrow">▾</span>
-          </button>
-          <div class="faq-answer">
-            <p id="faqA4">Oui. Les Tunisiens résidents à l'étranger bénéficient d'avantages financiers et fiscaux spécifiques. Les ressortissants étrangers peuvent également acquérir en toute légalité sous réserve des autorisations administratives d'usage pour lesquelles notre équipe juridique vous accompagne de A à Z.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            <span class="faq-q-text" id="faqQ5">Quelles sont les modalités de paiement et partenariats bancaires ?</span>
-            <span class="faq-arrow">▾</span>
-          </button>
-          <div class="faq-answer">
-            <p id="faqA5">Nous proposons des facilités de paiement échelonnées adaptées, ainsi que des conventions de crédit immobilier avec les principales banques de la place à des taux très compétitifs.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            <span class="faq-q-text" id="faqQ6">Quels sont les matériaux et finitions inclus ?</span>
-            <span class="faq-arrow">▾</span>
-          </button>
-          <div class="faq-answer">
-            <p id="faqA6">Revêtement en marbre Thala impérial de premier choix dans le salon et chambres, menuiserie en aluminium avec double vitrage isolant thermique et phonique, cuisine aménagée et équipée (plaque, hotte, four), sanitaires et robinetterie de marques européennes de luxe.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ═══════════════════ CONTACT ═══════════════════ -->
   <section id="contact" class="contact section-pad">
     <div class="container">
@@ -1124,10 +954,8 @@
         <a href="#typologies"  class="footer-link">Logements</a>
         <a href="#tour360"     class="footer-link">Visite 360°</a>
         <a href="#gallery"     class="footer-link">Galerie</a>
-        <a href="#calculator"  class="footer-link">Simulateur</a>
         <a href="#quartier"    class="footer-link">Quartier</a>
         <a href="#app"         class="footer-link">Application</a>
-        <a href="#faq"         class="footer-link">FAQ</a>
         <a href="#contact"     class="footer-link">Contact</a>
       </div>
       <div class="footer-divider-line"></div>

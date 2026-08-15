@@ -59,7 +59,6 @@
       <nav class="nav-links" id="navLinks">
         <a href="#about"       class="nav-link" id="navAbout">À Propos</a>
         <a href="#amenities"   class="nav-link" id="navAmen">Prestations</a>
-        <a href="#typologies"  class="nav-link" id="navTypo">Logements</a>
         <a href="#tour360"     class="nav-link" id="navTour">Visite 360°</a>
         <a href="#gallery"     class="nav-link" id="navGal">Galerie</a>
         <a href="#quartier"    class="nav-link" id="navQuartier">Quartier</a>
@@ -126,7 +125,6 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="#about"       class="mob-link">À Propos</a>
     <a href="#amenities"   class="mob-link">Prestations</a>
-    <a href="#typologies"  class="mob-link">Logements &amp; Plans</a>
     <a href="#tour360"     class="mob-link">Visite 360°</a>
     <a href="#gallery"     class="mob-link">Galerie</a>
     <a href="#quartier"    class="mob-link">Guide Quartier</a>
@@ -333,137 +331,6 @@
           <span class="amen-number">06</span>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════ TYPOLOGIES & PLANS ═══════════════════ -->
-  <section id="typologies" class="typologies section-pad">
-    <div class="container">
-      <div class="section-header centered reveal-up">
-        <p class="section-tag" id="typoTag">Logements &amp; Plans</p>
-        <h2 class="section-title" id="typoTitle">Espaces de Vie<br /><em>Conçus pour l'Excellence</em></h2>
-        <p class="typo-sub" id="typoSub">Des typologies harmonieuses allant du S+1 optimisé au Penthouse d'exception avec vue panoramique mer.</p>
-      </div>
-
-      <!-- Typology Selector Pills -->
-      <div class="typo-tabs reveal-up" id="typoTabs">
-        <button class="typo-tab-btn active" data-type="s1" id="tabS1">
-          <span>S+1 (1 Chambre)</span>
-          <span class="tab-sqm">65 m²</span>
-        </button>
-        <button class="typo-tab-btn" data-type="s2" id="tabS2">
-          <span>S+2 (2 Chambres)</span>
-          <span class="tab-sqm">115 m²</span>
-        </button>
-        <button class="typo-tab-btn" data-type="s3" id="tabS3">
-          <span>S+3 (3 Chambres)</span>
-          <span class="tab-sqm">165 m²</span>
-        </button>
-        <button class="typo-tab-btn" data-type="penthouse" id="tabPenthouse">
-          <span>Penthouse / Duplex</span>
-          <span class="tab-sqm">245 m²</span>
-        </button>
-      </div>
-
-      <!-- Typology Showcase Container -->
-      <div class="typo-display reveal-up" id="typoDisplay">
-        <div class="typo-card">
-          <div class="typo-card-grid">
-            <div class="typo-card-visual">
-              <div class="blueprint-frame">
-                <!-- Dynamic Blueprint SVG Graphic -->
-                <div class="blueprint-svg-wrap" id="blueprintGraphic">
-                  <svg viewBox="0 0 500 350" class="blueprint-svg" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                      <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(212,175,55,0.08)" stroke-width="1"/>
-                      </pattern>
-                    </defs>
-                    <rect width="500" height="350" fill="#13171f"/>
-                    <rect width="500" height="350" fill="url(#grid)" />
-                    <!-- Rooms outline -->
-                    <rect x="40" y="40" width="240" height="180" fill="rgba(212,175,55,0.06)" stroke="#d4af37" stroke-width="2" stroke-dasharray="4 2"/>
-                    <text x="160" y="135" fill="#f5d77f" font-family="'Montserrat',sans-serif" font-size="14" text-anchor="middle" font-weight="600">SALON &amp; SÉJOUR (32 m²)</text>
-                    
-                    <rect x="290" y="40" width="170" height="180" fill="rgba(255,255,255,0.03)" stroke="#d4af37" stroke-width="1.5"/>
-                    <text x="375" y="135" fill="#ffffff" font-family="'Montserrat',sans-serif" font-size="13" text-anchor="middle">SUITE PARENTALE (18 m²)</text>
-                    
-                    <rect x="40" y="230" width="140" height="80" fill="rgba(255,255,255,0.03)" stroke="#d4af37" stroke-width="1.5"/>
-                    <text x="110" y="275" fill="#ffffff" font-family="'Montserrat',sans-serif" font-size="12" text-anchor="middle">CUISINE (10 m²)</text>
-
-                    <rect x="190" y="230" width="90" height="80" fill="rgba(255,255,255,0.03)" stroke="#d4af37" stroke-width="1.5"/>
-                    <text x="235" y="275" fill="#ffffff" font-family="'Montserrat',sans-serif" font-size="11" text-anchor="middle">S.D.B (5 m²)</text>
-
-                    <rect x="290" y="230" width="170" height="80" fill="rgba(212,175,55,0.12)" stroke="#d4af37" stroke-width="2"/>
-                    <text x="375" y="275" fill="#d4af37" font-family="'Montserrat',sans-serif" font-size="12" text-anchor="middle" font-weight="600">TERRASSE VUE MER (12 m²)</text>
-                  </svg>
-                </div>
-                <div class="blueprint-badge">
-                  <span class="b-dot"></span>
-                  <span id="blueprintBadgeText">Plan d'Architecte Certifié</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="typo-card-info">
-              <div class="typo-header-row">
-                <h3 class="typo-name" id="currentTypoName">Appartement S+1 — Grand Confort</h3>
-                <span class="typo-area-badge" id="currentTypoArea">65 m²</span>
-              </div>
-              <p class="typo-desc" id="currentTypoDesc">Idéal pour un pied-à-terre luxueux ou un investissement locatif à forte rentabilité. Salon lumineux avec baie vitrée ouverte sur terrasse, cuisine contemporaine entièrement équipée, chambre spacieuse avec dressing intégré et salle d'eau à l'italienne.</p>
-
-              <div class="typo-specs-grid" id="currentTypoSpecs">
-                <div class="spec-pill">
-                  <span class="spec-icon">📐</span>
-                  <div>
-                    <span class="spec-label" id="lblSpecArea">Surface Totale</span>
-                    <span class="spec-val" id="specArea">65 m²</span>
-                  </div>
-                </div>
-                <div class="spec-pill">
-                  <span class="spec-icon">🛏</span>
-                  <div>
-                    <span class="spec-label" id="lblSpecRooms">Chambres</span>
-                    <span class="spec-val" id="specRooms">1 Chambre + Dressing</span>
-                  </div>
-                </div>
-                <div class="spec-pill">
-                  <span class="spec-icon">🚿</span>
-                  <div>
-                    <span class="spec-label" id="lblSpecBaths">Salle d'Eau</span>
-                    <span class="spec-val" id="specBaths">1 Italienne en Marbre</span>
-                  </div>
-                </div>
-                <div class="spec-pill">
-                  <span class="spec-icon">🌅</span>
-                  <div>
-                    <span class="spec-label" id="lblSpecBalcony">Extérieur</span>
-                    <span class="spec-val" id="specBalcony">Terrasse vue Jardin / Bassin</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="typo-features-list">
-                <span class="typo-feat-tag">✓ Marbre Thala impérial</span>
-                <span class="typo-feat-tag">✓ Climatisation &amp; Chauffage central</span>
-                <span class="typo-feat-tag">✓ Double vitrage isolant</span>
-                <span class="typo-feat-tag">✓ Volets roulants électriques</span>
-              </div>
-
-              <div class="typo-cta-row">
-                <a href="#contact" class="btn-primary magnetic" id="typoCtaInquire">
-                  <span>Demander le Dossier &amp; Prix</span>
-                  <span>→</span>
-                </a>
-                <a href="https://wa.me/21629112233?text=Bonjour,%20je%20souhaite%20recevoir%20les%20plans%20et%20prix%20de%20la%20Résidence%20Le%20Jacaranda." target="_blank" rel="noopener noreferrer" class="btn-outline magnetic">
-                  <span>Plan PDF WhatsApp</span>
-                  <span>💬</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -950,7 +817,6 @@
       <div class="footer-links">
         <a href="#about"       class="footer-link">À Propos</a>
         <a href="#amenities"   class="footer-link">Prestations</a>
-        <a href="#typologies"  class="footer-link">Logements</a>
         <a href="#tour360"     class="footer-link">Visite 360°</a>
         <a href="#gallery"     class="footer-link">Galerie</a>
         <a href="#quartier"    class="footer-link">Quartier</a>

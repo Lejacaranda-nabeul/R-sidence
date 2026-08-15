@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Résidence Le Jacaranda — Luxe, Sérénité &amp; Prestige à Mrezgua Nabeul</title>
+  <meta name="description" content="Découvrez la Résidence Le Jacaranda à Mrezgua, Nabeul (Tunisie). Appartements de haut standing S+1, S+2, S+3 &amp; Penthouses à 300m de la plage avec piscines, conciergerie 24/7 et sécurité." />
+  <meta name="keywords" content="Résidence Le Jacaranda, Mrezgua, Nabeul, appartement luxe Tunisie, immobilier bord de mer, S+1, S+2, S+3, Penthouse" />
+  <meta property="og:title" content="Résidence Le Jacaranda — Luxe &amp; Élégance" />
+  <meta property="og:description" content="Vivez l'exception à 300m de la mer. Résidence Le Jacaranda." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="hero_banner.jpg" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Pannellum 360° viewer -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
+  <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-night">
+
+  <!-- Scroll Progress Bar -->
+  <div id="scrollProgress" class="scroll-progress"></div>
+
+  <!-- Custom Luxury Cursor -->
+  <div id="cursor" class="cursor"></div>
+  <div id="cursorFollower" class="cursor-follower"></div>
+
+  <!-- Particles Canvas -->
+  <canvas id="particles" class="particles-canvas"></canvas>
+
+  <!-- ═══════════════════ FLOATING CONTROLS ═══════════════════ -->
+  <!-- Floating WhatsApp Concierge Pill -->
+  <a href="https://wa.me/21629112233" target="_blank" rel="noopener noreferrer" class="floating-concierge" id="floatingConcierge" aria-label="Conciergerie WhatsApp">
+    <span class="concierge-pulse"></span>
+    <svg class="concierge-icon" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zM12.04 20.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.54c.12.17 1.73 2.64 4.2 3.7.59.25 1.05.4 1.41.51.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.12-.23-.19-.48-.31z"/>
+    </svg>
+    <span class="concierge-text" id="conciergeLiveText">Conciergerie 24/7 en direct</span>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+    <span>↑</span>
+  </button>
+
+  <!-- ═══════════════════ NAVIGATION ═══════════════════ -->
+  <header id="navbar" class="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-main">Le Jacaranda</span>
+        <span class="logo-sub">RÉSIDENCE LUXE</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about"       class="nav-link" id="navAbout">À Propos</a>
+        <a href="#amenities"   class="nav-link" id="navAmen">Prestations</a>
+        <a href="#typologies"  class="nav-link" id="navTypo">Logements</a>
+        <a href="#tour360"     class="nav-link" id="navTour">Visite 360°</a>
+        <a href="#gallery"     class="nav-link" id="navGal">Galerie</a>
+        <a href="#calculator"  class="nav-link" id="navCalc">Simulateur</a>
+        <a href="#quartier"    class="nav-link" id="navQuartier">Quartier</a>
+        <a href="#app"         class="nav-link" id="navApp">App Résidents</a>
+        <a href="#faq"         class="nav-link" id="navFaq">FAQ</a>
+        <a href="#contact"     class="nav-link" id="navCon">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <!-- Live Resort Status & Time -->
+        <div class="resort-live-pill" id="resortLivePill" title="Météo et heure locale à Nabeul">
+          <span class="live-dot"></span>
+          <span class="resort-city">Mrezgua</span>
+          <span class="resort-temp">28°C</span>
+          <span class="resort-time" id="resortTime">--:--</span>
+        </div>
+
+        <!-- Atmospheric Soundscape Toggle -->
+        <button class="soundscape-toggle magnetic" id="soundscapeToggle" title="Ambiance sonore apaisante" aria-label="Ambiance sonore">
+          <span class="sound-wave"></span>
+          <span class="sound-wave"></span>
+          <span class="sound-wave"></span>
+        </button>
+
+        <!-- Ambience Toggle (Day/Night) -->
+        <button class="ambience-toggle magnetic" id="ambienceToggle" title="Changer l'ambiance Lumineuse">
+          <span class="ambience-icon" id="ambienceIcon">🌙</span>
+        </button>
+
+        <!-- Language Dropdown -->
+        <div class="lang-dropdown" id="langDropdown">
+          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false">
+            <span class="lang-flag">🇫🇷</span>
+            <span class="lang-code">FR</span>
+            <span class="lang-chevron">▾</span>
+          </button>
+          <div class="lang-menu" id="langMenu" role="menu">
+            <button class="lang-option active" data-lang="fr" role="menuitem">
+              <span class="lang-flag">🇫🇷</span><span>Français</span>
+            </button>
+            <button class="lang-option" data-lang="en" role="menuitem">
+              <span class="lang-flag">🇬🇧</span><span>English</span>
+            </button>
+            <button class="lang-option" data-lang="es" role="menuitem">
+              <span class="lang-flag">🇪🇸</span><span>Español</span>
+            </button>
+            <button class="lang-option" data-lang="it" role="menuitem">
+              <span class="lang-flag">🇮🇹</span><span>Italiano</span>
+            </button>
+            <button class="lang-option" data-lang="de" role="menuitem">
+              <span class="lang-flag">🇩🇪</span><span>Deutsch</span>
+            </button>
+            <button class="lang-option" data-lang="ar" role="menuitem">
+              <span class="lang-flag">🇸🇦</span><span>عربي</span>
+            </button>
+          </div>
+        </div>
+        <a href="#contact" class="cta-nav magnetic" id="ctaNav">Prendre Rendez-vous</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about"       class="mob-link">À Propos</a>
+    <a href="#amenities"   class="mob-link">Prestations</a>
+    <a href="#typologies"  class="mob-link">Logements &amp; Plans</a>
+    <a href="#tour360"     class="mob-link">Visite 360°</a>
+    <a href="#gallery"     class="mob-link">Galerie</a>
+    <a href="#calculator"  class="mob-link">Simulateur Investissement</a>
+    <a href="#quartier"    class="mob-link">Guide Quartier</a>
+    <a href="#app"         class="mob-link">App Résidents</a>
+    <a href="#localisation" class="mob-link">Localisation</a>
+    <a href="#faq"         class="mob-link">Questions Fréquentes</a>
+    <a href="#contact"     class="mob-link">Contact</a>
+    <div class="mob-lang-bar">
+      <button class="mob-lang-btn" data-lang="fr">🇫🇷 FR</button>
+      <button class="mob-lang-btn" data-lang="en">🇬🇧 EN</button>
+      <button class="mob-lang-btn" data-lang="es">🇪🇸 ES</button>
+      <button class="mob-lang-btn" data-lang="it">🇮🇹 IT</button>
+      <button class="mob-lang-btn" data-lang="de">🇩🇪 DE</button>
+      <button class="mob-lang-btn" data-lang="ar">🇸🇦 AR</button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section id="hero" class="hero">
+    <div class="hero-bg">
+      <img src="hero_banner.jpg" alt="Résidence Le Jacaranda" class="hero-img" id="heroParallaxImg" />
+      <div class="hero-overlay"></div>
+      <div class="hero-glow"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge-pill" id="heroBadgePill">
+        <span class="badge-dot"></span>
+        <span id="heroBadgeText">Résidence d'Exception · Mrezgua Nabeul · À 300m de la Plage</span>
+      </div>
+
+      <p class="hero-eyebrow" id="heroEyebrow">
+        <span class="eyebrow-line"></span>
+        <span id="heroEyebrowText">Mrezgua · Nabeul · Tunisie</span>
+        <span class="eyebrow-line"></span>
+      </p>
+
+      <h1 class="hero-title" id="heroTitle">
+        <span class="title-thin split-text">Le</span>
+        <span class="title-bold split-text">Jacaranda</span>
+      </h1>
+
+      <p class="hero-tagline" id="heroTagline">L'art de vivre dans sa plus belle expression</p>
+
+      <div class="hero-divider">
+        <span class="divider-line"></span>
+        <span class="divider-diamond">◆</span>
+        <span class="divider-line"></span>
+      </div>
+
+      <div class="hero-cta-group">
+        <a href="#typologies" class="btn-primary magnetic" id="heroCta1">
+          <span>Découvrir les Logements</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <a href="#tour360" class="btn-outline magnetic" id="heroCta2">
+          <span>Visite Virtuelle 360°</span>
+          <span class="btn-pulse-icon">⟳</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <span class="scroll-text" id="scrollText">Défiler pour explorer</span>
+      <span class="scroll-arrow-wrap"><span class="scroll-arrow">↓</span></span>
+    </div>
+
+    <!-- Live Animated Stats -->
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-number" data-target="5" id="statN1">0</span>
+        <span class="stat-label" id="stat1">Blocs Résidentiels</span>
+      </div>
+      <div class="stat-sep">◆</div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="2" id="statN2">0</span>
+        <span class="stat-label" id="stat2">Piscines d'Eau Cristalline</span>
+      </div>
+      <div class="stat-sep">◆</div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="300" id="statN3">0</span><span class="stat-pct">m</span>
+        <span class="stat-label" id="stat3">de la Plage Méditerranée</span>
+      </div>
+      <div class="stat-sep">◆</div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="24" id="statN4">0</span><span class="stat-pct">/7</span>
+        <span class="stat-label" id="stat4">Conciergerie &amp; Sécurité</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ ABOUT ═══════════════════ -->
+  <section id="about" class="about section-pad">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual reveal-left">
+          <div class="about-img-frame">
+            <img src="pool_night.jpg" alt="Piscine de la Résidence" class="about-img" id="aboutDynamicImg" />
+            <div class="img-badge">
+              <span class="badge-year">2024 - 2025</span>
+              <span class="badge-label" id="badgeLabel">Livraison Immédiate</span>
+            </div>
+          </div>
+          <div class="about-float-card">
+            <span class="float-icon">◆</span>
+            <div>
+              <span class="float-title" id="floatTitle">Architecture Contemporaine</span>
+              <span class="float-sub" id="floatSub">Design méditerranéen &amp; finitions haut de gamme</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text reveal-right">
+          <p class="section-tag" id="aboutTag">À Propos du Projet</p>
+          <h2 class="section-title" id="aboutTitle">Un Art de Vivre<br /><em>Exceptionnel</em></h2>
+          <p class="about-body" id="aboutBody">Nichée au cœur de Mrezgua, à seulement 300 mètres de la magnifique plage de Nabeul, la Résidence Le Jacaranda est le fruit d'une vision architecturale ambitieuse : offrir un cadre de vie alliant modernité, élégance et sérénité.</p>
+          <p class="about-body" id="aboutBody2">Ses façades en blanc immaculé, ses balcons généreux et ses espaces communs soigneusement paysagés font de cette résidence un havre de paix au design contemporain haut de gamme.</p>
+          <ul class="about-features" id="aboutFeatures">
+            <li><span class="feat-icon">◆</span> Architecture contemporaine de prestige</li>
+            <li><span class="feat-icon">◆</span> Finitions de premier choix en marbre et aluminium</li>
+            <li><span class="feat-icon">◆</span> Espaces verts et jardins paysagers méditerranéens</li>
+            <li><span class="feat-icon">◆</span> Résidence clôturée, gardée 24h/24 avec contrôle d'accès</li>
+          </ul>
+          <div class="about-actions">
+            <a href="#tour360" class="btn-tour magnetic" id="aboutCta">
+              <span class="btn-tour-icon">⟳</span>
+              <span id="aboutCtaText">Explorer en 360°</span>
+            </a>
+            <a href="#contact" class="btn-secondary-link magnetic" id="aboutCtaBrochure">
+              <span>Demander la Brochure</span>
+              <span>↓</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════ AMENITIES ═══════════════════ -->
+  <section id="amenities" class="amenities section-pad">
+    <div class="container">
+      <div class="section-header centered reveal-up">
+        <p class="section-tag" id="amenTag">Prestations</p>
+        <h2 class="section-title" id="amenTitle">Tout le Luxe<br /><em>Réuni en un Lieu</em></h2>
+      </div>
+      <div class="amenities-grid">
+
+        <div class="amen-card tilt-card">
+          <div class="amen-card-bg"></div>
+          <div class="amen-icon-wrap">
+            <svg class="amen-icon" viewBox="0 0 48 48" fill="none"><path d="M8 36 C8 36 16 16 24 16 C32 16 40 36 40 36" stroke="currentColor" stroke-width="1.5"/><rect x="6" y="36" width="36" height="4" rx="2" fill="currentColor" opacity=".3"/><circle cx="24" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3 class="amen-name" id="amen1">Piscines</h3>
+          <p class="amen-desc" id="amen1d">Deux bassins cristallins illuminés, pour des moments de détente incomparables à toute heure.</p>
+          <span class="amen-number">01</span>
+        </div>
+
+        <div class="amen-card tilt-card">
+          <div class="amen-card-bg"></div>
+          <div class="amen-icon-wrap">
+            <svg class="amen-icon" viewBox="0 0 48 48" fill="none"><rect x="8" y="20" width="32" height="20" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 20V14a8 8 0 0116 0v6" stroke="currentColor" stroke-width="1.5"/><circle cx="24" cy="30" r="3" fill="currentColor" opacity=".5"/></svg>
+          </div>
+          <h3 class="amen-name" id="amen2">Sécurité 24h/24</h3>
+          <p class="amen-desc" id="amen2d">Accès sécurisé, surveillance permanente et système de contrôle avancé pour votre tranquillité.</p>
+          <span class="amen-number">02</span>
+        </div>
+
+        <div class="amen-card tilt-card">
+          <div class="amen-card-bg"></div>
+          <div class="amen-icon-wrap">
+            <svg class="amen-icon" viewBox="0 0 48 48" fill="none"><rect x="10" y="28" width="28" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M14 28V22a4 4 0 014-4h12a4 4 0 014 4v6" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3 class="amen-name" id="amen3">Parking Privé</h3>
+          <p class="amen-desc" id="amen3d">Espaces de stationnement couverts et sécurisés, à disposition exclusive des résidents.</p>
+          <span class="amen-number">03</span>
+        </div>
+
+        <div class="amen-card tilt-card">
+          <div class="amen-card-bg"></div>
+          <div class="amen-icon-wrap">
+            <svg class="amen-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="20" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M12 40c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="amen-name" id="amen4">Espaces Verts</h3>
+          <p class="amen-desc" id="amen4d">Jardins paysagés et végétation méditerranéenne pour une atmosphère douce et ressourçante.</p>
+          <span class="amen-number">04</span>
+        </div>
+
+        <div class="amen-card tilt-card">
+          <div class="amen-card-bg"></div>
+          <div class="amen-icon-wrap">
+            <svg class="amen-icon" viewBox="0 0 48 48" fill="none"><path d="M24 8L28 18H40L30 24L34 36L24 30L14 36L18 24L8 18H20L24 8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="amen-name" id="amen5">Finitions Premium</h3>
+          <p class="amen-desc" id="amen5d">Matériaux nobles, carrelage grand format, menuiserie aluminium — des prestations d'exception.</p>
+          <span class="amen-number">05</span>
+        </div>
+
+        <div class="amen-card tilt-card">
+          <div class="amen-card-bg"></div>
+          <div class="amen-icon-wrap">
+            <svg class="amen-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="1.5"/><path d="M24 14v10l6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="amen-name" id="amen6">Conciergerie</h3>
+          <p class="amen-desc" id="amen6d">Service disponible pour répondre à toutes vos demandes avec la plus grande discrétion.</p>
+          <span class="amen-number">06</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ TYPOLOGIES & PLANS ═══════════════════ -->
+  <section id="typologies" class="typologies section-pad">
+    <div class="container">
+      <div class="section-header centered reveal-up">
+        <p class="section-tag" id="typoTag">Logements &amp; Plans</p>
+        <h2 class="section-title" id="typoTitle">Espaces de Vie<br /><em>Conçus pour l'Excellence</em></h2>
+        <p class="typo-sub" id="typoSub">Des typologies harmonieuses allant du S+1 optimisé au Penthouse d'exception avec vue panoramique mer.</p>
+      </div>
+
+      <!-- Typology Selector Pills -->
+      <div class="typo-tabs reveal-up" id="typoTabs">
+        <button class="typo-tab-btn active" data-type="s1" id="tabS1">
+          <span>S+1 (1 Chambre)</span>
+          <span class="tab-sqm">65 m²</span>
+        </button>
+        <button class="typo-tab-btn" data-type="s2" id="tabS2">
+          <span>S+2 (2 Chambres)</span>
+          <span class="tab-sqm">115 m²</span>
+        </button>
+        <button class="typo-tab-btn" data-type="s3" id="tabS3">
+          <span>S+3 (3 Chambres)</span>
+          <span class="tab-sqm">165 m²</span>
+        </button>
+        <button class="typo-tab-btn" data-type="penthouse" id="tabPenthouse">
+          <span>Penthouse / Duplex</span>
+          <span class="tab-sqm">245 m²</span>
+        </button>
+      </div>
+
+      <!-- Typology Showcase Container -->
+      <div class="typo-display reveal-up" id="typoDisplay">
+        <div class="typo-card">
+          <div class="typo-card-grid">
+            <div class="typo-card-visual">
+              <div class="blueprint-frame">
+                <!-- Dynamic Blueprint SVG Graphic -->
+                <div class="blueprint-svg-wrap" id="blueprintGraphic">
+                  <svg viewBox="0 0 500 350" class="blueprint-svg" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(212,175,55,0.08)" stroke-width="1"/>
+                      </pattern>
+                    </defs>
+                    <rect width="500" height="350" fill="#13171f"/>
+                    <rect width="500" height="350" fill="url(#grid)" />
+                    <!-- Rooms outline -->
+                    <rect x="40" y="40" width="240" height="180" fill="rgba(212,175,55,0.06)" stroke="#d4af37" stroke-width="2" stroke-dasharray="4 2"/>
+                    <text x="160" y="135" fill="#f5d77f" font-family="'Montserrat',sans-serif" font-size="14" text-anchor="middle" font-weight="600">SALON &amp; SÉJOUR (32 m²)</text>
+                    
+                    <rect x="290" y="40" width="170" height="180" fill="rgba(255,255,255,0.03)" stroke="#d4af37" stroke-width="1.5"/>
+                    <text x="375" y="135" fill="#ffffff" font-family="'Montserrat',sans-serif" font-size="13" text-anchor="middle">SUITE PARENTALE (18 m²)</text>
+                    
+                    <rect x="40" y="230" width="140" height="80" fill="rgba(255,255,255,0.03)" stroke="#d4af37" stroke-width="1.5"/>
+                    <text x="110" y="275" fill="#ffffff" font-family="'Montserrat',sans-serif" font-size="12" text-anchor="middle">CUISINE (10 m²)</text>
+
+                    <rect x="190" y="230" width="90" height="80" fill="rgba(255,255,255,0.03)" stroke="#d4af37" stroke-width="1.5"/>
+                    <text x="235" y="275" fill="#ffffff" font-family="'Montserrat',sans-serif" font-size="11" text-anchor="middle">S.D.B (5 m²)</text>
+
+                    <rect x="290" y="230" width="170" height="80" fill="rgba(212,175,55,0.12)" stroke="#d4af37" stroke-width="2"/>
+                    <text x="375" y="275" fill="#d4af37" font-family="'Montserrat',sans-serif" font-size="12" text-anchor="middle" font-weight="600">TERRASSE VUE MER (12 m²)</text>
+                  </svg>
+                </div>
+                <div class="blueprint-badge">
+                  <span class="b-dot"></span>
+                  <span id="blueprintBadgeText">Plan d'Architecte Certifié</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="typo-card-info">
+              <div class="typo-header-row">
+                <h3 class="typo-name" id="currentTypoName">Appartement S+1 — Grand Confort</h3>
+                <span class="typo-area-badge" id="currentTypoArea">65 m²</span>
+              </div>
+              <p class="typo-desc" id="currentTypoDesc">Idéal pour un pied-à-terre luxueux ou un investissement locatif à forte rentabilité. Salon lumineux avec baie vitrée ouverte sur terrasse, cuisine contemporaine entièrement équipée, chambre spacieuse avec dressing intégré et salle d'eau à l'italienne.</p>
+
+              <div class="typo-specs-grid" id="currentTypoSpecs">
+                <div class="spec-pill">
+                  <span class="spec-icon">📐</span>
+                  <div>
+                    <span class="spec-label" id="lblSpecArea">Surface Totale</span>
+                    <span class="spec-val" id="specArea">65 m²</span>
+                  </div>
+                </div>
+                <div class="spec-pill">
+                  <span class="spec-icon">🛏</span>
+                  <div>
+                    <span class="spec-label" id="lblSpecRooms">Chambres</span>
+                    <span class="spec-val" id="specRooms">1 Chambre + Dressing</span>
+                  </div>
+                </div>
+                <div class="spec-pill">
+                  <span class="spec-icon">🚿</span>
+                  <div>
+                    <span class="spec-label" id="lblSpecBaths">Salle d'Eau</span>
+                    <span class="spec-val" id="specBaths">1 Italienne en Marbre</span>
+                  </div>
+                </div>
+                <div class="spec-pill">
+                  <span class="spec-icon">🌅</span>
+                  <div>
+                    <span class="spec-label" id="lblSpecBalcony">Extérieur</span>
+                    <span class="spec-val" id="specBalcony">Terrasse vue Jardin / Bassin</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="typo-features-list">
+                <span class="typo-feat-tag">✓ Marbre Thala impérial</span>
+                <span class="typo-feat-tag">✓ Climatisation &amp; Chauffage central</span>
+                <span class="typo-feat-tag">✓ Double vitrage isolant</span>
+                <span class="typo-feat-tag">✓ Volets roulants électriques</span>
+              </div>
+
+              <div class="typo-cta-row">
+                <a href="#contact" class="btn-primary magnetic" id="typoCtaInquire">
+                  <span>Demander le Dossier &amp; Prix</span>
+                  <span>→</span>
+                </a>
+                <a href="https://wa.me/21629112233?text=Bonjour,%20je%20souhaite%20recevoir%20les%20plans%20et%20prix%20de%20la%20Résidence%20Le%20Jacaranda." target="_blank" rel="noopener noreferrer" class="btn-outline magnetic">
+                  <span>Plan PDF WhatsApp</span>
+                  <span>💬</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ SIMULATEUR FINANCEMENT & RENDEMENT ═══════════════════ -->
+  <section id="calculator" class="calculator-section section-pad">
+    <div class="container">
+      <div class="section-header centered reveal-up">
+        <p class="section-tag" id="calcTag">Investissement &amp; Financement</p>
+        <h2 class="section-title" id="calcTitle">Simulez Votre Projet<br /><em>&amp; Rendement Locatif</em></h2>
+        <p class="calc-sub" id="calcSub">Évaluez vos mensualités, revenus locatifs estimés et le retour sur investissement dans la zone balnéaire de Mrezgua.</p>
+      </div>
+
+      <div class="calculator-grid reveal-up">
+        <!-- Controls Side -->
+        <div class="calc-controls-card">
+          <div class="calc-type-selector">
+            <label class="calc-lbl" id="calcLblType">Sélectionnez le Logement :</label>
+            <div class="calc-type-pills">
+              <button class="calc-pill-btn active" data-apt="s1">S+1 (65m²)</button>
+              <button class="calc-pill-btn" data-apt="s2">S+2 (115m²)</button>
+              <button class="calc-pill-btn" data-apt="s3">S+3 (165m²)</button>
+              <button class="calc-pill-btn" data-apt="penthouse">Penthouse</button>
+            </div>
+          </div>
+
+          <div class="calc-slider-group">
+            <div class="calc-slider-header">
+              <span class="calc-lbl" id="calcLblDown">Apport Initial (%)</span>
+              <span class="calc-val-display" id="downPaymentVal">30%</span>
+            </div>
+            <input type="range" class="calc-range" id="downPaymentRange" min="10" max="80" step="5" value="30" />
+            <div class="calc-range-labels">
+              <span>10%</span>
+              <span>50%</span>
+              <span>80%</span>
+            </div>
+          </div>
+
+          <div class="calc-slider-group">
+            <div class="calc-slider-header">
+              <span class="calc-lbl" id="calcLblDuration">Durée de Financement (Années)</span>
+              <span class="calc-val-display" id="loanYearsVal">15 ans</span>
+            </div>
+            <input type="range" class="calc-range" id="loanYearsRange" min="5" max="25" step="1" value="15" />
+            <div class="calc-range-labels">
+              <span>5 ans</span>
+              <span>15 ans</span>
+              <span>25 ans</span>
+            </div>
+          </div>
+
+          <div class="calc-currency-group">
+            <span class="calc-lbl" id="calcLblCur">Devise d'Affichage :</span>
+            <div class="currency-toggle-btns">
+              <button class="cur-btn active" data-cur="TND">TND (DT)</button>
+              <button class="cur-btn" data-cur="EUR">EUR (€)</button>
+              <button class="cur-btn" data-cur="USD">USD ($)</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Result KPI Card -->
+        <div class="calc-results-card">
+          <div class="calc-result-badge">
+            <span>◆</span>
+            <span id="calcYieldBadge">Rendement Brut Estimé</span>
+            <span class="yield-pct" id="yieldPct">9.4% / an</span>
+          </div>
+
+          <div class="calc-kpis">
+            <div class="calc-kpi-item">
+              <span class="kpi-label" id="kpiMonthlyLbl">Mensualité Estimée</span>
+              <span class="kpi-number" id="kpiMonthlyVal">1 850 DT <small>/ mois</small></span>
+            </div>
+            <div class="calc-kpi-item">
+              <span class="kpi-label" id="kpiRentLbl">Revenu Locatif Annuel Estimé</span>
+              <span class="kpi-number highlight" id="kpiRentVal">28 500 DT <small>/ an</small></span>
+            </div>
+            <div class="calc-kpi-item">
+              <span class="kpi-label" id="kpiSummerLbl">Revenu Saisonnier Estimé (Été)</span>
+              <span class="kpi-number" id="kpiSummerVal">18 000 DT <small>(10 sem.)</small></span>
+            </div>
+          </div>
+
+          <div class="calc-footer-note">
+            <p id="calcNote">* Simulation indicative basée sur les moyennes locatives de Mrezgua Nabeul. Contactez notre service pour une étude patrimoniale personnalisée.</p>
+            <a href="#contact" class="btn-primary w-full magnetic" id="btnCalcConsult">
+              <span>Étude de Financement Gratuite</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ VISITE 360° ═══════════════════ -->
+  <section id="tour360" class="tour360 section-pad">
+    <div class="container">
+      <div class="section-header centered reveal-up">
+        <p class="section-tag" id="tourTag">Visite Virtuelle</p>
+        <h2 class="section-title" id="tourTitle">Explorez la Résidence<br /><em>en 360°</em></h2>
+        <p class="tour-sub" id="tourSub">Naviguez librement dans nos espaces. Cliquez et faites glisser pour explorer chaque recoin.</p>
+      </div>
+
+      <!-- Tab buttons -->
+      <div class="tour-tabs">
+        <button class="tour-tab active" data-scene="interior" id="tabInterior">
+          <span class="tab-icon">🛋</span>
+          <span id="tabInteriorText">Appartement</span>
+        </button>
+        <button class="tour-tab" data-scene="pool" id="tabPool">
+          <span class="tab-icon">🏊</span>
+          <span id="tabPoolText">Piscine & Jardins</span>
+        </button>
+      </div>
+
+      <!-- 360° Viewer -->
+      <div class="viewer-wrap reveal-up">
+        <div id="panorama360" class="panorama360"></div>
+        <div class="viewer-hint" id="viewerHint">
+          <span class="hint-icon">⟳</span>
+          <span id="hintText">Cliquez et faites glisser pour explorer</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ GALLERY ═══════════════════ -->
+  <section id="gallery" class="gallery section-pad">
+    <div class="container">
+      <div class="section-header centered reveal-up">
+        <p class="section-tag" id="galTag">Galerie Photographique</p>
+        <h2 class="section-title" id="galTitle">La Résidence<br /><em>en Images</em></h2>
+      </div>
+
+      <!-- Gallery Filter Chips -->
+      <div class="gal-filters reveal-up" id="galFilters">
+        <button class="gal-filter-btn active" data-filter="all" id="galFilterAll">Toutes</button>
+        <button class="gal-filter-btn" data-filter="exterior" id="galFilterExt">Extérieur</button>
+        <button class="gal-filter-btn" data-filter="interior" id="galFilterInt">Intérieurs</button>
+        <button class="gal-filter-btn" data-filter="night" id="galFilterNight">Piscine &amp; Nuit</button>
+      </div>
+    </div>
+
+    <div class="gallery-strip">
+      <div class="gallery-item" data-category="exterior" data-idx="0">
+        <img src="hero_banner.jpg" alt="Vue extérieure" loading="lazy" />
+        <div class="gal-overlay">
+          <span class="gal-tag">Extérieur</span>
+          <span class="gal-caption-text" id="galCap1">Façade Contemporaine</span>
+          <span class="gal-zoom">↗</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="interior" data-idx="1">
+        <img src="apartment_interior.jpg" alt="Intérieur luxueux" loading="lazy" />
+        <div class="gal-overlay">
+          <span class="gal-tag">Intérieur</span>
+          <span class="gal-caption-text" id="galCap2">Salons &amp; Suites</span>
+          <span class="gal-zoom">↗</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="night" data-idx="2">
+        <img src="pool_night.jpg" alt="Piscine nocturne" loading="lazy" />
+        <div class="gal-overlay">
+          <span class="gal-tag">Nuit &amp; Détente</span>
+          <span class="gal-caption-text" id="galCap3">Piscine Illuminée</span>
+          <span class="gal-zoom">↗</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="exterior" data-idx="3">
+        <img src="panorama_pool.jpg" alt="Vue aérienne piscine" loading="lazy" />
+        <div class="gal-overlay">
+          <span class="gal-tag">Vue Aérienne</span>
+          <span class="gal-caption-text" id="galCap4">Jardins &amp; Bassins</span>
+          <span class="gal-zoom">↗</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">✕</button>
+      <button class="lightbox-prev" id="lightboxPrev" aria-label="Précédent">‹</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+      <button class="lightbox-next" id="lightboxNext" aria-label="Suivant">›</button>
+      <div class="lightbox-counter" id="lightboxCounter">1 / 4</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ GUIDE DU QUARTIER & ART DE VIVRE ═══════════════════ -->
+  <section id="quartier" class="quartier-section section-pad">
+    <div class="container">
+      <div class="section-header centered reveal-up">
+        <p class="section-tag" id="quartierTag">Art de Vivre Méditerranéen</p>
+        <h2 class="section-title" id="quartierTitle">Mrezgua &amp; Ses Trésors<br /><em>Entre Mer, Culture &amp; Détente</em></h2>
+        <p class="quartier-sub" id="quartierSub">Une situation d'exception à la croisée de Nabeul et d'Hammamet, alliant sérénité côtière et dynamisme.</p>
+      </div>
+
+      <div class="quartier-grid reveal-up">
+        <div class="quartier-card">
+          <div class="quartier-icon">🏖</div>
+          <span class="quartier-dist">300 m · 3 min à pied</span>
+          <h3 class="quartier-name" id="qCard1Title">Plage de Mrezgua</h3>
+          <p class="quartier-desc" id="qCard1Desc">Sable blanc, eaux turquoise calmes et couchers de soleil féeriques face au golfe d'Hammamet.</p>
+        </div>
+
+        <div class="quartier-card">
+          <div class="quartier-icon">🏺</div>
+          <span class="quartier-dist">4 km · 5 min</span>
+          <h3 class="quartier-name" id="qCard2Title">Nabeul &amp; Artisanat</h3>
+          <p class="quartier-desc" id="qCard2Desc">Capitale tunisienne de la céramique, marchés traditionnels aux épices et distilleries de fleurs d'oranger.</p>
+        </div>
+
+        <div class="quartier-card">
+          <div class="quartier-icon">⛵</div>
+          <span class="quartier-dist">10 km · 12 min</span>
+          <h3 class="quartier-name" id="qCard3Title">Hammamet Nord &amp; Marina</h3>
+          <p class="quartier-desc" id="qCard3Desc">Restaurants gastronomiques pieds dans l'eau, cafés mythiques de la Médina et clubs nautiques sélects.</p>
+        </div>
+
+        <div class="quartier-card">
+          <div class="quartier-icon">⛳</div>
+          <span class="quartier-dist">18 km · 20 min</span>
+          <h3 class="quartier-name" id="qCard4Title">Golfs Citrus &amp; Yasmine</h3>
+          <p class="quartier-desc" id="qCard4Desc">Parcours de championnat internationaux 45 trous au milieu des oliviers et des collines verdoyantes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ APPLICATION RÉSIDENTS ═══════════════════ -->
+  <section id="app" class="app-section section-pad">
+    <div class="container">
+      <div class="app-grid">
+        <div class="app-text reveal-left">
+          <p class="section-tag" id="appTag">Écosystème Connecté</p>
+          <h2 class="section-title" id="appTitle">Gérez votre résidence<br /><em>depuis votre smartphone</em></h2>
+          <p class="app-body" id="appBody">Signalez un incident en un clic, contactez le syndic et la conciergerie, recevez les annonces officielles en temps réel et suivez vos demandes directement depuis l'application dédiée.</p>
+          <ul class="app-features" id="appFeatures">
+            <li><span class="feat-icon">◆</span> Suivi des réclamations &amp; propositions en temps réel</li>
+            <li><span class="feat-icon">◆</span> Messagerie instantanée avec le Syndic &amp; Concierge</li>
+            <li><span class="feat-icon">◆</span> Rappels de cotisations &amp; rapports PDF partagés</li>
+            <li><span class="feat-icon">◆</span> Notifications prioritaires et annonces de résidence</li>
+          </ul>
+
+          <!-- Interactive App Try Button -->
+          <div class="app-interactive-box">
+            <button class="btn-primary magnetic" id="btnTryAppModal">
+              <span>📱 Tester la Démo Résident Interactive</span>
+              <span>⚡</span>
+            </button>
+          </div>
+
+          <div class="app-store-btns">
+            <a href="#" class="store-btn magnetic" id="appStoreBtn" aria-label="Télécharger sur l'App Store">
+              <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              <div class="store-text">
+                <span class="store-sub" id="appStoreSub">Télécharger sur</span>
+                <span class="store-name">App Store</span>
+              </div>
+            </a>
+            <a href="#" class="store-btn magnetic" id="playStoreBtn" aria-label="Télécharger sur Google Play">
+              <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76a2.52 2.52 0 0 1-1.15-2.18V2.42A2.52 2.52 0 0 1 3.18.24l.11-.07 11.94 11.95-.11.1L3.18 23.76zm13.05-7.62-2.54-2.54 2.53-2.53 3.07 1.74a1.51 1.51 0 0 1 0 2.61l-3.06 1.72zm-12.2 6.84 10.4-10.4-2.37-2.37L2.07 20.52a1.84 1.84 0 0 0 1.96 2.46zM2.07 3.47l9.99 9.99-2.37 2.37L2.07 5.94a1.84 1.84 0 0 1 0-2.47z"/></svg>
+              <div class="store-text">
+                <span class="store-sub" id="playStoreSub">Disponible sur</span>
+                <span class="store-name">Google Play</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="app-visual reveal-right">
+          <div class="app-phone-mockup">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <!-- Live Interactive Mini-UI Simulator -->
+              <div class="app-sim-header">
+                <div class="sim-brand">
+                  <span class="sim-logo-dot"></span>
+                  <span>La Jacaranda Résident</span>
+                </div>
+                <span class="sim-badge">Apt A32</span>
+              </div>
+
+              <div class="sim-banner">
+                <span class="sim-icon">🔔</span>
+                <div>
+                  <strong>Notification Syndic</strong>
+                  <p>Entretien préventif ascenseur Bloc B ce vendredi.</p>
+                </div>
+              </div>
+
+              <div class="sim-actions-grid">
+                <div class="sim-btn sim-btn-claim" id="simClaimBtn">
+                  <span>⚠️</span>
+                  <span>Réclamation</span>
+                </div>
+                <div class="sim-btn sim-btn-prop" id="simPropBtn">
+                  <span>💡</span>
+                  <span>Proposition</span>
+                </div>
+              </div>
+
+              <div class="sim-ticket-card">
+                <div class="sim-ticket-header">
+                  <span class="sim-t-title">Signalement Robinetterie</span>
+                  <span class="sim-t-status status-in-progress">En cours</span>
+                </div>
+                <p class="sim-t-desc">Plombier mandaté pour vérification à 14h00.</p>
+              </div>
+
+              <div class="sim-chat-bar">
+                <span class="sim-chat-txt">Écrire au concierge...</span>
+                <span class="sim-send-btn">➤</span>
+              </div>
+            </div>
+            <div class="app-glow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Resident Demo Modal -->
+  <div class="app-modal" id="appDemoModal" role="dialog" aria-modal="true">
+    <div class="app-modal-content">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-header">
+        <span class="modal-badge">Simulation Interactive</span>
+        <h3 class="modal-title">Espace Résident Connecté</h3>
+        <p class="modal-sub">Découvrez comment les résidents de La Jacaranda interagissent au quotidien.</p>
+      </div>
+      <div class="modal-body">
+        <div class="demo-interactive-form">
+          <label>Type de signalement :</label>
+          <div class="demo-type-pills">
+            <button class="demo-pill active" data-type="claim">🔧 Réclamation (Plomberie, Ascenseur...)</button>
+            <button class="demo-pill" data-type="proposal">💡 Suggestion d'amélioration</button>
+          </div>
+          <input type="text" class="demo-input" id="demoSubject" placeholder="Objet (ex: Entretien espace vert)" />
+          <textarea class="demo-textarea" id="demoDesc" placeholder="Description du problème ou de votre idée..."></textarea>
+          <button class="btn-primary w-full" id="btnSimulateSubmit">Transmettre au Syndic (Démo)</button>
+          <div class="demo-result" id="demoResult">
+            <span>✓</span> Signalement transmis avec succès ! Le syndic a été notifié en temps réel.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ LOCALISATION ═══════════════════ -->
+  <section id="localisation" class="localisation-section">
+    <div class="loc-header">
+      <div class="container">
+        <div class="loc-title-row reveal-up">
+          <div>
+            <p class="section-tag" id="locTag">Emplacement Stratégique</p>
+            <h2 class="section-title" id="locTitle">Mrezgua, Nabeul<br /><em>À 300m de la Mer</em></h2>
+          </div>
+          <div class="loc-badges">
+            <div class="loc-badge" data-poi="beach">
+              <span class="loc-badge-icon">🏖</span>
+              <div>
+                <span class="loc-badge-val" id="locBadge1Val">300m</span>
+                <span class="loc-badge-lbl" id="locBadge1Lbl">Plage de sable fin (3 min à pied)</span>
+              </div>
+            </div>
+            <div class="loc-badge" data-poi="city">
+              <span class="loc-badge-icon">🏙</span>
+              <div>
+                <span class="loc-badge-val" id="locBadge2Val">5 min</span>
+                <span class="loc-badge-lbl" id="locBadge2Lbl">Centre-ville Nabeul &amp; Marchés</span>
+              </div>
+            </div>
+            <div class="loc-badge" data-poi="airport">
+              <span class="loc-badge-icon">✈</span>
+              <div>
+                <span class="loc-badge-val" id="locBadge3Val">45 min</span>
+                <span class="loc-badge-lbl" id="locBadge3Lbl">Aéroport Enfidha / Tunis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="map-wrap">
+      <!-- Full-height Google Maps iFrame — Mrezgua, Nabeul exact coordinates -->
+      <iframe
+        id="googleMap"
+        class="google-map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.312!2d10.7370!3d36.4508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd4a2b3e8d9f05%3A0x7e1c3a5b4f20a681!2sMrezgua%2C%20Nabeul%2C%20Tunisie!5e0!3m2!1sfr!2sfr!4v1724000000000!5m2!1sfr!2sfr"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Localisation Résidence Le Jacaranda - Mrezgua Nabeul">
+      </iframe>
+
+      <!-- Map Overlay Card -->
+      <div class="map-overlay-card">
+        <div class="map-pin-brand">
+          <div class="map-pin-logo">
+            <span>JC</span>
+          </div>
+          <div>
+            <span class="map-pin-title" id="mapPinTitle">Résidence Le Jacaranda</span>
+            <span class="map-pin-addr" id="mapPinAddr">Mrezgua, Nabeul, Tunisie · À 300m de la plage</span>
+          </div>
+        </div>
+
+        <div class="map-poi-list">
+          <div class="map-poi-item">
+            <span class="map-poi-icon">🏖</span>
+            <div class="map-poi-info">
+              <span class="map-poi-name">Plage de Mrezgua</span>
+              <span class="map-poi-dist">300 m · 3 min à pied</span>
+            </div>
+          </div>
+          <div class="map-poi-item">
+            <span class="map-poi-icon">🏙</span>
+            <div class="map-poi-info">
+              <span class="map-poi-name">Centre-ville Nabeul</span>
+              <span class="map-poi-dist">4 km · 5 min en voiture</span>
+            </div>
+          </div>
+          <div class="map-poi-item">
+            <span class="map-poi-icon">🛒</span>
+            <div class="map-poi-info">
+              <span class="map-poi-name">Commerces &amp; Marchés</span>
+              <span class="map-poi-dist">1,2 km · 2 min en voiture</span>
+            </div>
+          </div>
+          <div class="map-poi-item">
+            <span class="map-poi-icon">✈</span>
+            <div class="map-poi-info">
+              <span class="map-poi-name">Aéroport Enfidha</span>
+              <span class="map-poi-dist">60 km · 45 min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- GPS "M'y rendre" button -->
+        <div class="map-actions-row">
+          <button class="map-gps-btn magnetic" id="btnGpsDirections" aria-label="Itinéraire depuis ma position">
+            <span class="gps-spinner" id="gpsSpinner" hidden>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="spin-icon">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+              </svg>
+            </span>
+            <span class="gps-icon-wrap" id="gpsIconWrap">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
+                <path d="M12 1v2M12 21v2M1 12h2M21 12h2" stroke-width="1" opacity="0.5"/>
+              </svg>
+            </span>
+            <span id="gpsLabel">M'y rendre depuis ma position</span>
+          </button>
+          <p class="gps-status" id="gpsStatus"></p>
+        </div>
+
+        <a
+          href="https://www.google.com/maps/search/Mrezgua,+Nabeul,+Tunisie/@36.4508,10.7370,15z"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="map-open-btn magnetic"
+          id="mapOpenBtn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          Ouvrir dans Google Maps
+        </a>
+      </div>
+
+      <!-- Floating Directions CTA -->
+      <a href="https://www.google.com/maps/dir//Mrezgua,+Nabeul,+Tunisie" target="_blank" rel="noopener noreferrer" class="map-directions-fab magnetic">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/>
+        </svg>
+        <span>Itinéraire</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FAQ INTERACTIVE ═══════════════════ -->
+  <section id="faq" class="faq-section section-pad">
+    <div class="container">
+      <div class="section-header centered reveal-up">
+        <p class="section-tag" id="faqTag">Questions Fréquentes</p>
+        <h2 class="section-title" id="faqTitle">Tout ce que vous devez<br /><em>Savoir sur le Projet</em></h2>
+        <p class="faq-sub" id="faqSub">Retrouvez les réponses aux interrogations juridiques, financières et pratiques les plus courantes.</p>
+      </div>
+
+      <div class="faq-accordion reveal-up" id="faqAccordion">
+        <div class="faq-item active">
+          <button class="faq-question" aria-expanded="true">
+            <span class="faq-q-text" id="faqQ1">Le projet dispose-t-il d'un titre foncier individuel ?</span>
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-answer">
+            <p id="faqA1">Absolument. Chaque lot et appartement de la Résidence Le Jacaranda fait l'objet d'un titre foncier individuel distinct (Titre Bleu), garantissant une sécurité juridique absolue pour chaque acquéreur et facilitant les démarches notariées et bancaires.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-text" id="faqQ2">Quelles sont les échéances de livraison et de remise des clés ?</span>
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-answer">
+            <p id="faqA2">Les travaux sont achevés et les premiers blocs sont d'ores et déjà prêts pour livraison immédiate. La remise des clés s'effectue dès la signature du contrat définitif de vente et le règlement correspondant.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-text" id="faqQ3">Comment fonctionne la conciergerie et la gestion du syndic ?</span>
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-answer">
+            <p id="faqA3">Un syndic professionnel agréé assure l'entretien des parties communes, la surveillance 24/7, la maintenance des piscines et des ascenseurs. La conciergerie privée est disponible pour les réservations, transferts aéroport et services sur-mesure via l'application mobile.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-text" id="faqQ4">Les Tunisiens résidents à l'étranger (TRE) ou étrangers peuvent-ils acquérir ?</span>
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-answer">
+            <p id="faqA4">Oui. Les Tunisiens résidents à l'étranger bénéficient d'avantages financiers et fiscaux spécifiques. Les ressortissants étrangers peuvent également acquérir en toute légalité sous réserve des autorisations administratives d'usage pour lesquelles notre équipe juridique vous accompagne de A à Z.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-text" id="faqQ5">Quelles sont les modalités de paiement et partenariats bancaires ?</span>
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-answer">
+            <p id="faqA5">Nous proposons des facilités de paiement échelonnées adaptées, ainsi que des conventions de crédit immobilier avec les principales banques de la place à des taux très compétitifs.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-text" id="faqQ6">Quels sont les matériaux et finitions inclus ?</span>
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-answer">
+            <p id="faqA6">Revêtement en marbre Thala impérial de premier choix dans le salon et chambres, menuiserie en aluminium avec double vitrage isolant thermique et phonique, cuisine aménagée et équipée (plaque, hotte, four), sanitaires et robinetterie de marques européennes de luxe.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CONTACT ═══════════════════ -->
+  <section id="contact" class="contact section-pad">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <p class="section-tag" id="conTag">Service Commercial &amp; Syndic</p>
+          <h2 class="section-title" id="conTitle">Écrivez-nous,<br /><em>Rencontrons-nous</em></h2>
+          <p class="contact-sub" id="conSub">Notre équipe commerciale et de gestion est à votre entière disposition pour organiser une visite privée ou répondre à vos questions.</p>
+          <ul class="contact-details">
+            <li>
+              <span class="con-icon">✉</span>
+              <div>
+                <span class="con-label" id="conLabel1">Email Officiel</span>
+                <a href="mailto:contact@lejacaranda.tn" class="con-value">contact@lejacaranda.tn</a>
+              </div>
+            </li>
+            <li>
+              <span class="con-icon">✆</span>
+              <div>
+                <span class="con-label" id="conLabel2">Ligne Directe</span>
+                <a href="tel:+21672000000" class="con-value">+216 72 000 000</a>
+              </div>
+            </li>
+            <li>
+              <span class="con-icon">💬</span>
+              <div>
+                <span class="con-label">WhatsApp Concierge</span>
+                <a href="https://wa.me/21629112233" target="_blank" rel="noopener noreferrer" class="con-value">+216 29 112 233</a>
+              </div>
+            </li>
+            <li>
+              <span class="con-icon">⌖</span>
+              <div>
+                <span class="con-label" id="conLabel3">Adresse</span>
+                <span class="con-value" id="conAddr">Avenue Habib Bourguiba, Mrezgua, Nabeul</span>
+              </div>
+            </li>
+            <li>
+              <span class="con-icon">🏖</span>
+              <div>
+                <span class="con-label" id="conLabel4">Accès Plage</span>
+                <span class="con-value" id="conBeach">À 300 mètres de la mer</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="contact-form-wrap reveal-right">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname" id="fnameLabel">Prénom</label>
+                <input type="text" id="fname" name="fname" placeholder="Votre prénom" autocomplete="given-name" required />
+              </div>
+              <div class="form-group">
+                <label for="lname" id="lnameLabel">Nom</label>
+                <input type="text" id="lname" name="lname" placeholder="Votre nom" autocomplete="family-name" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email" id="emailLabel">Email</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone" id="phoneLabel">Téléphone / WhatsApp</label>
+              <input type="tel" id="phone" name="phone" placeholder="+216 ..." />
+            </div>
+            <div class="form-group">
+              <label for="message" id="msgLabel">Message / Type de bien recherché</label>
+              <textarea id="message" name="message" rows="4" placeholder="Je souhaite obtenir des informations sur le S+2 ou planifier une visite..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary form-submit magnetic" id="formSubmit">
+              <span id="btnSubmitText">Envoyer le Message</span>
+              <span>→</span>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <span>◆</span>
+              <span id="successMsg">Message envoyé avec succès. Notre équipe vous contactera sous 24 heures.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-main">Le Jacaranda</span>
+        <span class="logo-sub">RÉSIDENCE DE PRESTIGE · NABEUL</span>
+      </div>
+      <div class="footer-links">
+        <a href="#about"       class="footer-link">À Propos</a>
+        <a href="#amenities"   class="footer-link">Prestations</a>
+        <a href="#typologies"  class="footer-link">Logements</a>
+        <a href="#tour360"     class="footer-link">Visite 360°</a>
+        <a href="#gallery"     class="footer-link">Galerie</a>
+        <a href="#calculator"  class="footer-link">Simulateur</a>
+        <a href="#quartier"    class="footer-link">Quartier</a>
+        <a href="#app"         class="footer-link">Application</a>
+        <a href="#faq"         class="footer-link">FAQ</a>
+        <a href="#contact"     class="footer-link">Contact</a>
+      </div>
+      <div class="footer-divider-line"></div>
+      <p class="footer-tagline" id="footerTagline">L'excellence à chaque détail.</p>
+      <p class="footer-copy" id="footerCopy">© 2024 - 2026 Résidence Le Jacaranda. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

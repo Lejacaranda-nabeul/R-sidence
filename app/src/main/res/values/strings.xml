@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">La Jacaranda</string>
+    <string name="app_resident_title">La Jacaranda Résident</string>
+    <string name="app_syndic_title">La Jacaranda Syndic Admin</string>
+
+    <string name="lang_french">Français (FR)</string>
+    <string name="lang_english">English (EN)</string>
+    <string name="lang_spanish">Español (ES)</string>
+    <string name="lang_italian">Italiano (IT)</string>
+    <string name="lang_german">Deutsch (DE)</string>
+    <string name="lang_arabic">العربية (AR)</string>
+    <string name="select_language">Changer de langue</string>
+
+    <!-- Auth -->
+    <string name="welcome_to_residence">Bienvenue à la Résidence</string>
+    <string name="resident_login_title">Connexion Résident</string>
+    <string name="syndic_login_title">Espace Syndic &amp; Gestion</string>
+    <string name="apartment_code_label">Code Appartement (ex: A32)</string>
+    <string name="apartment_code_placeholder">Ex: A32</string>
+    <string name="apartment_code_helper">Bâtiment (A-D) + Étage (1-5) + N° Appt (1-5)</string>
+    <string name="apartment_code_error">Format invalide (ex: A32, B14)</string>
+    <string name="whatsapp_label">Numéro WhatsApp</string>
+    <string name="whatsapp_placeholder">+216 XX XXX XXX</string>
+    <string name="whatsapp_error">Veuillez entrer un numéro valide</string>
+    <string name="btn_access_dashboard">Accéder au Tableau de bord</string>
+    <string name="demo_access_title">— ACCÈS RAPIDE DÉMO —</string>
+    <string name="btn_demo_resident">Connexion Démo Résident (A32)</string>
+    <string name="btn_demo_syndic">Connexion Démo Syndic Admin</string>
+
+    <!-- Dashboard -->
+    <string name="resident_space">Espace Résident</string>
+    <string name="export_pdf">Exporter PDF</string>
+    <string name="logout">Déconnexion</string>
+    <string name="what_would_you_like_to_do">Que souhaitez-vous faire ?</string>
+    <string name="make_claim">Faire une\nréclamation</string>
+    <string name="make_claim_subtitle">Signaler un problème</string>
+    <string name="make_proposal">Faire une\nproposition</string>
+    <string name="make_proposal_subtitle">Idée d\'amélioration</string>
+    <string name="my_recent_requests">Mes demandes récentes</string>
+    <string name="see_all_history">Voir tout l\'historique</string>
+    <string name="no_requests_yet">Aucune demande enregistrée</string>
+    <string name="no_requests_desc">Vos signalements et propositions apparaîtront ici.</string>
+    <string name="private_message_tag">Message Privé</string>
+    <string name="from_author">De : %1$s</string>
+
+    <!-- Create Ticket -->
+    <string name="new_request_title">Nouvelle demande</string>
+    <string name="request_type_label">Type de demande</string>
+    <string name="type_claim_label">Réclamation</string>
+    <string name="type_proposal_label">Proposition</string>
+    <string name="category_label">Catégorie</string>
+    <string name="subject_label">Objet de la demande</string>
+    <string name="subject_placeholder">Ex: Fuite d\'eau au robinet</string>
+    <string name="subject_error">L\'objet est obligatoire</string>
+    <string name="description_label">Description détaillée</string>
+    <string name="description_placeholder">Décrivez le problème avec un maximum de détails...</string>
+    <string name="description_error">La description doit contenir au moins 10 caractères</string>
+    <string name="priority_label">Niveau d\'urgence</string>
+    <string name="priority_low">Faible</string>
+    <string name="priority_medium">Moyenne</string>
+    <string name="priority_high">Urgente</string>
+    <string name="priority_urgent">Critique</string>
+    <string name="photo_attachment">Photo / Justificatif (optionnel)</string>
+    <string name="btn_submit_request">Envoyer la demande</string>
+    <string name="ticket_created_success_title">Demande envoyée !</string>
+    <string name="ticket_created_success_msg">Votre demande a été transmise à la gestion du syndic avec succès.</string>
+    <string name="btn_understood">Compris</string>
+    <string name="btn_cancel">Annuler</string>
+
+    <!-- History -->
+    <string name="history_title">Historique des demandes</string>
+    <string name="tab_all">Tous</string>
+    <string name="tab_claims">Réclamations</string>
+    <string name="tab_proposals">Propositions</string>
+    <string name="tab_resolved">Traités</string>
+    <string name="empty_history_filter">Aucune demande trouvée pour ce filtre.</string>
+
+    <!-- Statuses -->
+    <string name="status_new">Nouveau</string>
+    <string name="status_in_progress">En cours</string>
+    <string name="status_resolved">Traité</string>
+    <string name="status_rejected">Rejeté</string>
+
+    <!-- Categories -->
+    <string name="cat_plumbing">Plomberie</string>
+    <string name="cat_electricity">Électricité</string>
+    <string name="cat_elevator">Ascenseur</string>
+    <string name="cat_common_areas">Parties Communes</string>
+    <string name="cat_pool">Piscine</string>
+    <string name="cat_security">Sécurité</string>
+    <string name="cat_noise">Nuisance Sonore</string>
+    <string name="cat_cleaning">Nettoyage</string>
+    <string name="cat_other">Autre</string>
+
+    <!-- Syndic Admin -->
+    <string name="syndic_admin_title">Administration Syndic</string>
+    <string name="broadcast_center_title">Centre d\'Annonces</string>
+    <string name="syndic_forum_title">Forum Syndic</string>
+    <string name="respond_to_resident">Répondre au résident</string>
+    <string name="response_placeholder">Saisir votre réponse ou action...</string>
+    <string name="btn_send_response">Envoyer la réponse</string>
+    <string name="action_call">Appeler</string>
+    <string name="action_whatsapp">WhatsApp</string>
+    <string name="clear_all_demo">Réinitialiser les données</string>
+    <string name="clear_all_confirm">Voulez-vous réinitialiser toutes les demandes ?</string>
+    <string name="btn_confirm">Confirmer</string>
+</resources>

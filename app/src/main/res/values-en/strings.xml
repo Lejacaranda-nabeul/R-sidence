@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">La Jacaranda</string>
+    <string name="app_resident_title">La Jacaranda Resident</string>
+    <string name="app_syndic_title">La Jacaranda Syndic Admin</string>
+
+    <string name="lang_french">Français (FR)</string>
+    <string name="lang_english">English (EN)</string>
+    <string name="lang_spanish">Español (ES)</string>
+    <string name="lang_italian">Italiano (IT)</string>
+    <string name="lang_german">Deutsch (DE)</string>
+    <string name="lang_arabic">العربية (AR)</string>
+    <string name="select_language">Change language</string>
+
+    <!-- Auth -->
+    <string name="welcome_to_residence">Welcome to the Residence</string>
+    <string name="resident_login_title">Resident Login</string>
+    <string name="syndic_login_title">Syndic &amp; Management Portal</string>
+    <string name="apartment_code_label">Apartment Code (e.g. A32)</string>
+    <string name="apartment_code_placeholder">E.g. A32</string>
+    <string name="apartment_code_helper">Building (A-D) + Floor (1-5) + Apt No (1-5)</string>
+    <string name="apartment_code_error">Invalid format (e.g. A32, B14)</string>
+    <string name="whatsapp_label">WhatsApp Number</string>
+    <string name="whatsapp_placeholder">+216 XX XXX XXX</string>
+    <string name="whatsapp_error">Please enter a valid phone number</string>
+    <string name="btn_access_dashboard">Access Dashboard</string>
+    <string name="demo_access_title">— QUICK DEMO ACCESS —</string>
+    <string name="btn_demo_resident">Demo Resident Login (A32)</string>
+    <string name="btn_demo_syndic">Demo Syndic Admin Login</string>
+
+    <!-- Dashboard -->
+    <string name="resident_space">Resident Space</string>
+    <string name="export_pdf">Export PDF</string>
+    <string name="logout">Logout</string>
+    <string name="what_would_you_like_to_do">What would you like to do?</string>
+    <string name="make_claim">File a\nclaim</string>
+    <string name="make_claim_subtitle">Report an issue</string>
+    <string name="make_proposal">Make a\nproposal</string>
+    <string name="make_proposal_subtitle">Improvement idea</string>
+    <string name="my_recent_requests">My recent requests</string>
+    <string name="see_all_history">View full history</string>
+    <string name="no_requests_yet">No requests registered yet</string>
+    <string name="no_requests_desc">Your reports and proposals will appear here.</string>
+    <string name="private_message_tag">Private Message</string>
+    <string name="from_author">From: %1$s</string>
+
+    <!-- Create Ticket -->
+    <string name="new_request_title">New Request</string>
+    <string name="request_type_label">Request Type</string>
+    <string name="type_claim_label">Claim / Issue</string>
+    <string name="type_proposal_label">Proposal / Idea</string>
+    <string name="category_label">Category</string>
+    <string name="subject_label">Request Subject</string>
+    <string name="subject_placeholder">E.g. Leaking kitchen faucet</string>
+    <string name="subject_error">Subject is required</string>
+    <string name="description_label">Detailed Description</string>
+    <string name="description_placeholder">Describe the issue in as much detail as possible...</string>
+    <string name="description_error">Description must contain at least 10 characters</string>
+    <string name="priority_label">Urgency Level</string>
+    <string name="priority_low">Low</string>
+    <string name="priority_medium">Medium</string>
+    <string name="priority_high">High</string>
+    <string name="priority_urgent">Critical</string>
+    <string name="photo_attachment">Photo / Proof (optional)</string>
+    <string name="btn_submit_request">Submit Request</string>
+    <string name="ticket_created_success_title">Request Submitted!</string>
+    <string name="ticket_created_success_msg">Your request has been successfully sent to the property management.</string>
+    <string name="btn_understood">Understood</string>
+    <string name="btn_cancel">Cancel</string>
+
+    <!-- History -->
+    <string name="history_title">Requests History</string>
+    <string name="tab_all">All</string>
+    <string name="tab_claims">Claims</string>
+    <string name="tab_proposals">Proposals</string>
+    <string name="tab_resolved">Resolved</string>
+    <string name="empty_history_filter">No requests found for this filter.</string>
+
+    <!-- Statuses -->
+    <string name="status_new">New</string>
+    <string name="status_in_progress">In Progress</string>
+    <string name="status_resolved">Resolved</string>
+    <string name="status_rejected">Rejected</string>
+
+    <!-- Categories -->
+    <string name="cat_plumbing">Plumbing</string>
+    <string name="cat_electricity">Electricity</string>
+    <string name="cat_elevator">Elevator</string>
+    <string name="cat_common_areas">Common Areas</string>
+    <string name="cat_pool">Swimming Pool</string>
+    <string name="cat_security">Security</string>
+    <string name="cat_noise">Noise Disturbance</string>
+    <string name="cat_cleaning">Cleaning &amp; Upkeep</string>
+    <string name="cat_other">Other</string>
+
+    <!-- Syndic Admin -->
+    <string name="syndic_admin_title">Syndic Administration</string>
+    <string name="broadcast_center_title">Broadcast Center</string>
+    <string name="syndic_forum_title">Syndic Forum</string>
+    <string name="respond_to_resident">Reply to resident</string>
+    <string name="response_placeholder">Enter your response or action taken...</string>
+    <string name="btn_send_response">Send Response</string>
+    <string name="action_call">Call</string>
+    <string name="action_whatsapp">WhatsApp</string>
+    <string name="clear_all_demo">Reset Data</string>
+    <string name="clear_all_confirm">Do you want to reset all requests?</string>
+    <string name="btn_confirm">Confirm</string>
+</resources>

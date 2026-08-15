@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">La Jacaranda</string>
+    <string name="app_resident_title">La Jacaranda Bewohner</string>
+    <string name="app_syndic_title">La Jacaranda Hausverwaltung</string>
+
+    <string name="lang_french">Français (FR)</string>
+    <string name="lang_english">English (EN)</string>
+    <string name="lang_spanish">Español (ES)</string>
+    <string name="lang_italian">Italiano (IT)</string>
+    <string name="lang_german">Deutsch (DE)</string>
+    <string name="lang_arabic">العربية (AR)</string>
+    <string name="select_language">Sprache ändern</string>
+
+    <!-- Auth -->
+    <string name="welcome_to_residence">Willkommen in der Residenz</string>
+    <string name="resident_login_title">Bewohner-Anmeldung</string>
+    <string name="syndic_login_title">Hausverwaltung &amp; Management</string>
+    <string name="apartment_code_label">Wohnungscode (z.B. A32)</string>
+    <string name="apartment_code_placeholder">Z.B. A32</string>
+    <string name="apartment_code_helper">Gebäude (A-D) + Etage (1-5) + Whg-Nr. (1-5)</string>
+    <string name="apartment_code_error">Ungültiges Format (z.B. A32, B14)</string>
+    <string name="whatsapp_label">WhatsApp-Nummer</string>
+    <string name="whatsapp_placeholder">+216 XX XXX XXX</string>
+    <string name="whatsapp_error">Bitte geben Sie eine gültige Telefonnummer ein</string>
+    <string name="btn_access_dashboard">Zum Dashboard</string>
+    <string name="demo_access_title">— SCHNELLER DEMO-ZUGANG —</string>
+    <string name="btn_demo_resident">Demo-Bewohner (A32)</string>
+    <string name="btn_demo_syndic">Demo-Hausverwaltung</string>
+
+    <!-- Dashboard -->
+    <string name="resident_space">Bewohner-Bereich</string>
+    <string name="export_pdf">PDF exportieren</string>
+    <string name="logout">Abmelden</string>
+    <string name="what_would_you_like_to_do">Was möchten Sie tun?</string>
+    <string name="make_claim">Reklamation\neinreichen</string>
+    <string name="make_claim_subtitle">Problem melden</string>
+    <string name="make_proposal">Vorschlag\neinreichen</string>
+    <string name="make_proposal_subtitle">Verbesserungsidee</string>
+    <string name="my_recent_requests">Meine aktuellen Anfragen</string>
+    <string name="see_all_history">Gesamten Verlauf anzeigen</string>
+    <string name="no_requests_yet">Noch keine Anfragen registriert</string>
+    <string name="no_requests_desc">Ihre Meldungen und Vorschläge werden hier angezeigt.</string>
+    <string name="private_message_tag">Private Nachricht</string>
+    <string name="from_author">Von: %1$s</string>
+
+    <!-- Create Ticket -->
+    <string name="new_request_title">Neue Anfrage</string>
+    <string name="request_type_label">Anfragetyp</string>
+    <string name="type_claim_label">Reklamation / Schaden</string>
+    <string name="type_proposal_label">Vorschlag / Idee</string>
+    <string name="category_label">Kategorie</string>
+    <string name="subject_label">Betreff der Anfrage</string>
+    <string name="subject_placeholder">Z.B. Wasserhahn in der Küche tropft</string>
+    <string name="subject_error">Betreff ist erforderlich</string>
+    <string name="description_label">Detaillierte Beschreibung</string>
+    <string name="description_placeholder">Beschreiben Sie das Problem so detailliert wie möglich...</string>
+    <string name="description_error">Die Beschreibung muss mindestens 10 Zeichen lang sein</string>
+    <string name="priority_label">Dringlichkeitsstufe</string>
+    <string name="priority_low">Niedrig</string>
+    <string name="priority_medium">Mittel</string>
+    <string name="priority_high">Dringend</string>
+    <string name="priority_urgent">Kritisch</string>
+    <string name="photo_attachment">Foto / Beleg (optional)</string>
+    <string name="btn_submit_request">Anfrage absenden</string>
+    <string name="ticket_created_success_title">Anfrage übermittelt!</string>
+    <string name="ticket_created_success_msg">Ihre Anfrage wurde erfolgreich an die Hausverwaltung übermittelt.</string>
+    <string name="btn_understood">Verstanden</string>
+    <string name="btn_cancel">Abbrechen</string>
+
+    <!-- History -->
+    <string name="history_title">Anfragenverlauf</string>
+    <string name="tab_all">Alle</string>
+    <string name="tab_claims">Reklamationen</string>
+    <string name="tab_proposals">Vorschläge</string>
+    <string name="tab_resolved">Erledigt</string>
+    <string name="empty_history_filter">Keine Anfragen für diesen Filter gefunden.</string>
+
+    <!-- Statuses -->
+    <string name="status_new">Neu</string>
+    <string name="status_in_progress">In Bearbeitung</string>
+    <string name="status_resolved">Erledigt</string>
+    <string name="status_rejected">Abgelehnt</string>
+
+    <!-- Categories -->
+    <string name="cat_plumbing">Sanitär / Klempner</string>
+    <string name="cat_electricity">Elektrik</string>
+    <string name="cat_elevator">Aufzug</string>
+    <string name="cat_common_areas">Gemeinschaftsbereiche</string>
+    <string name="cat_pool">Schwimmbad</string>
+    <string name="cat_security">Sicherheit</string>
+    <string name="cat_noise">Lärmbelästigung</string>
+    <string name="cat_cleaning">Reinigung</string>
+    <string name="cat_other">Sonstiges</string>
+
+    <!-- Syndic Admin -->
+    <string name="syndic_admin_title">Hausverwaltung Administration</string>
+    <string name="broadcast_center_title">Mitteilungszentrale</string>
+    <string name="syndic_forum_title">Hausverwaltungs-Forum</string>
+    <string name="respond_to_resident">Dem Bewohner antworten</string>
+    <string name="response_placeholder">Antwort oder Maßnahmen eingeben...</string>
+    <string name="btn_send_response">Antwort senden</string>
+    <string name="action_call">Anrufen</string>
+    <string name="action_whatsapp">WhatsApp</string>
+    <string name="clear_all_demo">Daten zurücksetzen</string>
+    <string name="clear_all_confirm">Möchten Sie alle Anfragen zurücksetzen?</string>
+    <string name="btn_confirm">Bestätigen</string>
+</resources>

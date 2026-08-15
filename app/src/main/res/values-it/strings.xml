@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">La Jacaranda</string>
+    <string name="app_resident_title">La Jacaranda Residente</string>
+    <string name="app_syndic_title">La Jacaranda Amministratore</string>
+
+    <string name="lang_french">Français (FR)</string>
+    <string name="lang_english">English (EN)</string>
+    <string name="lang_spanish">Español (ES)</string>
+    <string name="lang_italian">Italiano (IT)</string>
+    <string name="lang_german">Deutsch (DE)</string>
+    <string name="lang_arabic">العربية (AR)</string>
+    <string name="select_language">Cambia lingua</string>
+
+    <!-- Auth -->
+    <string name="welcome_to_residence">Benvenuti al Residence</string>
+    <string name="resident_login_title">Accesso Residente</string>
+    <string name="syndic_login_title">Portale Amministrazione &amp; Gestione</string>
+    <string name="apartment_code_label">Codice Appartamento (es: A32)</string>
+    <string name="apartment_code_placeholder">Es: A32</string>
+    <string name="apartment_code_helper">Edificio (A-D) + Piano (1-5) + N° Appt (1-5)</string>
+    <string name="apartment_code_error">Formato non valido (es: A32, B14)</string>
+    <string name="whatsapp_label">Numero WhatsApp</string>
+    <string name="whatsapp_placeholder">+216 XX XXX XXX</string>
+    <string name="whatsapp_error">Si prega di inserire un numero valido</string>
+    <string name="btn_access_dashboard">Accedi alla Dashboard</string>
+    <string name="demo_access_title">— ACCESSO RAPIDO DEMO —</string>
+    <string name="btn_demo_resident">Accesso Demo Residente (A32)</string>
+    <string name="btn_demo_syndic">Accesso Demo Amministratore</string>
+
+    <!-- Dashboard -->
+    <string name="resident_space">Spazio Residente</string>
+    <string name="export_pdf">Esporta PDF</string>
+    <string name="logout">Disconnetti</string>
+    <string name="what_would_you_like_to_do">Cosa desideri fare?</string>
+    <string name="make_claim">Invia un\nreclamo</string>
+    <string name="make_claim_subtitle">Segnala un problema</string>
+    <string name="make_proposal">Fai una\nproposta</string>
+    <string name="make_proposal_subtitle">Idea di miglioramento</string>
+    <string name="my_recent_requests">Le mie richieste recenti</string>
+    <string name="see_all_history">Visualizza cronologia completa</string>
+    <string name="no_requests_yet">Nessuna richiesta registrata</string>
+    <string name="no_requests_desc">Le tue segnalazioni e proposte appariranno qui.</string>
+    <string name="private_message_tag">Messaggio Privato</string>
+    <string name="from_author">Da: %1$s</string>
+
+    <!-- Create Ticket -->
+    <string name="new_request_title">Nuova richiesta</string>
+    <string name="request_type_label">Tipo di richiesta</string>
+    <string name="type_claim_label">Reclamo / Segnalazione</string>
+    <string name="type_proposal_label">Proposta / Idea</string>
+    <string name="category_label">Categoria</string>
+    <string name="subject_label">Oggetto della richiesta</string>
+    <string name="subject_placeholder">Es: Perdita d\'acqua dal rubinetto</string>
+    <string name="subject_error">L\'oggetto è obbligatorio</string>
+    <string name="description_label">Descrizione dettagliata</string>
+    <string name="description_placeholder">Descrivi il problema con il massimo dettaglio possibile...</string>
+    <string name="description_error">La descrizione deve contenere almeno 10 caratteri</string>
+    <string name="priority_label">Livello di urgenza</string>
+    <string name="priority_low">Bassa</string>
+    <string name="priority_medium">Media</string>
+    <string name="priority_high">Urgente</string>
+    <string name="priority_urgent">Critica</string>
+    <string name="photo_attachment">Foto / Allegato (opzionale)</string>
+    <string name="btn_submit_request">Invia la richiesta</string>
+    <string name="ticket_created_success_title">Richiesta inviata!</string>
+    <string name="ticket_created_success_msg">La tua richiesta è stata trasmessa con successo all\'amministrazione del condominio.</string>
+    <string name="btn_understood">Ho capito</string>
+    <string name="btn_cancel">Annulla</string>
+
+    <!-- History -->
+    <string name="history_title">Cronologia richieste</string>
+    <string name="tab_all">Tutte</string>
+    <string name="tab_claims">Reclami</string>
+    <string name="tab_proposals">Proposte</string>
+    <string name="tab_resolved">Risolte</string>
+    <string name="empty_history_filter">Nessuna richiesta trovata per questo filtro.</string>
+
+    <!-- Statuses -->
+    <string name="status_new">Nuovo</string>
+    <string name="status_in_progress">In corso</string>
+    <string name="status_resolved">Risolto</string>
+    <string name="status_rejected">Respinto</string>
+
+    <!-- Categories -->
+    <string name="cat_plumbing">Idraulica</string>
+    <string name="cat_electricity">Elettricità</string>
+    <string name="cat_elevator">Ascensore</string>
+    <string name="cat_common_areas">Parti Comuni</string>
+    <string name="cat_pool">Piscina</string>
+    <string name="cat_security">Sicurezza</string>
+    <string name="cat_noise">Disturbo della quiete</string>
+    <string name="cat_cleaning">Pulizia</string>
+    <string name="cat_other">Altro</string>
+
+    <!-- Syndic Admin -->
+    <string name="syndic_admin_title">Amministrazione Condominiale</string>
+    <string name="broadcast_center_title">Centro Avvisi</string>
+    <string name="syndic_forum_title">Forum Amministrazione</string>
+    <string name="respond_to_resident">Rispondi al residente</string>
+    <string name="response_placeholder">Inserisci la risposta o le azioni intraprese...</string>
+    <string name="btn_send_response">Invia risposta</string>
+    <string name="action_call">Chiama</string>
+    <string name="action_whatsapp">WhatsApp</string>
+    <string name="clear_all_demo">Ripristina dati</string>
+    <string name="clear_all_confirm">Vuoi ripristinare tutte le richieste?</string>
+    <string name="btn_confirm">Conferma</string>
+</resources>

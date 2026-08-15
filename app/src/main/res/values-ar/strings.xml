@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">La Jacaranda</string>
+    <string name="app_resident_title">إقامة لو خاكاراندا - المقيم</string>
+    <string name="app_syndic_title">إقامة لو خاكاراندا - السنديك</string>
+
+    <string name="lang_french">Français (FR)</string>
+    <string name="lang_english">English (EN)</string>
+    <string name="lang_spanish">Español (ES)</string>
+    <string name="lang_italian">Italiano (IT)</string>
+    <string name="lang_german">Deutsch (DE)</string>
+    <string name="lang_arabic">العربية (AR)</string>
+    <string name="select_language">تغيير اللغة</string>
+
+    <!-- Auth -->
+    <string name="welcome_to_residence">مرحباً بكم في الإقامة</string>
+    <string name="resident_login_title">تسجيل دخول المقيم</string>
+    <string name="syndic_login_title">بوابة السنديك والإدارة</string>
+    <string name="apartment_code_label">رمز الشقة (مثال: A32)</string>
+    <string name="apartment_code_placeholder">مثال: A32</string>
+    <string name="apartment_code_helper">المبنى (A-D) + الطابق (1-5) + رقم الشقة (1-5)</string>
+    <string name="apartment_code_error">تنسيق غير صالح (مثال: A32, B14)</string>
+    <string name="whatsapp_label">رقم الواتساب</string>
+    <string name="whatsapp_placeholder">+216 XX XXX XXX</string>
+    <string name="whatsapp_error">يرجى إدخال رقم هاتف صالح</string>
+    <string name="btn_access_dashboard">الدخول إلى لوحة التحكم</string>
+    <string name="demo_access_title">— وصول تجريبي سريع —</string>
+    <string name="btn_demo_resident">دخول تجريبي مقيم (A32)</string>
+    <string name="btn_demo_syndic">دخول تجريبي سنديك الإدارة</string>
+
+    <!-- Dashboard -->
+    <string name="resident_space">فضاء المقيم</string>
+    <string name="export_pdf">تصدير PDF</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="what_would_you_like_to_do">ماذا تريد أن تفعل؟</string>
+    <string name="make_claim">تقديم\nشكوى</string>
+    <string name="make_claim_subtitle">الإبلاغ عن مشكلة</string>
+    <string name="make_proposal">تقديم\nاقتراح</string>
+    <string name="make_proposal_subtitle">فكرة للتحسين</string>
+    <string name="my_recent_requests">طلباتي الأخيرة</string>
+    <string name="see_all_history">عرض السجل كاملاً</string>
+    <string name="no_requests_yet">لا توجد طلبات مسجلة بعد</string>
+    <string name="no_requests_desc">ستظهر بلاغاتك واقتراحاتك هنا.</string>
+    <string name="private_message_tag">رسالة خاصة</string>
+    <string name="from_author">من: %1$s</string>
+
+    <!-- Create Ticket -->
+    <string name="new_request_title">طلب جديد</string>
+    <string name="request_type_label">نوع الطلب</string>
+    <string name="type_claim_label">شكوى / عطل</string>
+    <string name="type_proposal_label">اقتراح / فكرة</string>
+    <string name="category_label">الفئة</string>
+    <string name="subject_label">موضوع الطلب</string>
+    <string name="subject_placeholder">مثال: تسرب مياه في الصنبور</string>
+    <string name="subject_error">الموضوع مطلوب</string>
+    <string name="description_label">الوصف التفصيلي</string>
+    <string name="description_placeholder">صف المشكلة بأكبر قدر ممكن من التفاصيل...</string>
+    <string name="description_error">يجب ألا يقل الوصف عن 10 أحرف</string>
+    <string name="priority_label">مستوى الاستعجال</string>
+    <string name="priority_low">منخفض</string>
+    <string name="priority_medium">متوسط</string>
+    <string name="priority_high">عاجل</string>
+    <string name="priority_urgent">حرج</string>
+    <string name="photo_attachment">صورة / إثبات (اختياري)</string>
+    <string name="btn_submit_request">إرسال الطلب</string>
+    <string name="ticket_created_success_title">تم إرسال الطلب!</string>
+    <string name="ticket_created_success_msg">تم إرسال طلبك بنجاح إلى إدارة السنديك.</string>
+    <string name="btn_understood">حسناً</string>
+    <string name="btn_cancel">إلغاء</string>
+
+    <!-- History -->
+    <string name="history_title">سجل الطلبات</string>
+    <string name="tab_all">الكل</string>
+    <string name="tab_claims">الشكاوى</string>
+    <string name="tab_proposals">الاقتراحات</string>
+    <string name="tab_resolved">المعالجة</string>
+    <string name="empty_history_filter">لم يتم العثور على طلبات لهذا التصنيف.</string>
+
+    <!-- Statuses -->
+    <string name="status_new">جديد</string>
+    <string name="status_in_progress">قيد المعالجة</string>
+    <string name="status_resolved">تمت المعالجة</string>
+    <string name="status_rejected">مرفوض</string>
+
+    <!-- Categories -->
+    <string name="cat_plumbing">سباكة</string>
+    <string name="cat_electricity">كهرباء</string>
+    <string name="cat_elevator">مصعد</string>
+    <string name="cat_common_areas">المساحات المشتركة</string>
+    <string name="cat_pool">المسبح</string>
+    <string name="cat_security">الأمن</string>
+    <string name="cat_noise">إزعاج وضوضاء</string>
+    <string name="cat_cleaning">النظافة</string>
+    <string name="cat_other">أخرى</string>
+
+    <!-- Syndic Admin -->
+    <string name="syndic_admin_title">إدارة السنديك</string>
+    <string name="broadcast_center_title">مركز الإعلانات</string>
+    <string name="syndic_forum_title">منتدى السنديك</string>
+    <string name="respond_to_resident">الرد على المقيم</string>
+    <string name="response_placeholder">أدخل ردك أو الإجراء المتخذ...</string>
+    <string name="btn_send_response">إرسال الرد</string>
+    <string name="action_call">اتصال</string>
+    <string name="action_whatsapp">واتساب</string>
+    <string name="clear_all_demo">إعادة تعيين البيانات</string>
+    <string name="clear_all_confirm">هل تريد إعادة ضبط جميع الطلبات؟</string>
+    <string name="btn_confirm">تأكيد</string>
+</resources>

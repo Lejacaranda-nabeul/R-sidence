@@ -1435,100 +1435,85 @@ function initTypologies() {
 }
 
 /* ═══════════════════════════════════════════════════
-   SMOOTH CLASSY JAZZ LOUNGE AUDIO SYSTEM
-═══════════════════════════════════════════════════ */
-/* ═══════════════════════════════════════════════════
-   LUXURY ENTRY OVERLAY — Garantit la lecture automatique
+   JAZZ LOUNGE — AUTOPLAY SILENCIEUX + DÉMUETTAGE AU 1er GESTE
+   Technique : muted autoplay (autorisé par tous les navigateurs)
+   → dès le 1er scroll/clic/toucher : démuettage progressif
 ═══════════════════════════════════════════════════ */
 (function() {
-  const overlay  = document.getElementById('entryOverlay');
-  const enterBtn = document.getElementById('entryBtn');
-  const skipBtn  = document.getElementById('entrySkip');
+  const audio = document.getElementById('jazzAudio');
+  const btn   = document.getElementById('soundscapeToggle');
+  if (!audio) return;
 
-  if (!overlay) return;
+  // L'audio démarre déjà en boucle muette (attributs HTML : autoplay muted loop)
+  // S'assurer qu'il tourne
+  audio.play().catch(() => {});
 
-  function dismissOverlay(withMusic) {
-    overlay.classList.add('hidden');
-    // remove from DOM after animation
-    setTimeout(() => overlay.remove(), 950);
+  let unmuteTriggered = false;
 
-    if (withMusic) {
-      jazzPlayer.play();
-    }
+  function unmuteFadeIn() {
+    if (unmuteTriggered) return;
+    unmuteTriggered = true;
+
+    // Démuetter et monter le volume en fondu sur 2.5 secondes
+    audio.volume = 0;
+    audio.muted  = false;
+
+    const target   = 0.45;
+    const duration = 2500; // ms
+    const interval = 60;
+    const steps    = duration / interval;
+    const stepVol  = target / steps;
+
+    const iv = setInterval(() => {
+      if (audio.volume + stepVol >= target) {
+        audio.volume = target;
+        clearInterval(iv);
+        if (btn) { btn.classList.add('active'); btn.title = 'Mettre en pause la musique Jazz'; }
+      } else {
+        audio.volume += stepVol;
+      }
+    }, interval);
+
+    // Retirer les listeners après le premier déclenchement
+    ['mousemove','click','scroll','touchstart','keydown','pointerdown'].forEach(evt => {
+      window.removeEventListener(evt, unmuteFadeIn, { passive: true });
+      document.removeEventListener(evt, unmuteFadeIn, { passive: true });
+    });
   }
 
-  if (enterBtn) enterBtn.addEventListener('click', () => dismissOverlay(true));
-  if (skipBtn)  skipBtn.addEventListener('click',  () => dismissOverlay(false));
+  // Écouter le premier geste de l'utilisateur
+  ['mousemove','click','scroll','touchstart','keydown','pointerdown'].forEach(evt => {
+    window.addEventListener(evt, unmuteFadeIn,  { once: true, passive: true });
+    document.addEventListener(evt, unmuteFadeIn, { once: true, passive: true });
+  });
+
+  // Bouton toggle dans la navbar
+  if (btn) {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (audio.paused) {
+        audio.muted = false;
+        audio.play().catch(() => {});
+        btn.classList.add('active');
+        btn.title = 'Mettre en pause la musique Jazz';
+        unmuteTriggered = true;
+      } else if (audio.muted) {
+        unmuteFadeIn();
+      } else {
+        audio.pause();
+        btn.classList.remove('active');
+        btn.title = 'Lancer l\'ambiance Jazz Lounge';
+      }
+    });
+  }
+
+  // Sync bouton selon état audio
+  audio.addEventListener('play',  () => { if (!audio.muted && btn) btn.classList.add('active'); });
+  audio.addEventListener('pause', () => { if (btn) btn.classList.remove('active'); });
+
 })();
 
-/* ═══════════════════════════════════════════════════
-   JAZZ LOUNGE AUDIO PLAYER
-═══════════════════════════════════════════════════ */
-class JazzLoungeAudio {
-  constructor() {
-    this.isPlaying = false;
-    this.audio = new Audio('jazz_lounge.mp3');
-    this.audio.loop = true;
-    this.audio.volume = 0.45;
-    this.audio.preload = 'auto';
-    this.toggleBtn = document.getElementById('soundscapeToggle');
-    this.init();
-  }
 
-  init() {
-    if (this.toggleBtn) {
-      this.toggleBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        this.isPlaying ? this.pause() : this.play();
-      });
-    }
-
-    this.audio.addEventListener('play', () => {
-      this.isPlaying = true;
-      if (this.toggleBtn) {
-        this.toggleBtn.classList.add('active');
-        this.toggleBtn.title = 'Mettre en pause la musique Jazz';
-      }
-    });
-
-    this.audio.addEventListener('pause', () => {
-      this.isPlaying = false;
-      if (this.toggleBtn) {
-        this.toggleBtn.classList.remove('active');
-        this.toggleBtn.title = 'Lancer l\'ambiance Jazz Lounge';
-      }
-    });
-  }
-
-  fadeInVolume(targetVol = 0.45, duration = 2000) {
-    this.audio.volume = 0.02;
-    const stepTime = 60;
-    const steps = duration / stepTime;
-    const step = (targetVol - 0.02) / steps;
-    const iv = setInterval(() => {
-      if (this.audio.volume + step >= targetVol) {
-        this.audio.volume = targetVol;
-        clearInterval(iv);
-      } else {
-        this.audio.volume = Math.min(targetVol, this.audio.volume + step);
-      }
-    }, stepTime);
-  }
-
-  play() {
-    this.audio.play().then(() => {
-      this.fadeInVolume();
-    }).catch(err => {
-      console.warn('Audio play blocked:', err);
-    });
-  }
-
-  pause() {
-    this.audio.pause();
-  }
-}
-
-const jazzPlayer = new JazzLoungeAudio();
 
 /* ═══════════════════════════════════════════════════
    LIVE MREZGUA WEATHER & REAL-TIME CLOCK

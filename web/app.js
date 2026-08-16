@@ -83,7 +83,7 @@ const translations = {
     footerTagline: "L'excellence à chaque détail.",
     footerCopy: "© 2024 - 2026 Résidence Le Jacaranda. Tous droits réservés.",
     navAbout: "À Propos", navAmen: "Prestations", navTour: "Visite 360°", navGal: "Galerie", navQuartier: "Quartier", navApp: "App Résidents", navCon: "Contact",
-    heroCta1: "Découvrir les Logements", heroCta2: "Visite Virtuelle 360°"
+    heroCta1: "Découvrir la Résidence", heroCta2: "Visite Virtuelle 360°"
   },
 
   /* ════════ ENGLISH ════════ */
@@ -154,7 +154,7 @@ const translations = {
     footerTagline: "Excellence in every detail.",
     footerCopy: "© 2024 - 2026 Résidence Le Jacaranda. All rights reserved.",
     navAbout: "About", navAmen: "Amenities", navTour: "360° Tour", navGal: "Gallery", navQuartier: "Neighborhood", navApp: "Resident App", navCon: "Contact",
-    heroCta1: "Discover Residences", heroCta2: "Virtual Tour 360°"
+    heroCta1: "Discover the Residence", heroCta2: "Virtual Tour 360°"
   },
 
   /* ════════ ARABIC ════════ */
@@ -225,7 +225,7 @@ const translations = {
     footerTagline: "التميز في أدق التفاصيل.",
     footerCopy: "© 2024 - 2026 إقامة لو خاكاراندا. جميع الحقوق محفوظة.",
     navAbout: "عن المشروع", navAmen: "المميزات", navTour: "جولة 360°", navGal: "الصور", navQuartier: "المنطقة", navApp: "تطبيق المقيمين", navCon: "تواصل معنا",
-    heroCta1: "اكتشف الشقق", heroCta2: "جولة افتراضية 360°"
+    heroCta1: "اكتشف الإقامة", heroCta2: "جولة افتراضية 360°"
   },
 
   /* ════════ ESPAÑOL ════════ */
@@ -296,7 +296,7 @@ const translations = {
     footerTagline: "La excelencia en cada detalle.",
     footerCopy: "© 2024 - 2026 Residencia Le Jacaranda. Todos los derechos reservados.",
     navAbout: "Acerca de", navAmen: "Servicios", navTour: "Visita 360°", navGal: "Galería", navQuartier: "Barrio", navApp: "App Residentes", navCon: "Contacto",
-    heroCta1: "Descubrir Viviendas", heroCta2: "Visita Virtual 360°"
+    heroCta1: "Descubrir la Residencia", heroCta2: "Visita Virtual 360°"
   },
 
   /* ════════ ITALIANO ════════ */
@@ -367,7 +367,7 @@ const translations = {
     footerTagline: "L'eccellenza in ogni dettaglio.",
     footerCopy: "© 2024 - 2026 Résidence Le Jacaranda. Tutti i diritti riservati.",
     navAbout: "Chi Siamo", navAmen: "Servizi", navTour: "Visita 360°", navGal: "Galleria", navQuartier: "Quartiere", navApp: "App Residenti", navCon: "Contatti",
-    heroCta1: "Scopri gli Alloggi", heroCta2: "Visita Virtuale 360°"
+    heroCta1: "Scopri la Residenza", heroCta2: "Visita Virtuale 360°"
   },
 
   /* ════════ DEUTSCH ════════ */
@@ -438,7 +438,7 @@ const translations = {
     footerTagline: "Exzellenz bis ins kleinste Detail.",
     footerCopy: "© 2024 - 2026 Résidence Le Jacaranda. Alle Rechte vorbehalten.",
     navAbout: "Über Uns", navAmen: "Ausstattung", navTour: "360° Rundgang", navGal: "Galerie", navQuartier: "Quartier", navApp: "Bewohner-App", navCon: "Kontakt",
-    heroCta1: "Wohnungen entdecken", heroCta2: "360° Rundgang"
+    heroCta1: "Residenz entdecken", heroCta2: "360° Rundgang"
   }
 };
 

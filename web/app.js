@@ -43,7 +43,7 @@ const translations = {
     tourTag: "Visite Virtuelle",
     tourTitle: "Explorez la Résidence<br /><em>en 360°</em>",
     tourSub: "Naviguez librement dans nos espaces. Cliquez et faites glisser pour explorer chaque recoin.",
-    tabInteriorText: "Appartement", tabPoolText: "Piscine & Jardins", tabBeachText: "Plage de Mrezgua",
+    tabFacadeText: "Façade & Nuit", tabInteriorText: "Appartement", tabPoolText: "Piscine & Jardins", tabBeachText: "Plage de Mrezgua",
     hintText: "Cliquez et faites glisser pour explorer",
     galTag: "Galerie Photographique",
     galTitle: "La Résidence<br /><em>en Images</em>",
@@ -115,7 +115,7 @@ const translations = {
     tourTag: "Virtual Tour",
     tourTitle: "Explore the Residence<br /><em>in 360°</em>",
     tourSub: "Navigate freely through our spaces. Click and drag to explore every corner.",
-    tabInteriorText: "Apartment", tabPoolText: "Pool & Gardens", tabBeachText: "Mrezgua Beach",
+    tabFacadeText: "Façade & Night", tabInteriorText: "Apartment", tabPoolText: "Pool & Gardens", tabBeachText: "Mrezgua Beach",
     hintText: "Click and drag to explore",
     galTag: "Photo Gallery",
     galTitle: "The Residence<br /><em>in Pictures</em>",
@@ -187,7 +187,7 @@ const translations = {
     tourTag: "جولة افتراضية",
     tourTitle: "استكشف الإقامة<br /><em>بزاوية 360°</em>",
     tourSub: "تجول بحرية داخل الإقامة. انقر واسحب للتنقل في جميع الأرجاء.",
-    tabInteriorText: "الشقق", tabPoolText: "المسبح والحدائق", tabBeachText: "شاطئ مـرزقة",
+    tabFacadeText: "الواجهة والمشهد الليلي", tabInteriorText: "الشقق", tabPoolText: "المسبح والحدائق", tabBeachText: "شاطئ مـرزقة",
     hintText: "انقر واسحب للاستكشاف",
     galTag: "معرض الصور",
     galTitle: "الإقـامـة<br /><em>بـالـصـور</em>",
@@ -259,7 +259,7 @@ const translations = {
     tourTag: "Visita Virtual",
     tourTitle: "Explore la Residencia<br /><em>en 360°</em>",
     tourSub: "Navegue libremente por nuestros espacios. Haga clic y arrastre para explorar cada rincón.",
-    tabInteriorText: "Apartamento", tabPoolText: "Piscina y Jardines", tabBeachText: "Playa de Mrezgua",
+    tabFacadeText: "Fachada y Noche", tabInteriorText: "Apartamento", tabPoolText: "Piscina y Jardines", tabBeachText: "Playa de Mrezgua",
     hintText: "Haga clic y arrastre para explorar",
     galTag: "Galería Fotográfica",
     galTitle: "La Residencia<br /><em>en Imágenes</em>",
@@ -331,7 +331,7 @@ const translations = {
     tourTag: "Visita Virtuale",
     tourTitle: "Esplora la Residenza<br /><em>a 360°</em>",
     tourSub: "Naviga liberamente negli spazi. Clicca e trascina per esplorare ogni dettaglio.",
-    tabInteriorText: "Appartamento", tabPoolText: "Piscina & Giardini", tabBeachText: "Spiaggia di Mrezgua",
+    tabFacadeText: "Facciata & Notte", tabInteriorText: "Appartamento", tabPoolText: "Piscina & Giardini", tabBeachText: "Spiaggia di Mrezgua",
     hintText: "Clicca e trascina per esplorare",
     galTag: "Galleria Fotografica",
     galTitle: "La Residenza<br /><em>in Immagini</em>",
@@ -403,7 +403,7 @@ const translations = {
     tourTag: "Virtueller Rundgang",
     tourTitle: "Entdecken Sie die Residenz<br /><em>in 360°</em>",
     tourSub: "Bewegen Sie sich frei durch unsere Räumlichkeiten. Klicken und ziehen Sie, um jede Ecke zu erkunden.",
-    tabInteriorText: "Wohnung", tabPoolText: "Pool & Gärten", tabBeachText: "Strand von Mrezgua",
+    tabFacadeText: "Fassade & Nacht", tabInteriorText: "Wohnung", tabPoolText: "Pool & Gärten", tabBeachText: "Strand von Mrezgua",
     hintText: "Klicken und ziehen zum Umschauen",
     galTag: "Fotogalerie",
     galTitle: "Die Residenz<br /><em>in Bildern</em>",
@@ -483,7 +483,7 @@ function applyTranslation(lang) {
     'badgeLabel','floatTitle','floatSub','aboutCtaText',
     'amen1','amen1d','amen2','amen2d','amen3','amen3d',
     'amen4','amen4d','amen5','amen5d','amen6','amen6d',
-    'typoSub','tourSub','tabInteriorText','tabPoolText','tabBeachText','hintText',
+    'typoSub','tourSub','tabFacadeText','tabInteriorText','tabPoolText','tabBeachText','hintText',
     'galFilterAll','galFilterExt','galFilterInt','galFilterNight','galFilterCommon','galFilterBeach',
     'galCap1','galCap2','galCap3','galCap4','galCap5','galCap6','galCap7','galCap8','galCap9','galCap10',
     'galCapBeach1','galCapBeach2','galCapBeach3','galCapBeach4',
@@ -826,9 +826,10 @@ if (cursor && cursorFollower && window.innerWidth > 768) {
    PANNELLUM 360° VIEWER
 ═══════════════════════════════════════════════════ */
 const scenes = {
-  interior: { src: 'panorama_interior.jpg', title: 'Appartement' },
-  pool:     { src: 'panorama_pool.jpg',     title: 'Piscine & Jardins' },
-  beach:    { src: 'panorama_beach.jpg',    title: 'Plage de Mrezgua' },
+  facade:   { src: 'panorama_facade_night.jpg', title: 'Façade & Nuit' },
+  interior: { src: 'panorama_interior.jpg',     title: 'Appartement' },
+  pool:     { src: 'panorama_pool.jpg',         title: 'Piscine & Jardins' },
+  beach:    { src: 'panorama_beach.jpg',        title: 'Plage de Mrezgua' },
 };
 
 let pnlViewer = null;
@@ -867,7 +868,7 @@ if (tour360Section) {
   const tourObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting && !pnlViewer) {
-        initPanorama('interior');
+        initPanorama('facade');
         const hint = document.getElementById('viewerHint');
         if (hint) setTimeout(() => { hint.style.opacity = '0'; }, 3500);
       }

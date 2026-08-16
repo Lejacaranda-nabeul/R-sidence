@@ -395,7 +395,7 @@ ul  { list-style: none; }
 }
 
 .hero-img {
-  object-position: center 30%;
+  object-position: center 50%;
   transition: transform 8s ease;
 }
 

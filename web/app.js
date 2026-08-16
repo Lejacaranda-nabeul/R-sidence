@@ -17,7 +17,7 @@ const translations = {
 
   /* ════════ FRANÇAIS ════════ */
   fr: {
-    heroBadgeText: "Résidence d'Exception · Mrezgua Nabeul · À 300m de la Plage",
+    heroBadgeText: "Résidence d'Exception · Cité Wafa AFH, Mrezgua Nabeul · À 300m de la Plage",
     heroEyebrowText: "Mrezgua · Nabeul · Tunisie",
     heroTagline: "L'art de vivre dans sa plus belle expression",
     scrollText: "Défiler pour explorer",
@@ -25,7 +25,7 @@ const translations = {
     badgeLabel: "Livraison Immédiate", floatTitle: "Architecture Contemporaine", floatSub: "Design méditerranéen & finitions haut de gamme",
     aboutTag: "À Propos du Projet",
     aboutTitle: "Un Art de Vivre<br /><em>Exceptionnel</em>",
-    aboutBody: "Nichée au cœur de Mrezgua, à seulement 300 mètres de la magnifique plage de Nabeul, la Résidence Le Jacaranda est le fruit d'une vision architecturale ambitieuse : offrir un cadre de vie alliant modernité, élégance et sérénité.",
+    aboutBody: "Nichée au cœur de la Cité Wafa (AFH Mrezgua), à seulement 300 mètres de la magnifique plage de Nabeul, la Résidence Le Jacaranda est le fruit d'une vision architecturale ambitieuse : offrir un cadre de vie alliant modernité, élégance et sérénité.",
     aboutBody2: "Ses façades en blanc immaculé, ses balcons généreux et ses espaces communs soigneusement paysagés font de cette résidence un havre de paix au design contemporain haut de gamme.",
     aboutFeatures: ["Architecture contemporaine de prestige", "Finitions de premier choix en marbre et aluminium", "Espaces verts et jardins paysagers méditerranéens", "Résidence clôturée, gardée 24h/24 avec contrôle d'accès"],
     aboutCtaText: "Explorer en 360°",
@@ -73,13 +73,13 @@ const translations = {
     locBadge2Val: "5 min",  locBadge2Lbl: "Centre-ville Nabeul & Marchés",
     locBadge3Val: "45 min", locBadge3Lbl: "Aéroport Enfidha / Tunis",
     mapPinTitle: "Résidence Le Jacaranda",
-    mapPinAddr: "Mrezgua, Nabeul, Tunisie · À 300m de la plage",
+    mapPinAddr: "Cité Wafa AFH, Mrezgua, Nabeul · À 300m de la plage",
     gpsLabel: "M'y rendre depuis ma position",
     conTag: "Service Commercial & Syndic",
     conTitle: "Écrivez-nous,<br /><em>Rencontrons-nous</em>",
     conSub: "Notre équipe commerciale et de gestion est à votre entière disposition pour organiser une visite privée ou répondre à vos questions.",
     conLabel1: "Email Officiel", conLabel2: "Ligne Directe", conLabel3: "Adresse", conLabel4: "Accès Plage",
-    conAddr: "Avenue Habib Bourguiba, Mrezgua, Nabeul", conBeach: "À 300 mètres de la mer",
+    conAddr: "Cité Wafa AFH, Mrezgua, Nabeul", conBeach: "À 300 mètres de la mer",
     fnameLabel: "Prénom", lnameLabel: "Nom", emailLabel: "Email", phoneLabel: "Téléphone / WhatsApp", msgLabel: "Message / Type de bien recherché",
     fnamePh: "Votre prénom", lnamePh: "Votre nom", emailPh: "votre@email.com", phonePh: "+216 ...", msgPh: "Je souhaite obtenir des informations sur le S+2 ou planifier une visite...",
     formSubmit: "Envoyer le Message",
@@ -92,7 +92,7 @@ const translations = {
 
   /* ════════ ENGLISH ════════ */
   en: {
-    heroBadgeText: "Exceptional Residence · Mrezgua Nabeul · 300m from the Beach",
+    heroBadgeText: "Exceptional Residence · Cité Wafa AFH, Mrezgua Nabeul · 300m from the Beach",
     heroEyebrowText: "Mrezgua · Nabeul · Tunisia",
     heroTagline: "The art of living at its finest",
     scrollText: "Scroll to explore",
@@ -100,7 +100,7 @@ const translations = {
     badgeLabel: "Immediate Delivery", floatTitle: "Contemporary Architecture", floatSub: "Mediterranean design & luxury finishes",
     aboutTag: "About the Project",
     aboutTitle: "An Exceptional<br /><em>Living Experience</em>",
-    aboutBody: "Nestled in the heart of Mrezgua, just 300 meters from Nabeul's stunning beach, Résidence Le Jacaranda is born from an ambitious architectural vision: offering a living environment blending modernity, elegance, and serenity.",
+    aboutBody: "Nestled in the heart of Cité Wafa (AFH Mrezgua), just 300 meters from Nabeul's stunning beach, Résidence Le Jacaranda is born from an ambitious architectural vision: offering a living environment blending modernity, elegance, and serenity.",
     aboutBody2: "With pristine white facades, generous balconies, and meticulously landscaped common areas, the residence is a haven of peace featuring upscale contemporary design.",
     aboutFeatures: ["Prestigious contemporary architecture", "First-choice finishes in noble marble & aluminum", "Lush Mediterranean gardens and landscaping", "Gated, 24/7 guarded residence with secured access"],
     aboutCtaText: "Explore in 360°",
@@ -147,13 +147,13 @@ const translations = {
     locBadge2Val: "5 min",  locBadge2Lbl: "Nabeul Downtown & Markets",
     locBadge3Val: "45 min", locBadge3Lbl: "Enfidha / Tunis Airport",
     mapPinTitle: "Résidence Le Jacaranda",
-    mapPinAddr: "Mrezgua, Nabeul, Tunisia · 300m from the beach",
+    mapPinAddr: "Cité Wafa AFH, Mrezgua, Nabeul, Tunisia · 300m from the beach",
     gpsLabel: "Directions from my location",
     conTag: "Sales & Management Office",
     conTitle: "Write to Us,<br /><em>Let's Meet</em>",
     conSub: "Our sales and management team is at your complete disposal to arrange a private visit or answer any questions.",
     conLabel1: "Official Email", conLabel2: "Direct Phone", conLabel3: "Address", conLabel4: "Beach Access",
-    conAddr: "Avenue Habib Bourguiba, Mrezgua, Nabeul", conBeach: "300 meters from the sea",
+    conAddr: "Cité Wafa AFH, Mrezgua, Nabeul, Tunisia", conBeach: "300 meters from the sea",
     fnameLabel: "First Name", lnameLabel: "Last Name", emailLabel: "Email", phoneLabel: "Phone / WhatsApp", msgLabel: "Message / Property Type Requested",
     fnamePh: "Your first name", lnamePh: "Your last name", emailPh: "your@email.com", phonePh: "+216 ...", msgPh: "Your message...",
     formSubmit: "Send Message",
@@ -240,7 +240,7 @@ const translations = {
 
   /* ════════ ESPAÑOL ════════ */
   es: {
-    heroBadgeText: "Residencia Excepcional · Mrezgua Nabeul · A 300m de la Playa",
+    heroBadgeText: "Residencia Excepcional · Cité Wafa AFH, Mrezgua Nabeul · A 300m de la Playa",
     heroEyebrowText: "Mrezgua · Nabeul · Túnez",
     heroTagline: "El arte de vivir en su más bella expresión",
     scrollText: "Desplazar para explorar",
@@ -248,7 +248,7 @@ const translations = {
     badgeLabel: "Entrega Inmediata", floatTitle: "Arquitectura Contemporánea", floatSub: "Diseño mediterráneo y acabados de lujo",
     aboutTag: "Acerca del Proyecto",
     aboutTitle: "Un Arte de Vivir<br /><em>Excepcional</em>",
-    aboutBody: "Ubicada en el corazón de Mrezgua, a solo 300 metros de la magnífica playa de Nabeul, la Residencia Le Jacaranda es fruto de una ambiciosa visión arquitectónica: un espacio que combina modernidad, elegancia y serenidad.",
+    aboutBody: "Ubicada en el corazón de Cité Wafa (AFH Mrezgua), a solo 300 metros de la magnífica playa de Nabeul, la Residencia Le Jacaranda es fruto de una ambiciosa visión arquitectónica: un espacio que combina modernidad, elegancia y serenidad.",
     aboutBody2: "Sus fachadas de blanco inmaculado, sus amplios balcones y sus zonas comunes cuidadosamente ajardinadas hacen de esta residencia un remanso de paz con diseño contemporáneo de alta gama.",
     aboutFeatures: ["Arquitectura contemporánea de prestigio", "Acabados de primera calidad en mármol y aluminio", "Espacios verdes y jardines mediterráneos", "Residencia cerrada, vigilada 24h/24 con control de acceso"],
     aboutCtaText: "Explorar en 360°",
@@ -296,13 +296,13 @@ const translations = {
     locBadge2Val: "5 min",  locBadge2Lbl: "Centro de Nabeul y Mercados",
     locBadge3Val: "45 min", locBadge3Lbl: "Aeropuerto de Enfidha / Túnez",
     mapPinTitle: "Residencia Le Jacaranda",
-    mapPinAddr: "Mrezgua, Nabeul, Túnez · A 300m de la playa",
+    mapPinAddr: "Cité Wafa AFH, Mrezgua, Nabeul, Túnez · A 300m de la playa",
     gpsLabel: "Cómo llegar desde mi ubicación",
     conTag: "Oficina Comercial & Gestión",
     conTitle: "Escríbanos,<br /><em>Reunámonos</em>",
     conSub: "Nuestro equipo comercial y de gestión está a su entera disposición para organizar una visita privada o responder a sus dudas.",
     conLabel1: "Correo Oficial", conLabel2: "Línea Directa", conLabel3: "Dirección", conLabel4: "Acceso Playa",
-    conAddr: "Avenida Habib Bourguiba, Mrezgua, Nabeul", conBeach: "A 300 metros del mar",
+    conAddr: "Cité Wafa AFH, Mrezgua, Nabeul, Túnez", conBeach: "A 300 metros del mar",
     fnameLabel: "Nombre", lnameLabel: "Apellido", emailLabel: "Correo electrónico", phoneLabel: "Teléfono / WhatsApp", msgLabel: "Mensaje / Tipo de inmueble deseado",
     fnamePh: "Su nombre", lnamePh: "Su apellido", emailPh: "su@correo.com", phonePh: "+216 ...", msgPh: "Su mensaje...",
     formSubmit: "Enviar Mensaje",
@@ -315,7 +315,7 @@ const translations = {
 
   /* ════════ ITALIANO ════════ */
   it: {
-    heroBadgeText: "Residenza d'Eccezione · Mrezgua Nabeul · A 300m dalla Spiaggia",
+    heroBadgeText: "Residenza d'Eccezione · Cité Wafa AFH, Mrezgua Nabeul · A 300m dalla Spiaggia",
     heroEyebrowText: "Mrezgua · Nabeul · Tunisia",
     heroTagline: "L'arte di vivere nella sua più bella espressione",
     scrollText: "Scorri per esplorare",
@@ -323,7 +323,7 @@ const translations = {
     badgeLabel: "Consegna Immediata", floatTitle: "Architettura Contemporanea", floatSub: "Design mediterraneo & finiture di lusso",
     aboutTag: "Informazioni sul Progetto",
     aboutTitle: "Un'Arte di Vivere<br /><em>Eccezionale</em>",
-    aboutBody: "Immersa nel cuore di Mrezgua, a soli 300 metri dalla splendida spiaggia di Nabeul, la Résidence Le Jacaranda nasce da una visione ambiziosa: offrire uno spazio abitativo che unisce modernità, eleganza e serenità.",
+    aboutBody: "Immersa nel cuore di Cité Wafa (AFH Mrezgua), a soli 300 metri dalla splendida spiaggia di Nabeul, la Résidence Le Jacaranda nasce da una visione ambiziosa: offrire uno spazio abitativo che unisce modernità, eleganza e serenità.",
     aboutBody2: "Le sue facciate bianche immacolate, i suoi ampi balconi e le aree comuni curate fanno di questa residenza un'oasi di pace dal design contemporaneo di alto livello.",
     aboutFeatures: ["Architettura contemporanea di prestigio", "Finiture di prima scelta in marmo e alluminio", "Spazi verdi e giardini mediterranei curati", "Residenza recintata, custodita 24/7 con controllo accessi"],
     aboutCtaText: "Esplora a 360°",
@@ -371,13 +371,13 @@ const translations = {
     locBadge2Val: "5 min",  locBadge2Lbl: "Centro di Nabeul & Mercati",
     locBadge3Val: "45 min", locBadge3Lbl: "Aeroporto di Enfidha / Tunisi",
     mapPinTitle: "Résidence Le Jacaranda",
-    mapPinAddr: "Mrezgua, Nabeul, Tunisia · A 300m dalla spiaggia",
+    mapPinAddr: "Cité Wafa AFH, Mrezgua, Nabeul, Tunisia · A 300m dalla spiaggia",
     gpsLabel: "Indicazioni dalla mia posizione",
     conTag: "Ufficio Commerciale & Amministrazione",
     conTitle: "Scrivici,<br /><em>Incontriamoci</em>",
     conSub: "Il nostro team commerciale e di gestione è a vostra disposizione per organizzare una visita privata o rispondere a ogni domanda.",
     conLabel1: "Email Ufficiale", conLabel2: "Telefono Diretto", conLabel3: "Indirizzo", conLabel4: "Accesso Spiaggia",
-    conAddr: "Avenue Habib Bourguiba, Mrezgua, Nabeul", conBeach: "A 300 metri dal mare",
+    conAddr: "Cité Wafa AFH, Mrezgua, Nabeul, Tunisia", conBeach: "A 300 metri dal mare",
     fnameLabel: "Nome", lnameLabel: "Cognome", emailLabel: "Email", phoneLabel: "Telefono / WhatsApp", msgLabel: "Messaggio / Tipologia richiesta",
     fnamePh: "Il tuo nome", lnamePh: "Il tuo cognome", emailPh: "tua@email.com", phonePh: "+216 ...", msgPh: "Il tuo messaggio...",
     formSubmit: "Invia il Messaggio",
@@ -390,7 +390,7 @@ const translations = {
 
   /* ════════ DEUTSCH ════════ */
   de: {
-    heroBadgeText: "Außergewöhnliche Residenz · Mrezgua Nabeul · 300m vom Strand",
+    heroBadgeText: "Außergewöhnliche Residenz · Cité Wafa AFH, Mrezgua Nabeul · 300m vom Strand",
     heroEyebrowText: "Mrezgua · Nabeul · Tunesien",
     heroTagline: "Die Kunst des Wohnens in schönster Vollendung",
     scrollText: "Scrollen zum Erkunden",
@@ -398,7 +398,7 @@ const translations = {
     badgeLabel: "Sofortige Übergabe", floatTitle: "Zeitgenössische Architektur", floatSub: "Mediterranes Design & Luxusausstattung",
     aboutTag: "Über das Projekt",
     aboutTitle: "Ein Außergewöhnliches<br /><em>Lebensgefühl</em>",
-    aboutBody: "Im Herzen von Mrezgua, nur 300 Meter vom herrlichen Strand von Nabeul entfernt, vereint die Résidence Le Jacaranda Modernität, Eleganz und Ruhe in höchster Vollendung.",
+    aboutBody: "Im Herzen der Cité Wafa (AFH Mrezgua), nur 300 Meter vom herrlichen Strand von Nabeul entfernt, vereint die Résidence Le Jacaranda Modernität, Eleganz und Ruhe in höchster Vollendung.",
     aboutBody2: "Strahlend weiße Fassaden, großzügige Balkone und liebevoll gestaltete Grünanlagen machen diese Residenz zu einer friedvollen Oase im gehobenen zeitgenössischen Design.",
     aboutFeatures: ["Prestigeträchtige zeitgenössische Architektur", "Erstklassige Ausführungen in Marmor und Aluminium", "Mediterrane Grünflächen und angelegte Gärten", "Umzäunte, rund um die Uhr bewachte Residenz mit Zutrittskontrolle"],
     aboutCtaText: "360° Rundgang",
@@ -446,13 +446,13 @@ const translations = {
     locBadge2Val: "5 Min.", locBadge2Lbl: "Stadtzentrum Nabeul & Märkte",
     locBadge3Val: "45 Min.", locBadge3Lbl: "Flughafen Enfidha / Tunis",
     mapPinTitle: "Résidence Le Jacaranda",
-    mapPinAddr: "Mrezgua, Nabeul, Tunesien · 300m vom Strand",
+    mapPinAddr: "Cité Wafa AFH, Mrezgua, Nabeul, Tunesien · 300m vom Strand",
     gpsLabel: "Route von meinem Standort",
     conTag: "Verkaufsbüro & Verwaltung",
     conTitle: "Schreiben Sie uns,<br /><em>Lernen wir uns kennen</em>",
     conSub: "Unser Vertriebs- und Verwaltungsteam steht Ihnen gerne zur Seite, um eine private Besichtigung zu vereinbaren oder Ihre Fragen zu beantworten.",
     conLabel1: "Offizielle E-Mail", conLabel2: "Direktrufnummer", conLabel3: "Adresse", conLabel4: "Strandzugang",
-    conAddr: "Avenue Habib Bourguiba, Mrezgua, Nabeul", conBeach: "300 Meter vom Meer entfernt",
+    conAddr: "Cité Wafa AFH, Mrezgua, Nabeul, Tunesien", conBeach: "300 Meter vom Meer entfernt",
     fnameLabel: "Vorname", lnameLabel: "Nachname", emailLabel: "E-Mail", phoneLabel: "Telefon / WhatsApp", msgLabel: "Nachricht / Gewünschter Wohnungstyp",
     fnamePh: "Ihr Vorname", lnamePh: "Ihr Nachname", emailPh: "ihre@email.de", phonePh: "+216 ...", msgPh: "Ihre Nachricht...",
     formSubmit: "Nachricht Senden",
@@ -1233,9 +1233,9 @@ if (btnSimulateSubmit) {
    GPS — DIRECTIONS FROM CURRENT POSITION
    Destination: Résidence Le Jacaranda, Mrezgua Nabeul
 ═══════════════════════════════════════════════════ */
-const DEST_LAT  = 36.4508;
-const DEST_LNG  = 10.7370;
-const DEST_NAME = 'Résidence Le Jacaranda, Mrezgua, Nabeul, Tunisie';
+const DEST_LAT  = 36.4354;
+const DEST_LNG  = 10.6918;
+const DEST_NAME = 'Résidence Le Jacaranda, Cité Wafa AFH, Mrezgua, Nabeul, Tunisie';
 
 const btnGps    = document.getElementById('btnGpsDirections');
 const gpsSpinner = document.getElementById('gpsSpinner');

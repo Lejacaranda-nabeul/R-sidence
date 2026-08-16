@@ -1,6 +1,6 @@
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
-   Rأ‰SIDENCE LE JACARANDA â€” App Logic (FR آ· AR آ· EN آ· ES)
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+/* ═══════════════════════════════════════════════════════
+   RÉSIDENCE LE JACARANDA — App Logic (FR · EN · ES · IT · DE · AR)
+═══════════════════════════════════════════════════════ */
 
 /* ── Language Config ── */
 const langMeta = {
@@ -9,364 +9,442 @@ const langMeta = {
   es: { flag: '🇪🇸', code: 'ES', label: 'Español',  dir: 'ltr', fontClass: '' },
   it: { flag: '🇮🇹', code: 'IT', label: 'Italiano', dir: 'ltr', fontClass: '' },
   de: { flag: '🇩🇪', code: 'DE', label: 'Deutsch',  dir: 'ltr', fontClass: '' },
-  ar: { flag: '🇹🇳', code: 'AR', label: 'عربي',     dir: 'rtl', fontClass: 'rtl' },
+  ar: { flag: '🇸🇦', code: 'AR', label: 'عربي',     dir: 'rtl', fontClass: 'rtl' },
 };
 
-/* â”€â”€ Translations â”€â”€ */
+/* ── Translations ── */
 const translations = {
 
-  /* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ FRANأ‡AIS â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+  /* ════════ FRANÇAIS ════════ */
   fr: {
-    heroEyebrow: 'Mrezgua آ· Nabeul آ· Tunisie',
+    heroBadgeText: "Résidence d'Exception · Mrezgua Nabeul · À 300m de la Plage",
+    heroEyebrowText: "Mrezgua · Nabeul · Tunisie",
     heroTagline: "L'art de vivre dans sa plus belle expression",
-    scrollText: 'Dأ©filer',
-    stat1: 'Blocs', stat2: 'Piscines', stat3: 'de la Plage', stat4: 'Conciergerie',
-    aboutTag: 'أ€ Propos',
-    aboutTitle: 'Un Art de Vivre<br /><em>Exceptionnel</em>',
-    aboutBody: "Nichأ©e au cإ“ur de Mrezgua, أ  300 mأ¨tres de la plage de Nabeul, la Rأ©sidence Le Jacaranda est le fruit d'une vision architecturale ambitieuse : offrir un cadre de vie alliant modernitأ©, أ©lأ©gance et sأ©rأ©nitأ©.",
-    aboutBody2: 'Ses faأ§ades en blanc immaculأ©, ses balcons gأ©nأ©reux et ses espaces communs soigneusement amأ©nagأ©s font de cette rأ©sidence un havre de paix au design contemporain.',
-    aboutFeatures: ['Architecture contemporaine haut de gamme', 'Finitions de premier choix', 'Espaces verts paysagأ©s', 'أ€ 300m de la mer'],
-    badgeLabel: 'Livraison', floatTitle: 'Architecture Premium', floatSub: 'Design contemporain de prestige',
-    aboutCtaText: 'Explorer en 360آ°',
-    amenTag: 'Prestations',
-    amenTitle: 'Tout le Luxe<br /><em>Rأ©uni en un Lieu</em>',
-    amen1: 'Piscines',          amen1d: 'Deux bassins cristallins illuminأ©s, pour des moments de dأ©tente incomparables أ  toute heure.',
-    amen2: 'Sأ©curitأ© 24h/24',  amen2d: 'Accأ¨s sأ©curisأ©, surveillance permanente et systأ¨me de contrأ´le avancأ© pour votre tranquillitأ©.',
-    amen3: 'Parking Privأ©',    amen3d: 'Espaces de stationnement couverts et sأ©curisأ©s, أ  disposition exclusive des rأ©sidents.',
-    amen4: 'Espaces Verts',    amen4d: 'Jardins paysagأ©s et vأ©gأ©tation mأ©diterranأ©enne pour une atmosphأ¨re douce et ressourأ§ante.',
-    amen5: 'Finitions Premium', amen5d: "Matأ©riaux nobles, carrelage grand format, menuiserie aluminium â€” des prestations d'exception.",
-    amen6: 'Conciergerie',     amen6d: 'Service disponible pour rأ©pondre أ  toutes vos demandes avec la plus grande discrأ©tion.',
-    tourTag: 'Visite Virtuelle',
-    tourTitle: 'Explorez la Rأ©sidence<br /><em>en 360آ°</em>',
-    tourSub: 'Naviguez librement dans nos espaces. Cliquez et faites glisser pour explorer chaque recoin.',
-    tabInteriorText: 'Appartement', tabPoolText: 'Piscine & Jardins',
-    hintText: 'Cliquez et faites glisser pour explorer',
-    galTag: 'Galerie',
-    galTitle: 'La Rأ©sidence<br /><em>en Images</em>',
-    galCap1: 'Vue Extأ©rieure', galCap2: 'Appartements', galCap3: 'Piscine de Nuit', galCap4: 'Vue Aأ©rienne',
-    appTag: 'Application Mobile',
-    appTitle: 'Gأ©rez votre rأ©sidence<br /><em>depuis votre poche</em>',
-    appBody: "Rأ©servez la piscine, contactez la conciergerie, accأ©dez aux informations et recevez les notifications importantes â€” tout depuis l'application officielle Le Jacaranda.",
-    appFeatures: ["Accأ¨s et contrأ´le de l'entrأ©e", 'Rأ©servation piscine & espaces communs', 'Chat direct avec la conciergerie', 'Notifications et annonces rأ©sidence'],
-    appStoreSub: 'Tأ©lأ©charger sur', playStoreSub: 'Disponible sur',
-    locTag: 'Localisation',
-    locTitle: 'Mrezgua, Nabeul<br /><em>أ€ 300m de la Mer</em>',
-    locBadge1Val: '300m',  locBadge1Lbl: 'de la plage',
-    locBadge2Val: 'Nabeul', locBadge2Lbl: 'Centre-ville',
-    locBadge3Val: 'Enfidha', locBadge3Lbl: 'Aأ©roport proche',
-    mapPinTitle: 'Rأ©sidence Le Jacaranda',
-    mapPinAddr: 'Mrezgua, Nabeul, Tunisie آ· 300m de la plage',
-    conTag: 'Contact',
-    conTitle: 'أ‰crivez-nous,<br /><em>Rencontrons-nous</em>',
-    conSub: 'Notre أ©quipe est أ  votre disposition pour vous accompagner dans votre projet de vie au sein de la Rأ©sidence Le Jacaranda.',
-    conLabel1: 'Email', conLabel2: 'Tأ©lأ©phone', conLabel3: 'Adresse', conLabel4: 'Accأ¨s Plage',
-    conAddr: 'Mrezgua, Nabeul, Tunisie', conBeach: 'أ€ 300 mأ¨tres de la mer',
-    fnameLabel: 'Prأ©nom', lnameLabel: 'Nom', emailLabel: 'Email', phoneLabel: 'Tأ©lأ©phone', msgLabel: 'Message',
-    fnamePh: 'Votre prأ©nom', lnamePh: 'Votre nom', emailPh: 'votre@email.com', phonePh: '+216 ...', msgPh: 'Votre message...',
-    formSubmit: 'Envoyer le Message',
-    successMsg: 'Message envoyأ© avec succأ¨s. Nous vous contacterons trأ¨s prochainement.',
-    footerTagline: "L'excellence أ  chaque dأ©tail.",
-    footerCopy: 'آ© 2024 - 2026 Rأ©sidence Le Jacaranda. Tous droits rأ©servأ©s.',
-    navAbout: 'À Propos', navAmen: 'Prestations', navTypo: 'Logements', navTour: 'Visite 360°', navGal: 'Galerie', navQuartier: 'Quartier', navApp: 'App Résidents', navLoc: 'Localisation', navCon: 'Contact',
-    typoTag: 'Logements & Plans', typoTitle: 'Espaces de Vie<br /><em>Conçus pour l\'Excellence</em>',
-    quartierTag: 'Art de Vivre Méditerranéen', quartierTitle: 'Mrezgua & Ses Trésors<br /><em>Entre Mer, Culture & Détente</em>',
-    ctaNav: 'Prendre Rendez-vous',
-    heroCta1: 'Découvrir', heroCta2: 'Visite 360°',
+    scrollText: "Défiler pour explorer",
+    stat1: "Blocs Résidentiels", stat2: "Piscines d'Eau Cristalline", stat3: "de la Plage Méditerranée", stat4: "Conciergerie & Sécurité",
+    badgeLabel: "Livraison Immédiate", floatTitle: "Architecture Contemporaine", floatSub: "Design méditerranéen & finitions haut de gamme",
+    aboutTag: "À Propos du Projet",
+    aboutTitle: "Un Art de Vivre<br /><em>Exceptionnel</em>",
+    aboutBody: "Nichée au cœur de Mrezgua, à seulement 300 mètres de la magnifique plage de Nabeul, la Résidence Le Jacaranda est le fruit d'une vision architecturale ambitieuse : offrir un cadre de vie alliant modernité, élégance et sérénité.",
+    aboutBody2: "Ses façades en blanc immaculé, ses balcons généreux et ses espaces communs soigneusement paysagés font de cette résidence un havre de paix au design contemporain haut de gamme.",
+    aboutFeatures: ["Architecture contemporaine de prestige", "Finitions de premier choix en marbre et aluminium", "Espaces verts et jardins paysagers méditerranéens", "Résidence clôturée, gardée 24h/24 avec contrôle d'accès"],
+    aboutCtaText: "Explorer en 360°",
+    amenTag: "Prestations",
+    amenTitle: "Tout le Luxe<br /><em>Réuni en un Lieu</em>",
+    amen1: "Piscines",          amen1d: "Deux bassins cristallins illuminés, pour des moments de détente incomparables à toute heure.",
+    amen2: "Sécurité 24h/24",  amen2d: "Accès sécurisé, surveillance permanente et système de contrôle avancé pour votre tranquillité.",
+    amen3: "Parking Privé",    amen3d: "Espaces de stationnement couverts et sécurisés, à disposition exclusive des résidents.",
+    amen4: "Espaces Verts",    amen4d: "Jardins paysagés et végétation méditerranéenne pour une atmosphère douce et ressourçante.",
+    amen5: "Finitions Premium", amen5d: "Matériaux nobles, carrelage grand format, menuiserie aluminium — des prestations d'exception.",
+    amen6: "Conciergerie",     amen6d: "Service disponible pour répondre à toutes vos demandes avec la plus grande discrétion.",
+    typoTag: "Logements & Plans",
+    typoTitle: "Espaces de Vie<br /><em>Conçus pour l'Excellence</em>",
+    typoSub: "Des typologies harmonieuses allant du S+1 optimisé au Penthouse d'exception avec vue panoramique mer.",
+    tourTag: "Visite Virtuelle",
+    tourTitle: "Explorez la Résidence<br /><em>en 360°</em>",
+    tourSub: "Naviguez librement dans nos espaces. Cliquez et faites glisser pour explorer chaque recoin.",
+    tabInteriorText: "Appartement", tabPoolText: "Piscine & Jardins",
+    hintText: "Cliquez et faites glisser pour explorer",
+    galTag: "Galerie Photographique",
+    galTitle: "La Résidence<br /><em>en Images</em>",
+    galFilterAll: "Toutes", galFilterExt: "Extérieur", galFilterInt: "Intérieurs", galFilterNight: "Piscine & Nuit", galFilterCommon: "Espaces Communs",
+    galCap1: "Façade Contemporaine", galCap2: "Vue Nocturne", galCap3: "Ascenseurs & Marbre", galCap4: "Parking Souterrain",
+    galCap5: "Couloirs élégants", galCap6: "Angle Panoramique", galCap7: "Piscine & Lobby", galCap8: "Grand Hall & Lustre",
+    galCap9: "Hall Rez-de-Chaussée", galCap10: "Piscine & Jardins",
+    quartierTag: "Art de Vivre Méditerranéen",
+    quartierTitle: "Mrezgua & Ses Trésors<br /><em>Entre Mer, Culture & Détente</em>",
+    quartierSub: "Une situation d'exception à la croisée de Nabeul et d'Hammamet, alliant sérénité côtière et dynamisme.",
+    qCard1Title: "Plage de Mrezgua", qCard1Desc: "Sable blanc, eaux turquoise calmes et couchers de soleil féeriques face au golfe d'Hammamet.",
+    qCard2Title: "Nabeul & Artisanat", qCard2Desc: "Capitale tunisienne de la céramique, marchés traditionnels aux épices et distilleries de fleurs d'oranger.",
+    qCard3Title: "Hammamet Nord & Marina", qCard3Desc: "Restaurants gastronomiques pieds dans l'eau, cafés mythiques de la Médina et clubs nautiques sélects.",
+    qCard4Title: "Golfs Citrus & Yasmine", qCard4Desc: "Parcours de championnat internationaux 45 trous au milieu des oliviers et des collines verdoyantes.",
+    appTag: "Écosystème Connecté",
+    appTitle: "Gérez votre résidence<br /><em>depuis votre smartphone</em>",
+    appBody: "Signalez un incident en un clic, contactez le syndic et la conciergerie, recevez les annonces officielles en temps réel et suivez vos demandes directement depuis l'application dédiée.",
+    appFeatures: ["Suivi des réclamations & propositions en temps réel", "Messagerie instantanée avec le Syndic & Concierge", "Rappels de cotisations & rapports PDF partagés", "Notifications prioritaires et annonces de résidence"],
+    appStoreSub: "Télécharger sur", playStoreSub: "Disponible sur",
+    locTag: "Emplacement Stratégique",
+    locTitle: "Mrezgua, Nabeul<br /><em>À 300m de la Mer</em>",
+    locBadge1Val: "300m",   locBadge1Lbl: "Plage de sable fin (3 min à pied)",
+    locBadge2Val: "5 min",  locBadge2Lbl: "Centre-ville Nabeul & Marchés",
+    locBadge3Val: "45 min", locBadge3Lbl: "Aéroport Enfidha / Tunis",
+    mapPinTitle: "Résidence Le Jacaranda",
+    mapPinAddr: "Mrezgua, Nabeul, Tunisie · À 300m de la plage",
+    gpsLabel: "M'y rendre depuis ma position",
+    conTag: "Service Commercial & Syndic",
+    conTitle: "Écrivez-nous,<br /><em>Rencontrons-nous</em>",
+    conSub: "Notre équipe commerciale et de gestion est à votre entière disposition pour organiser une visite privée ou répondre à vos questions.",
+    conLabel1: "Email Officiel", conLabel2: "Ligne Directe", conLabel3: "Adresse", conLabel4: "Accès Plage",
+    conAddr: "Avenue Habib Bourguiba, Mrezgua, Nabeul", conBeach: "À 300 mètres de la mer",
+    fnameLabel: "Prénom", lnameLabel: "Nom", emailLabel: "Email", phoneLabel: "Téléphone / WhatsApp", msgLabel: "Message / Type de bien recherché",
+    fnamePh: "Votre prénom", lnamePh: "Votre nom", emailPh: "votre@email.com", phonePh: "+216 ...", msgPh: "Votre message...",
+    formSubmit: "Envoyer le Message",
+    successMsg: "Message envoyé avec succès. Notre équipe vous contactera sous 24 heures.",
+    footerTagline: "L'excellence à chaque détail.",
+    footerCopy: "© 2024 - 2026 Résidence Le Jacaranda. Tous droits réservés.",
+    navAbout: "À Propos", navAmen: "Prestations", navTour: "Visite 360°", navGal: "Galerie", navQuartier: "Quartier", navApp: "App Résidents", navCon: "Contact",
+    heroCta1: "Découvrir les Logements", heroCta2: "Visite Virtuelle 360°"
   },
 
-  /* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ ARABIC â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
-  ar: {
-    heroEyebrow: 'ظ…ط±ط²ع¤ط© آ· ظ†ط§ط¨ظ„ آ· طھظˆظ†ط³',
-    heroTagline: 'ظپظ† ط§ظ„ط¹ظٹط´ ظپظٹ ط£ط¨ظ‡ظ‰ طھط¬ظ„ظٹط§طھظ‡',
-    scrollText: 'ط§ظ†طھظ‚ظ„ ظ„ط£ط³ظپظ„',
-    stat1: 'ظ…ط¨ط§ظ†ظچ', stat2: 'ظ…ط³ط§ط¨ط­', stat3: 'ظ…ظ† ط§ظ„ط´ط§ط·ط¦', stat4: 'ظƒظˆظ†ط³ظٹط±ط¬',
-    aboutTag: 'ط¹ظ† ط§ظ„ظ…ط´ط±ظˆط¹',
-    aboutTitle: 'ط£ط³ظ„ظˆط¨ ط­ظٹط§ط©<br /><em>ط§ط³طھط«ظ†ط§ط¦ظٹ</em>',
-    aboutBody: 'طھظ‚ط¹ ط¥ظ‚ط§ظ…ط© ظ„ظˆ ط®ط§ظƒط§ط±ط§ظ†ط¯ط§ ظپظٹ ظ‚ظ„ط¨ ظ…ط±ط²ع¤ط©طŒ ط¹ظ„ظ‰ ط¨ظڈط¹ط¯ 300 ظ…طھط± ظ…ظ† ط´ط§ط·ط¦ ظ†ط§ط¨ظ„. ظˆظ‡ظٹ ط«ظ…ط±ط© ط±ط¤ظٹط© ظ…ط¹ظ…ط§ط±ظٹط© ط·ظ…ظˆط­ط© طھط¬ظ…ط¹ ط¨ظٹظ† ط§ظ„ط­ط¯ط§ط«ط© ظˆط§ظ„ط£ظ†ط§ظ‚ط© ظˆط§ظ„ظ‡ط¯ظˆط،.',
-    aboutBody2: 'ظˆط§ط¬ظ‡ط§طھظ‡ط§ ط§ظ„ط¨ظٹط¶ط§ط، ط§ظ„ظ†ط§طµط¹ط©طŒ ط´ط±ظپط§طھظ‡ط§ ط§ظ„ظپط³ظٹط­ط©طŒ ظˆظپط¶ط§ط،ط§طھظ‡ط§ ط§ظ„ظ…ط´طھط±ظƒط© ط§ظ„ط£ظ†ظٹظ‚ط© طھط¬ط¹ظ„ ظ…ظ†ظ‡ط§ ظ…ط³ظƒظ†ط§ظ‹ ط§ط³طھط«ظ†ط§ط¦ظٹط§ظ‹ ط°ط§ طھطµظ…ظٹظ… ط¹طµط±ظٹ.',
-    aboutFeatures: ['ظ‡ظ†ط¯ط³ط© ظ…ط¹ظ…ط§ط±ظٹط© ط±ط§ظ‚ظٹط© ظˆظ…ط¹ط§طµط±ط©', 'طھط´ط·ظٹط¨ط§طھ ظ…ظ† ط§ظ„ط¯ط±ط¬ط© ط§ظ„ط£ظˆظ„ظ‰', 'ظ…ط³ط§ط­ط§طھ ط®ط¶ط±ط§ط، ظ…ظ†ط³ظ‚ط©', 'ط¹ظ„ظ‰ ط¨ظڈط¹ط¯ 300ظ… ظ…ظ† ط§ظ„ط¨ط­ط±'],
-    badgeLabel: 'طھط³ظ„ظٹظ…', floatTitle: 'ظ‡ظ†ط¯ط³ط© ظ…طھظ…ظٹط²ط©', floatSub: 'طھطµظ…ظٹظ… ط¹طµط±ظٹ ط±ط§ظ‚ظچ',
-    aboutCtaText: 'ط§ط³طھظƒط´ط§ظپ 360آ°',
-    amenTag: 'ط§ظ„ظ…ظ…ظٹط²ط§طھ',
-    amenTitle: 'ظƒظ„ ط§ظ„ظپط®ط§ظ…ط©<br /><em>ظپظٹ ظ…ظƒط§ظ† ظˆط§ط­ط¯</em>',
-    amen1: 'ط§ظ„ظ…ط³ط§ط¨ط­',    amen1d: 'ط­ظˆط¶ط§ظ† ط¨ظ„ظˆط±ظٹط§ظ† ظ…ط¶ط§ط،ط§ظ† ظ„ط­ط¸ط§طھ ط§ط³طھط±ط®ط§ط، ظ„ط§ ظ…ط«ظٹظ„ ظ„ظ‡ط§ ظپظٹ ظƒظ„ ظˆظ‚طھ.',
-    amen2: 'ط£ظ…ظ† 24/24',  amen2d: 'ط¯ط®ظˆظ„ ط¢ظ…ظ† ظˆظ…ط±ط§ظ‚ط¨ط© ط¯ط§ط¦ظ…ط© ظˆظ†ط¸ط§ظ… طھط­ظƒظ… ظ…طھظ‚ط¯ظ… ظ„ط±ط§ط­ط© ط¨ط§ظ„ظƒظ….',
-    amen3: 'ظ…ظˆظ‚ظپ ط®ط§طµ',  amen3d: 'ط£ظ…ط§ظƒظ† ط±ظƒظ† ظ…ط؛ط·ط§ط© ظˆط¢ظ…ظ†ط© ط­طµط±ط§ظ‹ ظ„ط³ظƒط§ظ† ط§ظ„ط¥ظ‚ط§ظ…ط©.',
-    amen4: 'ظ…ط³ط§ط­ط§طھ ط®ط¶ط±ط§ط،', amen4d: 'ط­ط¯ط§ط¦ظ‚ ظ…ظ†ط³ظ‚ط© ظˆظ†ط¨ط§طھط§طھ ظ…طھظˆط³ط·ظٹط© ظ„ط£ط¬ظˆط§ط، ظ‡ط§ط¯ط¦ط© ظˆظ…ظ†ط¹ط´ط©.',
-    amen5: 'طھط´ط·ظٹط¨ط§طھ ظپط§ط®ط±ط©', amen5d: 'ظ…ظˆط§ط¯ ظ†ط¨ظٹظ„ط©طŒ ط¨ظ„ط§ط· ظƒط¨ظٹط± ط§ظ„ط­ط¬ظ…طŒ ظ†ط¬ط§ط±ط© ط£ظ„ظ…ظ†ظٹظˆظ… â€” ط®ط¯ظ…ط§طھ ط§ط³طھط«ظ†ط§ط¦ظٹط©.',
-    amen6: 'ظƒظˆظ†ط³ظٹط±ط¬',   amen6d: 'ط®ط¯ظ…ط© ظ…طھط§ط­ط© ظ„ظ„ط±ط¯ ط¹ظ„ظ‰ ط·ظ„ط¨ط§طھظƒظ… ط¨ظƒظ„ طھظƒطھظ… ظˆظ…ظ‡ظ†ظٹط©.',
-    tourTag: 'ط¬ظˆظ„ط© ط§ظپطھط±ط§ط¶ظٹط©',
-    tourTitle: 'ط§ط³طھظƒط´ظپ ط§ظ„ط¥ظ‚ط§ظ…ط©<br /><em>ط¨ط²ط§ظˆظٹط© 360آ°</em>',
-    tourSub: 'طھط¬ظˆظ‘ظ„ ط¨ط­ط±ظٹط© ظپظٹ ظپط¶ط§ط،ط§طھظ†ط§. ط§ظ†ظ‚ط± ظˆط§ط³ط­ط¨ ظ„ط§ط³طھظƒط´ط§ظپ ظƒظ„ ط²ط§ظˆظٹط©.',
-    tabInteriorText: 'ط§ظ„ط´ظ‚ط©', tabPoolText: 'ط§ظ„ظ…ط³ط¨ط­ ظˆط§ظ„ط­ط¯ط§ط¦ظ‚',
-    hintText: 'ط§ظ†ظ‚ط± ظˆط§ط³ط­ط¨ ظ„ظ„ط§ط³طھظƒط´ط§ظپ',
-    galTag: 'ظ…ط¹ط±ط¶ ط§ظ„طµظˆط±',
-    galTitle: 'ط§ظ„ط¥ظ‚ط§ظ…ط©<br /><em>ط¨ط§ظ„طµظˆط±</em>',
-    galCap1: 'ط§ظ„ظ…ظ†ط¸ط± ط§ظ„ط®ط§ط±ط¬ظٹ', galCap2: 'ط§ظ„ط´ظ‚ظ‚', galCap3: 'ط§ظ„ظ…ط³ط¨ط­ ظ„ظٹظ„ط§ظ‹', galCap4: 'ظ…ظ†ط¸ط± ط¬ظˆظٹ',
-    appTag: 'ط§ظ„طھط·ط¨ظٹظ‚ ط§ظ„ط±ط³ظ…ظٹ',
-    appTitle: 'ط£ط¯ظگط± ط¥ظ‚ط§ظ…طھظƒ<br /><em>ظ…ظ† ظ‡ط§طھظپظƒ</em>',
-    appBody: 'ط§ط­ط¬ط² ط§ظ„ظ…ط³ط¨ط­طŒ طھظˆط§طµظ„ ظ…ط¹ ط§ظ„ظƒظˆظ†ط³ظٹط±ط¬طŒ ط§ط·ظ‘ظ„ط¹ ط¹ظ„ظ‰ ظ…ط¹ظ„ظˆظ…ط§طھ ط§ظ„ط¥ظ‚ط§ظ…ط© ظˆطھظ„ظ‚ظژظ‘ ط§ظ„ط¥ط´ط¹ط§ط±ط§طھ ط§ظ„ظ…ظ‡ظ…ط© â€” ظƒظ„ ط°ظ„ظƒ ظ…ظ† طھط·ط¨ظٹظ‚ ظ„ظˆ ط®ط§ظƒط§ط±ط§ظ†ط¯ط§ ط§ظ„ط±ط³ظ…ظٹ.',
-    appFeatures: ['ط§ظ„طھط­ظƒظ… ظپظٹ ط§ظ„ط¯ط®ظˆظ„', 'ط­ط¬ط² ط§ظ„ظ…ط³ط¨ط­ ظˆط§ظ„ظ…ط³ط§ط­ط§طھ ط§ظ„ظ…ط´طھط±ظƒط©', 'ط¯ط±ط¯ط´ط© ظ…ط¨ط§ط´ط±ط© ظ…ط¹ ط§ظ„ظƒظˆظ†ط³ظٹط±ط¬', 'ط¥ط´ط¹ط§ط±ط§طھ ظˆط¥ط¹ظ„ط§ظ†ط§طھ ط§ظ„ط¥ظ‚ط§ظ…ط©'],
-    appStoreSub: 'طھظ†ط²ظٹظ„ ط¹ظ„ظ‰', playStoreSub: 'ظ…طھط§ط­ ط¹ظ„ظ‰',
-    locTag: 'ط§ظ„ظ…ظˆظ‚ط¹',
-    locTitle: 'ظ…ط±ط²ع¤ط©طŒ ظ†ط§ط¨ظ„<br /><em>300ظ… ظ…ظ† ط§ظ„ط¨ط­ط±</em>',
-    locBadge1Val: '300ظ…',  locBadge1Lbl: 'ظ…ظ† ط§ظ„ط´ط§ط·ط¦',
-    locBadge2Val: 'ظ†ط§ط¨ظ„',  locBadge2Lbl: 'ظˆط³ط· ط§ظ„ظ…ط¯ظٹظ†ط©',
-    locBadge3Val: 'ط£ظ†ظپط¶ط©', locBadge3Lbl: 'ظ…ط·ط§ط± ظ‚ط±ظٹط¨',
-    mapPinTitle: 'ط¥ظ‚ط§ظ…ط© ظ„ظˆ ط®ط§ظƒط§ط±ط§ظ†ط¯ط§',
-    mapPinAddr: 'ظ…ط±ط²ع¤ط©طŒ ظ†ط§ط¨ظ„طŒ طھظˆظ†ط³ آ· 300ظ… ظ…ظ† ط§ظ„ط´ط§ط·ط¦',
-    conTag: 'طھظˆط§طµظ„ ظ…ط¹ظ†ط§',
-    conTitle: 'ط±ط§ط³ظ„ظˆظ†ط§طŒ<br /><em>طھظ‚ط§ط¨ظ„ظˆظ†ط§</em>',
-    conSub: 'ظپط±ظٹظ‚ظ†ط§ ط±ظ‡ظ† ط¥ط´ط§ط±طھظƒظ… ظ„ظ…ط±ط§ظپظ‚طھظƒظ… ظپظٹ ظ…ط´ط±ظˆط¹ ط­ظٹط§طھظƒظ… ط¯ط§ط®ظ„ ط¥ظ‚ط§ظ…ط© ظ„ظˆ ط®ط§ظƒط§ط±ط§ظ†ط¯ط§.',
-    conLabel1: 'ط§ظ„ط¨ط±ظٹط¯ ط§ظ„ط¥ظ„ظƒطھط±ظˆظ†ظٹ', conLabel2: 'ط§ظ„ظ‡ط§طھظپ', conLabel3: 'ط§ظ„ط¹ظ†ظˆط§ظ†', conLabel4: 'ط§ظ„ظˆطµظˆظ„ ظ„ظ„ط´ط§ط·ط¦',
-    conAddr: 'ظ…ط±ط²ع¤ط©طŒ ظ†ط§ط¨ظ„طŒ طھظˆظ†ط³', conBeach: 'ط¹ظ„ظ‰ ط¨ظڈط¹ط¯ 300 ظ…طھط± ظ…ظ† ط§ظ„ط¨ط­ط±',
-    fnameLabel: 'ط§ظ„ط§ط³ظ… ط§ظ„ط£ظˆظ„', lnameLabel: 'ط§ظ„ظ„ظ‚ط¨', emailLabel: 'ط§ظ„ط¨ط±ظٹط¯ ط§ظ„ط¥ظ„ظƒطھط±ظˆظ†ظٹ', phoneLabel: 'ط§ظ„ظ‡ط§طھظپ', msgLabel: 'ط§ظ„ط±ط³ط§ظ„ط©',
-    fnamePh: 'ط§ط³ظ…ظƒ ط§ظ„ط£ظˆظ„', lnamePh: 'ظ„ظ‚ط¨ظƒ', emailPh: 'ط¨ط±ظٹط¯ظƒ@ط§ظ„ط¥ظ„ظƒطھط±ظˆظ†ظٹ', phonePh: '+216 ...', msgPh: 'ط±ط³ط§ظ„طھظƒ...',
-    formSubmit: 'ط¥ط±ط³ط§ظ„ ط§ظ„ط±ط³ط§ظ„ط©',
-    successMsg: 'طھظ… ط¥ط±ط³ط§ظ„ ط±ط³ط§ظ„طھظƒ ط¨ظ†ط¬ط§ط­. ط³ظ†طھظˆط§طµظ„ ظ…ط¹ظƒظ… ظ‚ط±ظٹط¨ط§ظ‹ ط¬ط¯ط§ظ‹.',
-    footerTagline: 'ط§ظ„طھظ…ظٹط² ظپظٹ ظƒظ„ طھظپطµظٹظ„.',
-    footerCopy: 'آ© 2024 - 2026 ط¥ظ‚ط§ظ…ط© ظ„ظˆ ط®ط§ظƒط§ط±ط§ظ†ط¯ط§. ط¬ظ…ظٹط¹ ط§ظ„ط­ظ‚ظˆظ‚ ظ…ط­ظپظˆط¸ط©.',
-    navAbout: 'ط¹ظ† ط§ظ„ظ…ط´ط±ظˆط¹', navAmen: 'ط§ظ„ظ…ظ…ظٹط²ط§طھ', navTour: 'ط¬ظˆظ„ط© 360آ°', navGal: 'ظ…ط¹ط±ط¶ ط§ظ„طµظˆط±', navApp: 'ط§ظ„طھط·ط¨ظٹظ‚', navLoc: 'ط§ظ„ظ…ظˆظ‚ط¹', navCon: 'طھظˆط§طµظ„',
-    ctaNav: 'طھظˆط§طµظ„ ظ…ط¹ظ†ط§',
-    heroCta1: 'ط§ظƒطھط´ظپ', heroCta2: 'ط¬ظˆظ„ط© 360آ°',
-  },
-
-  /* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ ENGLISH â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+  /* ════════ ENGLISH ════════ */
   en: {
-    heroEyebrow: 'Mrezgua آ· Nabeul آ· Tunisia',
-    heroTagline: 'The art of living at its finest',
-    scrollText: 'Scroll',
-    stat1: 'Blocks', stat2: 'Pools', stat3: 'from the Beach', stat4: 'Concierge',
-    aboutTag: 'About',
-    aboutTitle: 'A Lifestyle<br /><em>Beyond Compare</em>',
-    aboutBody: 'Nestled in the heart of Mrezgua, just 300 metres from the beach in Nabeul, Rأ©sidence Le Jacaranda is the product of an ambitious architectural vision: a living space that blends modernity, elegance and serenity.',
-    aboutBody2: 'Its pristine white faأ§ades, generous balconies and beautifully appointed common areas make this residence a contemporary sanctuary of unmatched style.',
-    aboutFeatures: ['High-end contemporary architecture', 'Premium quality finishes', 'Landscaped green spaces', '300m from the sea'],
-    badgeLabel: 'Delivery', floatTitle: 'Premium Architecture', floatSub: 'Prestigious contemporary design',
-    aboutCtaText: 'Explore in 360آ°',
-    amenTag: 'Amenities',
-    amenTitle: 'All the Luxury<br /><em>In One Place</em>',
-    amen1: 'Swimming Pools', amen1d: 'Two illuminated crystal-clear pools for incomparable moments of relaxation at any hour.',
-    amen2: '24/7 Security',  amen2d: 'Secure access, permanent surveillance and an advanced control system for your peace of mind.',
-    amen3: 'Private Parking', amen3d: 'Covered, secure parking spaces exclusively for residents.',
-    amen4: 'Green Spaces',   amen4d: 'Landscaped gardens and Mediterranean vegetation for a gentle, restorative atmosphere.',
-    amen5: 'Premium Finishes', amen5d: 'Noble materials, large-format tiling, aluminium joinery â€” exceptional standards throughout.',
-    amen6: 'Concierge',      amen6d: 'Concierge service available to fulfil all your requests with the utmost discretion.',
-    tourTag: 'Virtual Tour',
-    tourTitle: 'Explore the Residence<br /><em>in 360آ°</em>',
-    tourSub: 'Navigate freely through our spaces. Click and drag to explore every corner.',
-    tabInteriorText: 'Apartment', tabPoolText: 'Pool & Gardens',
-    hintText: 'Click and drag to explore',
-    galTag: 'Gallery',
-    galTitle: 'The Residence<br /><em>in Pictures</em>',
-    galCap1: 'Exterior View', galCap2: 'Apartments', galCap3: 'Pool at Night', galCap4: 'Aerial View',
-    appTag: 'Mobile App',
-    appTitle: 'Manage your residence<br /><em>from your pocket</em>',
-    appBody: 'Book the pool, contact concierge, access residence information and receive important notifications â€” all from the official Le Jacaranda app.',
-    appFeatures: ['Building access & entry control', 'Pool & shared space booking', 'Direct chat with concierge', 'Residence notifications & announcements'],
-    appStoreSub: 'Download on the', playStoreSub: 'Get it on',
-    locTag: 'Location',
-    locTitle: 'Mrezgua, Nabeul<br /><em>300m from the Sea</em>',
-    locBadge1Val: '300m',   locBadge1Lbl: 'from the beach',
-    locBadge2Val: 'Nabeul', locBadge2Lbl: 'City centre',
-    locBadge3Val: 'Enfidha', locBadge3Lbl: 'Airport nearby',
-    mapPinTitle: 'Rأ©sidence Le Jacaranda',
-    mapPinAddr: 'Mrezgua, Nabeul, Tunisia آ· 300m from the beach',
-    conTag: 'Contact',
-    conTitle: 'Write to Us,<br /><em>Let\'s Meet</em>',
-    conSub: 'Our team is at your disposal to guide you through your journey at Rأ©sidence Le Jacaranda.',
-    conLabel1: 'Email', conLabel2: 'Phone', conLabel3: 'Address', conLabel4: 'Beach Access',
-    conAddr: 'Mrezgua, Nabeul, Tunisia', conBeach: '300 metres from the sea',
-    fnameLabel: 'First Name', lnameLabel: 'Last Name', emailLabel: 'Email', phoneLabel: 'Phone', msgLabel: 'Message',
-    fnamePh: 'Your first name', lnamePh: 'Your last name', emailPh: 'your@email.com', phonePh: '+216 ...', msgPh: 'Your message...',
-    formSubmit: 'Send Message',
-    successMsg: 'Message sent successfully. We will contact you very soon.',
-    footerTagline: 'Excellence in every detail.',
-    footerCopy: 'آ© 2024 - 2026 Rأ©sidence Le Jacaranda. All rights reserved.',
-    navAbout: 'About', navAmen: 'Amenities', navTypo: 'Apartments', navTour: '360° Tour', navGal: 'Gallery', navCalc: 'Simulator', navQuartier: 'Neighborhood', navApp: 'Resident App', navFaq: 'FAQ', navLoc: 'Location', navCon: 'Contact',
-    typoTag: 'Floor Plans & Residences', typoTitle: 'Living Spaces<br /><em>Designed for Excellence</em>',
-    calcTag: 'Investment & Financing', calcTitle: 'Simulate Your Project<br /><em>& Rental Yield</em>',
-    quartierTag: 'Mediterranean Lifestyle', quartierTitle: 'Mrezgua & Its Wonders<br /><em>Between Sea, Culture & Leisure</em>',
-    faqTag: 'Frequently Asked Questions', faqTitle: 'Everything You Need<br /><em>To Know About The Residence</em>',
-    ctaNav: 'Contact Us',
-    heroCta1: 'Discover', heroCta2: '360° Tour',
+    heroBadgeText: "Exceptional Residence · Mrezgua Nabeul · 300m from Beach",
+    heroEyebrowText: "Mrezgua · Nabeul · Tunisia",
+    heroTagline: "The art of living at its finest",
+    scrollText: "Scroll to explore",
+    stat1: "Residential Blocks", stat2: "Crystal Water Pools", stat3: "from Mediterranean Beach", stat4: "24/7 Concierge & Security",
+    badgeLabel: "Immediate Delivery", floatTitle: "Contemporary Architecture", floatSub: "Mediterranean design & luxury finishes",
+    aboutTag: "About the Project",
+    aboutTitle: "A Lifestyle<br /><em>Beyond Compare</em>",
+    aboutBody: "Nestled in the heart of Mrezgua, just 300 metres from the beautiful beach of Nabeul, Résidence Le Jacaranda is the fruit of an ambitious architectural vision: offering a living environment combining modernity, elegance and serenity.",
+    aboutBody2: "Its immaculate white façades, generous balconies and landscaped communal areas make this residence a peaceful haven with high-end contemporary design.",
+    aboutFeatures: ["Prestigious contemporary architecture", "First-choice marble and aluminum finishes", "Mediterranean green spaces and landscaped gardens", "Gated residence, 24/7 security with access control"],
+    aboutCtaText: "Explore in 360°",
+    amenTag: "Amenities",
+    amenTitle: "All the Luxury<br /><em>In One Place</em>",
+    amen1: "Swimming Pools", amen1d: "Two illuminated crystal-clear pools for incomparable moments of relaxation at any hour.",
+    amen2: "24/7 Security",  amen2d: "Secure access, permanent surveillance and advanced control system for your peace of mind.",
+    amen3: "Private Parking", amen3d: "Covered and secure parking spaces, exclusively available for residents.",
+    amen4: "Green Spaces",   amen4d: "Landscaped gardens and Mediterranean vegetation for a gentle and restorative atmosphere.",
+    amen5: "Premium Finishes", amen5d: "Noble materials, large format tiles, aluminum joinery — exceptional quality throughout.",
+    amen6: "Concierge",      amen6d: "Service available to meet all your requests with the utmost discretion.",
+    typoTag: "Residences & Floor Plans",
+    typoTitle: "Living Spaces<br /><em>Designed for Excellence</em>",
+    typoSub: "Harmonious residences from optimized 1-bedroom apartments to exceptional penthouses with panoramic sea views.",
+    tourTag: "Virtual Tour",
+    tourTitle: "Explore the Residence<br /><em>in 360°</em>",
+    tourSub: "Navigate freely through our spaces. Click and drag to explore every corner.",
+    tabInteriorText: "Apartment", tabPoolText: "Pool & Gardens",
+    hintText: "Click and drag to explore",
+    galTag: "Photo Gallery",
+    galTitle: "The Residence<br /><em>in Pictures</em>",
+    galFilterAll: "All", galFilterExt: "Exterior", galFilterInt: "Interiors", galFilterNight: "Pool & Night", galFilterCommon: "Common Areas",
+    galCap1: "Contemporary Façade", galCap2: "Night View", galCap3: "Marble Elevators & Lobby", galCap4: "Underground Parking",
+    galCap5: "Elegant Corridors", galCap6: "Panoramic Corner", galCap7: "Pool & Lobby", galCap8: "Grand Hall & Chandelier",
+    galCap9: "Ground Floor Hall", galCap10: "Pool & Gardens",
+    quartierTag: "Mediterranean Lifestyle",
+    quartierTitle: "Mrezgua & Its Treasures<br /><em>Between Sea, Culture & Leisure</em>",
+    quartierSub: "An exceptional location bridging Nabeul and Hammamet, combining coastal serenity and vibrant culture.",
+    qCard1Title: "Mrezgua Beach", qCard1Desc: "White sand, calm turquoise waters and magical sunsets overlooking the Gulf of Hammamet.",
+    qCard2Title: "Nabeul & Crafts", qCard2Desc: "Tunisian capital of pottery and ceramics, traditional spice souks and orange blossom distilleries.",
+    qCard3Title: "North Hammamet & Marina", qCard3Desc: "Seaside gourmet dining, iconic Medina cafes and exclusive water sport clubs.",
+    qCard4Title: "Citrus & Yasmine Golf", qCard4Desc: "International 45-hole championship courses set among olive groves and lush green hills.",
+    appTag: "Connected Ecosystem",
+    appTitle: "Manage your residence<br /><em>from your smartphone</em>",
+    appBody: "Report an incident in one click, contact the property manager and concierge, receive official announcements in real time and track your requests directly from the dedicated app.",
+    appFeatures: ["Real-time tracking of claims & proposals", "Instant messaging with Management & Concierge", "Payment reminders & shared PDF reports", "Priority notifications and residence news"],
+    appStoreSub: "Download on the", playStoreSub: "Get it on",
+    locTag: "Strategic Location",
+    locTitle: "Mrezgua, Nabeul<br /><em>300m from the Sea</em>",
+    locBadge1Val: "300m",   locBadge1Lbl: "Sandy beach (3 min walk)",
+    locBadge2Val: "5 min",  locBadge2Lbl: "Nabeul Downtown & Markets",
+    locBadge3Val: "45 min", locBadge3Lbl: "Enfidha / Tunis Airport",
+    mapPinTitle: "Résidence Le Jacaranda",
+    mapPinAddr: "Mrezgua, Nabeul, Tunisia · 300m from the beach",
+    gpsLabel: "Directions from my location",
+    conTag: "Sales & Management Office",
+    conTitle: "Write to Us,<br /><em>Let's Meet</em>",
+    conSub: "Our sales and management team is at your complete disposal to arrange a private visit or answer any questions.",
+    conLabel1: "Official Email", conLabel2: "Direct Phone", conLabel3: "Address", conLabel4: "Beach Access",
+    conAddr: "Avenue Habib Bourguiba, Mrezgua, Nabeul", conBeach: "300 meters from the sea",
+    fnameLabel: "First Name", lnameLabel: "Last Name", emailLabel: "Email", phoneLabel: "Phone / WhatsApp", msgLabel: "Message / Property Type Requested",
+    fnamePh: "Your first name", lnamePh: "Your last name", emailPh: "your@email.com", phonePh: "+216 ...", msgPh: "Your message...",
+    formSubmit: "Send Message",
+    successMsg: "Message sent successfully. Our team will contact you within 24 hours.",
+    footerTagline: "Excellence in every detail.",
+    footerCopy: "© 2024 - 2026 Résidence Le Jacaranda. All rights reserved.",
+    navAbout: "About", navAmen: "Amenities", navTour: "360° Tour", navGal: "Gallery", navQuartier: "Neighborhood", navApp: "Resident App", navCon: "Contact",
+    heroCta1: "Discover Residences", heroCta2: "Virtual Tour 360°"
   },
 
-  /* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ ESPAأ‘OL â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+  /* ════════ ARABIC ════════ */
+  ar: {
+    heroBadgeText: "إقامة استثنائية فاخرة · مـرزقة نـابـل · 300م عن الشاطئ",
+    heroEyebrowText: "مـرزقة · نـابـل · تـونـس",
+    heroTagline: "فـن العيـش فـي أرقـى تـجـلـيـاتـه",
+    scrollText: "مرر للاستكشاف",
+    stat1: "مبانٍ سكنية فاخرة", stat2: "مسابح مياه نقية", stat3: "عن الشاطئ المتوسطي", stat4: "حراسة وكونسيرج 24/7",
+    badgeLabel: "تسليم فوري", floatTitle: "هندسة معمارية عصرية", floatSub: "طابع متوسطي وتشطيبات راقية",
+    aboutTag: "عن المشروع الفاخر",
+    aboutTitle: "أسـلـوب حـيـاة<br /><em>اسـتـثـنـائـي</em>",
+    aboutBody: "تقع إقامة لو خاكاراندا في قلب منطقة مـرزقة، على بُعد 300 متر فقط من شاطئ نابل الساحر. تجسد الإقامة رؤية معمارية فريدة تجمع بين الحداثة والأناقة والسكينة المطلقة.",
+    aboutBody2: "بواجهاتها البيضاء الناصعة، وشرفاتها الواسعة ومساحاتها الخضراء المنسقة بعناية، تمثل الإقامة ملاذاً هادئاً بتصميم عصري فائق الجودة.",
+    aboutFeatures: ["هندسة معمارية عصرية راقية وفخمة", "تشطيبات من الرخام والألمنيوم عالي الجودة", "مساحات خضراء وحدائق متوسطية خلابة", "إقامة مسيجة ومحروسة 24/24 مع مراقبة ذكية"],
+    aboutCtaText: "استكشاف 360°",
+    amenTag: "الخدمات والمرافق",
+    amenTitle: "كل الـفـخـامـة<br /><em>فـي مـكـان واحـد</em>",
+    amen1: "المسابح",          amen1d: "حوضان بلوريان مضاءان لقضاء لحظات استرخاء لا تُضاهى في أي وقت.",
+    amen2: "أمن وحراسة 24/24", amen2d: "دخول مؤمن ومراقبة مستمرة بالكاميرات لراحتكم وطمأنينتكم.",
+    amen3: "موقف سيارات خاص", amen3d: "أماكن ركن سيارات مغطاة وآمنة تحت الأرض مخصصة حصرياً للمقيمين.",
+    amen4: "مساحات خضراء",    amen4d: "حدائق منسقة ونباتات متوسطية تمنحك أجواء من الهدوء والانتعاش.",
+    amen5: "تشطيبات بريميوم", amen5d: "مواد راقية، أرضيات رخامية فاخرة ونجارة ألمنيوم بأعلى المعايير.",
+    amen6: "خدمة الكونسيرج",   amen6d: "خدمة استقبال واستجابة متاحة لتلبية جميع احتياجاتكم بأعلى درجات الكفاءة.",
+    typoTag: "الشقق والمخططات",
+    typoTitle: "مساحات عيش<br /><em>صُممت للتميز</em>",
+    typoSub: "شقق متناسقة بتصاميم رحبة من غرفة وصالة حتى البنتهاوس الفاخر بإطلالة بحرية بانورامية ساحرة.",
+    tourTag: "جولة افتراضية",
+    tourTitle: "استكشف الإقامة<br /><em>بزاوية 360°</em>",
+    tourSub: "تجول بحرية داخل الإقامة. انقر واسحب للتنقل في جميع الأرجاء.",
+    tabInteriorText: "الشقق", tabPoolText: "المسبح والحدائق",
+    hintText: "انقر واسحب للاستكشاف",
+    galTag: "معرض الصور",
+    galTitle: "الإقـامـة<br /><em>بـالـصـور</em>",
+    galFilterAll: "الكل", galFilterExt: "الخارج", galFilterInt: "التصميم الداخلي", galFilterNight: "المسبح وليلاً", galFilterCommon: "المساحات المشتركة",
+    galCap1: "الواجهة العصرية", galCap2: "مشهد ليلي", galCap3: "المصاعد والبهو الرخامي", galCap4: "موقف السيارات السفلي",
+    galCap5: "أروقة فاخرة", galCap6: "إطلالة بانورامية", galCap7: "المسبح والبهو", galCap8: "البهو الرئيسي والثريا",
+    galCap9: "بهو الطابق الأرضي", galCap10: "المسبح والحدائق",
+    quartierTag: "أسلوب العيش المتوسطي",
+    quartierTitle: "مـرزقة والـمـنـطـقـة<br /><em>بين البحر، الثقافة والاسترخاء</em>",
+    quartierSub: "موقع استثنائي بين نابل والحمامات، يجمع بين هدوء الساحل وحيوية الثقافة المتوسطية.",
+    qCard1Title: "شاطئ مـرزقة", qCard1Desc: "رمال بيضاء ناعمة، مياه فيروزية هادئة وغروب ساحر للشمس يطل على خليج الحمامات.",
+    qCard2Title: "نابل والصناعات التقليدية", qCard2Desc: "عاصمة الخزف والفخار التونسي، أسواق التوابل التقليدية وتقطير زهر البرتقال العريق.",
+    qCard3Title: "شمال الحمامات والمارينا", qCard3Desc: "مطاعم راقية على البحر، مقاهي المدينة العتيقة ونوادٍ بحرية متميزة.",
+    qCard4Title: "ملاعب غولف ياسمين وسيتروس", qCard4Desc: "ملاعب غولف دولية 45 حفرة وسط أشجار الزيتون والتلال الخضراء الطبيعية.",
+    appTag: "المنظومة الذكية",
+    appTitle: "تحكّم في إقامتك<br /><em>مباشرة من هاتفك</em>",
+    appBody: "أبلغ عن الأعطال بضغطة زر، تواصل مباشرة مع السنديك والكونسيرج، واطلع على الإعلانات الرسمية وتتبع طلباتك في الوقت الفعلي.",
+    appFeatures: ["متابعة البلاغات والاقتراحات في الوقت الفعلي", "مراسلة فورية مع إدارة السنديك والكونسيرج", "تذكير بالمساهمات وتقارير PDF مشتركة", "إشعارات وإعلانات فورية للإقامة"],
+    appStoreSub: "تنزيل من", playStoreSub: "متوفر على",
+    locTag: "موقع استراتيجي ممتاز",
+    locTitle: "مـرزقة، نـابـل<br /><em>على بعد 300م من البحر</em>",
+    locBadge1Val: "300م",   locBadge1Lbl: "شاطئ رملي (3 دقائق مشياً)",
+    locBadge2Val: "5 دقائق", locBadge2Lbl: "وسط مدينة نابل والأسواق",
+    locBadge3Val: "45 دقيقة", locBadge3Lbl: "مطار النفيضة / تونس قرطاج",
+    mapPinTitle: "إقامة لو خاكاراندا",
+    mapPinAddr: "مرزقة، نابل، تونس · على بعد 300م من الشاطئ",
+    gpsLabel: "الاتجاهات من موقعي الحالي",
+    conTag: "المكتب التجاري وإدارة السنديك",
+    conTitle: "تواصلوا معنا،<br /><em>يسعدنا استقبالكم</em>",
+    conSub: "فريقنا التجاري والإداري في خدمتكم لتنظيم زيارة خاصة أو الإجابة عن كافة استفساراتكم.",
+    conLabel1: "البريد الرسمي", conLabel2: "الخط المباشر", conLabel3: "العنوان", conLabel4: "الوصول للشاطئ",
+    conAddr: "شارع الحبيب بورقيبة، مرزقة، نابل", conBeach: "على بعد 300 متر من البحر",
+    fnameLabel: "الاسم الأول", lnameLabel: "اللقب", emailLabel: "البريد الإلكتروني", phoneLabel: "الهاتف / واتساب", msgLabel: "الرسالة / نوع العقار المطلوب",
+    fnamePh: "اسمك الأول", lnamePh: "لقبك", emailPh: "your@email.com", phonePh: "+216 ...", msgPh: "رسالتك...",
+    formSubmit: "إرسال الرسالة",
+    successMsg: "تم إرسال رسالتك بنجاح. سيتواصل فريقنا معك خلال 24 ساعة.",
+    footerTagline: "التميز في أدق التفاصيل.",
+    footerCopy: "© 2024 - 2026 إقامة لو خاكاراندا. جميع الحقوق محفوظة.",
+    navAbout: "عن المشروع", navAmen: "المميزات", navTour: "جولة 360°", navGal: "الصور", navQuartier: "المنطقة", navApp: "تطبيق المقيمين", navCon: "تواصل معنا",
+    heroCta1: "اكتشف الشقق", heroCta2: "جولة افتراضية 360°"
+  },
+
+  /* ════════ ESPAÑOL ════════ */
   es: {
-    heroEyebrow: 'Mrezgua آ· Nabeul آ· Tأ؛nez',
-    heroTagline: 'El arte de vivir en su mأ،s bella expresiأ³n',
-    scrollText: 'Desplazar',
-    stat1: 'Bloques', stat2: 'Piscinas', stat3: 'de la Playa', stat4: 'Conserjerأ­a',
-    aboutTag: 'Acerca de',
-    aboutTitle: 'Un Arte de Vivir<br /><em>Excepcional</em>',
-    aboutBody: 'Ubicada en el corazأ³n de Mrezgua, a tan solo 300 metros de la playa de Nabeul, la Residencia Le Jacaranda es fruto de una ambiciosa visiأ³n arquitectأ³nica: un espacio de vida que combina modernidad, elegancia y serenidad.',
-    aboutBody2: 'Sus fachadas de blanco inmaculado, sus amplios balcones y sus zonas comunes cuidadosamente diseأ±adas hacen de esta residencia un remanso de paz con diseأ±o contemporأ،neo.',
-    aboutFeatures: ['Arquitectura contemporأ،nea de alta gama', 'Acabados de primera calidad', 'Espacios verdes ajardinados', 'A 300m del mar'],
-    badgeLabel: 'Entrega', floatTitle: 'Arquitectura Premium', floatSub: 'Diseأ±o contemporأ،neo de prestigio',
-    aboutCtaText: 'Explorar en 360آ°',
-    amenTag: 'Servicios',
-    amenTitle: 'Todo el Lujo<br /><em>en un Solo Lugar</em>',
-    amen1: 'Piscinas',       amen1d: 'Dos piscinas cristalinas iluminadas para momentos de relax incomparables a cualquier hora.',
-    amen2: 'Seguridad 24h',  amen2d: 'Acceso seguro, vigilancia permanente y sistema de control avanzado para su tranquilidad.',
-    amen3: 'Parking Privado', amen3d: 'Plazas de aparcamiento cubiertas y seguras de uso exclusivo para los residentes.',
-    amen4: 'Zonas Verdes',   amen4d: 'Jardines ajardinados y vegetaciأ³n mediterrأ،nea para un ambiente tranquilo y revitalizante.',
-    amen5: 'Acabados Premium', amen5d: 'Materiales nobles, pavimento de gran formato, carpinterأ­a de aluminio â€” prestaciones de excepciأ³n.',
-    amen6: 'Conserjerأ­a',    amen6d: 'Servicio de conserjerأ­a disponible para atender todas sus solicitudes con la mayor discreciأ³n.',
-    tourTag: 'Visita Virtual',
-    tourTitle: 'Explore la Residencia<br /><em>en 360آ°</em>',
-    tourSub: 'Navegue libremente por nuestros espacios. Haga clic y arrastre para explorar cada rincأ³n.',
-    tabInteriorText: 'Apartamento', tabPoolText: 'Piscina y Jardines',
-    hintText: 'Haga clic y arrastre para explorar',
-    galTag: 'Galerأ­a',
-    galTitle: 'La Residencia<br /><em>en Imأ،genes</em>',
-    galCap1: 'Vista Exterior', galCap2: 'Apartamentos', galCap3: 'Piscina de Noche', galCap4: 'Vista Aأ©rea',
-    appTag: 'Aplicaciأ³n Mأ³vil',
-    appTitle: 'Gestione su residencia<br /><em>desde su bolsillo</em>',
-    appBody: 'Reserve la piscina, contacte a la conserjerأ­a, acceda a la informaciأ³n de la residencia y reciba notificaciones importantes â€” todo desde la app oficial Le Jacaranda.',
-    appFeatures: ['Acceso y control de entrada', 'Reserva piscina y zonas comunes', 'Chat directo con conserjerأ­a', 'Notificaciones y anuncios de la residencia'],
-    appStoreSub: 'Descargar en', playStoreSub: 'Disponible en',
-    locTag: 'Localizaciأ³n',
-    locTitle: 'Mrezgua, Nabeul<br /><em>A 300m del Mar</em>',
-    locBadge1Val: '300m',   locBadge1Lbl: 'de la playa',
-    locBadge2Val: 'Nabeul', locBadge2Lbl: 'Centro ciudad',
-    locBadge3Val: 'Enfidha', locBadge3Lbl: 'Aeropuerto cercano',
-    mapPinTitle: 'Rأ©sidence Le Jacaranda',
-    mapPinAddr: 'Mrezgua, Nabeul, Tأ؛nez آ· 300m de la playa',
-    conTag: 'Contacto',
-    conTitle: 'Escrأ­banos,<br /><em>Reunأ،monos</em>',
-    conSub: 'Nuestro equipo estأ، a su disposiciأ³n para acompaأ±arle en su proyecto de vida en la Residencia Le Jacaranda.',
-    conLabel1: 'Correo', conLabel2: 'Telأ©fono', conLabel3: 'Direcciأ³n', conLabel4: 'Acceso Playa',
-    conAddr: 'Mrezgua, Nabeul, Tأ؛nez', conBeach: 'A 300 metros del mar',
-    fnameLabel: 'Nombre', lnameLabel: 'Apellido', emailLabel: 'Correo', phoneLabel: 'Telأ©fono', msgLabel: 'Mensaje',
-    fnamePh: 'Su nombre', lnamePh: 'Su apellido', emailPh: 'su@correo.com', phonePh: '+216 ...', msgPh: 'Su mensaje...',
-    formSubmit: 'Enviar Mensaje',
-    successMsg: 'Mensaje enviado con أ©xito. Nos pondremos en contacto muy pronto.',
-    footerTagline: 'La excelencia en cada detalle.',
-    footerCopy: 'آ© 2024 - 2026 Rأ©sidence Le Jacaranda. Todos los derechos reservados.',
-    navAbout: 'Acerca de', navAmen: 'Servicios', navTour: 'Tour 360آ°', navGal: 'Galerأ­a', navApp: 'Aplicaciأ³n', navLoc: 'Localizaciأ³n', navCon: 'Contacto',
-    ctaNav: 'Contأ،ctenos',
-    heroCta1: 'Descubrir', heroCta2: 'Tour 360آ°',
+    heroBadgeText: "Residencia Excepcional · Mrezgua Nabeul · A 300m de la Playa",
+    heroEyebrowText: "Mrezgua · Nabeul · Túnez",
+    heroTagline: "El arte de vivir en su más bella expresión",
+    scrollText: "Desplazar para explorar",
+    stat1: "Bloques Residenciales", stat2: "Piscinas de Agua Cristalina", stat3: "de la Playa Mediterránea", stat4: "Conserjería & Seguridad 24/7",
+    badgeLabel: "Entrega Inmediata", floatTitle: "Arquitectura Contemporánea", floatSub: "Diseño mediterráneo y acabados de lujo",
+    aboutTag: "Acerca del Proyecto",
+    aboutTitle: "Un Arte de Vivir<br /><em>Excepcional</em>",
+    aboutBody: "Ubicada en el corazón de Mrezgua, a solo 300 metros de la magnífica playa de Nabeul, la Residencia Le Jacaranda es fruto de una ambiciosa visión arquitectónica: un espacio que combina modernidad, elegancia y serenidad.",
+    aboutBody2: "Sus fachadas de blanco inmaculado, sus amplios balcones y sus zonas comunes cuidadosamente ajardinadas hacen de esta residencia un remanso de paz con diseño contemporáneo de alta gama.",
+    aboutFeatures: ["Arquitectura contemporánea de prestigio", "Acabados de primera calidad en mármol y aluminio", "Espacios verdes y jardines mediterráneos", "Residencia cerrada, vigilada 24h/24 con control de acceso"],
+    aboutCtaText: "Explorar en 360°",
+    amenTag: "Servicios & Prestaciones",
+    amenTitle: "Todo el Lujo<br /><em>en un Solo Lugar</em>",
+    amen1: "Piscinas",          amen1d: "Dos piscinas cristalinas iluminadas para momentos de relax incomparables a cualquier hora.",
+    amen2: "Seguridad 24h/24",  amen2d: "Acceso seguro, videovigilancia continua y sistema de control avanzado para su tranquilidad.",
+    amen3: "Parking Privado",   amen3d: "Plazas de aparcamiento cubiertas y seguras, exclusivas para los residentes.",
+    amen4: "Zonas Verdes",      amen4d: "Jardines mediterráneos para un ambiente tranquilo y revitalizante.",
+    amen5: "Acabados Premium",  amen5d: "Materiales nobles, suelos de gran formato, carpintería de aluminio — prestaciones de excepción.",
+    amen6: "Conserjería",       amen6d: "Servicio de conserjería disponible para atender todas sus solicitudes con máxima discreción.",
+    typoTag: "Viviendas & Planos",
+    typoTitle: "Espacios de Vida<br /><em>Diseñados para la Excelencia</em>",
+    typoSub: "Viviendas armoniosas desde apartamentos optimizados de 1 dormitorio hasta áticos exclusivos con vistas panorámicas al mar.",
+    tourTag: "Visita Virtual",
+    tourTitle: "Explore la Residencia<br /><em>en 360°</em>",
+    tourSub: "Navegue libremente por nuestros espacios. Haga clic y arrastre para explorar cada rincón.",
+    tabInteriorText: "Apartamento", tabPoolText: "Piscina y Jardines",
+    hintText: "Haga clic y arrastre para explorar",
+    galTag: "Galería Fotográfica",
+    galTitle: "La Residencia<br /><em>en Imágenes</em>",
+    galFilterAll: "Todas", galFilterExt: "Exterior", galFilterInt: "Interiores", galFilterNight: "Piscina y Noche", galFilterCommon: "Zonas Comunes",
+    galCap1: "Fachada Contemporánea", galCap2: "Vista Nocturna", galCap3: "Ascensores & Mármol", galCap4: "Parking Subterráneo",
+    galCap5: "Pasillos Elegantes", galCap6: "Ángulo Panorámico", galCap7: "Piscina & Lobby", galCap8: "Gran Vestíbulo & Lámpara",
+    galCap9: "Vestíbulo Planta Baja", galCap10: "Piscina & Jardines",
+    quartierTag: "Estilo de Vida Mediterráneo",
+    quartierTitle: "Mrezgua y sus Tesoros<br /><em>Entre Mar, Cultura y Ocio</em>",
+    quartierSub: "Una ubicación excepcional entre Nabeul y Hammamet, que combina la tranquilidad costera con una cultura vibrante.",
+    qCard1Title: "Playa de Mrezgua", qCard1Desc: "Arena blanca, aguas turquesas y puestas de sol mágicas frente al golfo de Hammamet.",
+    qCard2Title: "Nabeul y Artesanía", qCard2Desc: "Capital tunecina de la cerámica, zocos tradicionales de especias y destilerías de azahar.",
+    qCard3Title: "Hammamet Norte y Marina", qCard3Desc: "Restaurantes gastronómicos junto al mar, emblemáticos cafés de la Medina y exclusivos clubes náuticos.",
+    qCard4Title: "Campos de Golf Citrus y Yasmine", qCard4Desc: "Campos de campeonato internacional de 45 hoyos rodeados de olivos y colinas verdes.",
+    appTag: "Ecosistema Conectado",
+    appTitle: "Gestione su residencia<br /><em>desde su smartphone</em>",
+    appBody: "Notifique incidencias en un clic, contacte con el administrador y la conserjería, reciba avisos oficiales y siga sus trámites en tiempo real.",
+    appFeatures: ["Seguimiento de reclamaciones y sugerencias en tiempo real", "Mensajería directa con la administración y conserjería", "Recordatorios de cuotas e informes en PDF", "Notificaciones prioritarias de la residencia"],
+    appStoreSub: "Descargar en", playStoreSub: "Disponible en",
+    locTag: "Ubicación Estratégica",
+    locTitle: "Mrezgua, Nabeul<br /><em>A 300m del Mar</em>",
+    locBadge1Val: "300m",   locBadge1Lbl: "Playa de arena fina (3 min a pie)",
+    locBadge2Val: "5 min",  locBadge2Lbl: "Centro de Nabeul y Mercados",
+    locBadge3Val: "45 min", locBadge3Lbl: "Aeropuerto de Enfidha / Túnez",
+    mapPinTitle: "Residencia Le Jacaranda",
+    mapPinAddr: "Mrezgua, Nabeul, Túnez · A 300m de la playa",
+    gpsLabel: "Cómo llegar desde mi ubicación",
+    conTag: "Oficina Comercial & Gestión",
+    conTitle: "Escríbanos,<br /><em>Reunámonos</em>",
+    conSub: "Nuestro equipo comercial y de gestión está a su entera disposición para organizar una visita privada o responder a sus dudas.",
+    conLabel1: "Correo Oficial", conLabel2: "Línea Directa", conLabel3: "Dirección", conLabel4: "Acceso Playa",
+    conAddr: "Avenida Habib Bourguiba, Mrezgua, Nabeul", conBeach: "A 300 metros del mar",
+    fnameLabel: "Nombre", lnameLabel: "Apellido", emailLabel: "Correo electrónico", phoneLabel: "Teléfono / WhatsApp", msgLabel: "Mensaje / Tipo de inmueble deseado",
+    fnamePh: "Su nombre", lnamePh: "Su apellido", emailPh: "su@correo.com", phonePh: "+216 ...", msgPh: "Su mensaje...",
+    formSubmit: "Enviar Mensaje",
+    successMsg: "Mensaje enviado con éxito. Nuestro equipo se pondrá en contacto en 24 horas.",
+    footerTagline: "La excelencia en cada detalle.",
+    footerCopy: "© 2024 - 2026 Residencia Le Jacaranda. Todos los derechos reservados.",
+    navAbout: "Acerca de", navAmen: "Servicios", navTour: "Visita 360°", navGal: "Galería", navQuartier: "Barrio", navApp: "App Residentes", navCon: "Contacto",
+    heroCta1: "Descubrir Viviendas", heroCta2: "Visita Virtual 360°"
   },
 
-  /* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ ITALIANO â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+  /* ════════ ITALIANO ════════ */
   it: {
-    heroEyebrow: 'Mrezgua آ· Nabeul آ· Tunisia',
-    heroTagline: "L'arte di vivere nella sua piأ¹ bella espressione",
-    scrollText: 'Scorri',
-    stat1: 'Edifici', stat2: 'Piscine', stat3: 'dalla Spiaggia', stat4: 'Portineria',
-    aboutTag: 'Chi Siamo',
-    aboutTitle: 'Un\'Arte di Vivere<br /><em>Eccezionale</em>',
-    aboutBody: "Immersa nel cuore di Mrezgua, a 300 metri dalla spiaggia di Nabeul, la Rأ©sidence Le Jacaranda nasce da una visione architettonica ambiziosa: offrire uno spazio abitativo che unisce modernitأ , eleganza e serenitأ .",
-    aboutBody2: 'Le sue facciate bianche immacolate, i suoi ampi balconi e le aree comuni curate nei minimi dettagli fanno di questo residence un\'oasi di pace dal design contemporaneo.',
-    aboutFeatures: ['Architettura contemporanea di alto livello', 'Finiture di prima qualitأ ', 'Spazi verdi e giardini curati', 'A 300m dal mare'],
-    badgeLabel: 'Consegna', floatTitle: 'Architettura Premium', floatSub: 'Design contemporaneo di prestigio',
-    aboutCtaText: 'Esplora a 360آ°',
-    amenTag: 'Servizi',
-    amenTitle: 'Tutto il Lusso<br /><em>in un Solo Luogo</em>',
-    amen1: 'Piscine',          amen1d: 'Due piscine cristalline illuminate per momenti di relax senza pari a qualsiasi ora.',
-    amen2: 'Sicurezza 24h/24',  amen2d: 'Accesso protetto, videosorveglianza continua e sistema di controllo avanzato per la massima tranquillitأ .',
-    amen3: 'Parcheggio Privato', amen3d: 'Posti auto coperti e custoditi ad uso esclusivo dei residenti.',
-    amen4: 'Aree Verdi',       amen4d: 'Giardini paesaggistici e flora mediterranea per un\'atmosfera distensiva e rigenerante.',
-    amen5: 'Finiture di Pregio', amen5d: 'Materiali nobili, pavimentazione di grande formato, infissi in alluminio â€” standard d\'eccellenza.',
-    amen6: 'Concierge',        amen6d: 'Servizio di portineria dedicato per soddisfare ogni richiesta con la massima discrezione.',
-    tourTag: 'Visita Virtuale',
-    tourTitle: 'Esplora la Residenza<br /><em>a 360آ°</em>',
-    tourSub: 'Naviga liberamente negli spazi. Clicca e trascina per esplorare ogni dettaglio.',
-    tabInteriorText: 'Appartamento', tabPoolText: 'Piscina & Giardini',
-    hintText: 'Clicca e trascina per esplorare',
-    galTag: 'Galleria',
-    galTitle: 'La Residenza<br /><em>in Immagini</em>',
-    galCap1: 'Vista Esterna', galCap2: 'Appartamenti', galCap3: 'Piscina Notturna', galCap4: 'Vista Aerea',
-    appTag: 'App Mobile',
-    appTitle: 'Gestisci la residenza<br /><em>dal tuo smartphone</em>',
-    appBody: "Prenota la piscina, contatta il custode, accedi a tutte le informazioni e ricevi le notifiche importanti â€” tutto dall'app ufficiale Le Jacaranda.",
-    appFeatures: ["Controllo accessi e varchi", 'Prenotazione piscina e aree comuni', 'Chat diretta con la portineria', 'Notifiche e comunicazioni condominiali'],
-    appStoreSub: 'Scarica su', playStoreSub: 'Disponibile su',
-    locTag: 'Posizione',
-    locTitle: 'Mrezgua, Nabeul<br /><em>A 300m dal Mare</em>',
-    locBadge1Val: '300m',   locBadge1Lbl: 'dalla spiaggia',
-    locBadge2Val: 'Nabeul', locBadge2Lbl: 'Centro cittأ ',
-    locBadge3Val: 'Enfidha', locBadge3Lbl: 'Aeroporto vicino',
-    mapPinTitle: 'Rأ©sidence Le Jacaranda',
-    mapPinAddr: 'Mrezgua, Nabeul, Tunisia آ· 300m dalla spiaggia',
-    conTag: 'Contatti',
-    conTitle: 'Scrivici,<br /><em>Incontriamoci</em>',
-    conSub: 'Il nostro team أ¨ a tua completa disposizione per accompagnarti nel tuo progetto di vita alla Rأ©sidence Le Jacaranda.',
-    conLabel1: 'Email', conLabel2: 'Telefono', conLabel3: 'Indirizzo', conLabel4: 'Accesso Spiaggia',
-    conAddr: 'Mrezgua, Nabeul, Tunisia', conBeach: 'A 300 metri dal mare',
-    fnameLabel: 'Nome', lnameLabel: 'Cognome', emailLabel: 'Email', phoneLabel: 'Telefono', msgLabel: 'Messaggio',
-    fnamePh: 'Il tuo nome', lnamePh: 'Il tuo cognome', emailPh: 'tua@email.com', phonePh: '+216 ...', msgPh: 'Il tuo messaggio...',
-    formSubmit: 'Invia il Messaggio',
-    successMsg: 'Messaggio inviato con successo. Ti ricontatteremo a breve.',
+    heroBadgeText: "Residenza d'Eccezione · Mrezgua Nabeul · A 300m dalla Spiaggia",
+    heroEyebrowText: "Mrezgua · Nabeul · Tunisia",
+    heroTagline: "L'arte di vivere nella sua più bella espressione",
+    scrollText: "Scorri per esplorare",
+    stat1: "Edifici Residenziali", stat2: "Piscine di Acqua Cristallina", stat3: "dalla Spiaggia del Mediterraneo", stat4: "Portineria & Sicurezza 24/7",
+    badgeLabel: "Consegna Immediata", floatTitle: "Architettura Contemporanea", floatSub: "Design mediterraneo & finiture di lusso",
+    aboutTag: "Informazioni sul Progetto",
+    aboutTitle: "Un'Arte di Vivere<br /><em>Eccezionale</em>",
+    aboutBody: "Immersa nel cuore di Mrezgua, a soli 300 metri dalla splendida spiaggia di Nabeul, la Résidence Le Jacaranda nasce da una visione ambiziosa: offrire uno spazio abitativo che unisce modernità, eleganza e serenità.",
+    aboutBody2: "Le sue facciate bianche immacolate, i suoi ampi balconi e le aree comuni curate fanno di questa residenza un'oasi di pace dal design contemporaneo di alto livello.",
+    aboutFeatures: ["Architettura contemporanea di prestigio", "Finiture di prima scelta in marmo e alluminio", "Spazi verdi e giardini mediterranei curati", "Residenza recintata, custodita 24/7 con controllo accessi"],
+    aboutCtaText: "Esplora a 360°",
+    amenTag: "Servizi & Comfort",
+    amenTitle: "Tutto il Lusso<br /><em>in un Solo Luogo</em>",
+    amen1: "Piscine",          amen1d: "Due piscine cristalline illuminate per momenti di relax senza pari a qualsiasi ora.",
+    amen2: "Sicurezza 24h/24",  amen2d: "Accesso protetto, videosorveglianza continua e sistema di controllo avanzato per la vostra tranquillità.",
+    amen3: "Parcheggio Privato", amen3d: "Posti auto coperti e custoditi ad uso esclusivo dei residenti.",
+    amen4: "Aree Verdi",       amen4d: "Giardini paesaggistici e flora mediterranea per un'atmosfera distensiva e rigenerante.",
+    amen5: "Finiture di Pregio", amen5d: "Materiali nobili, pavimenti in grande formato, infissi in alluminio — standard d'eccellenza.",
+    amen6: "Concierge",        amen6d: "Servizio di portineria dedicato per soddisfare ogni richiesta con la massima discrezione.",
+    typoTag: "Alloggi & Piante",
+    typoTitle: "Spazi Abitativi<br /><em>Progettati per l'Eccellenza</em>",
+    typoSub: "Alloggi armoniosi da bilocali ottimizzati a prestigiosi attici con vista panoramica sul mare.",
+    tourTag: "Visita Virtuale",
+    tourTitle: "Esplora la Residenza<br /><em>a 360°</em>",
+    tourSub: "Naviga liberamente negli spazi. Clicca e trascina per esplorare ogni dettaglio.",
+    tabInteriorText: "Appartamento", tabPoolText: "Piscina & Giardini",
+    hintText: "Clicca e trascina per esplorare",
+    galTag: "Galleria Fotografica",
+    galTitle: "La Residenza<br /><em>in Immagini</em>",
+    galFilterAll: "Tutte", galFilterExt: "Esterno", galFilterInt: "Interni", galFilterNight: "Piscina & Notte", galFilterCommon: "Spazi Comuni",
+    galCap1: "Facciata Contemporanea", galCap2: "Vista Notturna", galCap3: "Ascensori in Marmo", galCap4: "Parcheggio Sotterraneo",
+    galCap5: "Corridoi Eleganti", galCap6: "Angolo Panoramico", galCap7: "Piscina & Lobby", galCap8: "Grande Atrio & Lampadario",
+    galCap9: "Atrio Piano Terra", galCap10: "Piscina & Giardini",
+    quartierTag: "Stile di Vita Mediterraneo",
+    quartierTitle: "Mrezgua & i Suoi Tesori<br /><em>Tra Mare, Cultura e Relax</em>",
+    quartierSub: "Una posizione privilegiata tra Nabeul e Hammamet, che unisce la quiete marina alla vivacità culturale.",
+    qCard1Title: "Spiaggia di Mrezgua", qCard1Desc: "Sabbia bianca, acque cristalline calme e tramonti indimenticabili sul Golfo di Hammamet.",
+    qCard2Title: "Nabeul & Artigianato", qCard2Desc: "Capitale tunisina della ceramica, mercati tradizionali di spezie e storiche distillerie di fiori d'arancio.",
+    qCard3Title: "Hammamet Nord & Marina", qCard3Desc: "Ristoranti d'eccellenza sul mare, caffè storici della Medina ed esclusivi club nautici.",
+    qCard4Title: "Golf Citrus & Yasmine", qCard4Desc: "Campi da golf di livello internazionale a 45 buche tra uliveti e verdi colline.",
+    appTag: "Ecosistema Connesso",
+    appTitle: "Gestisci la residenza<br /><em>dal tuo smartphone</em>",
+    appBody: "Segnala un guasto in un clic, contatta l'amministrazione e il custode, ricevi avvisi ufficiali e segui le tue richieste in tempo reale.",
+    appFeatures: ["Monitoraggio in tempo reale di segnalazioni e proposte", "Messaggistica diretta con Amministratore & Custode", "Promemoria rate e report PDF condivisi", "Notifiche prioritarie e avvisi del condominio"],
+    appStoreSub: "Scarica su", playStoreSub: "Disponibile su",
+    locTag: "Posizione Strategica",
+    locTitle: "Mrezgua, Nabeul<br /><em>A 300m dal Mare</em>",
+    locBadge1Val: "300m",   locBadge1Lbl: "Spiaggia di sabbia fine (3 min a piedi)",
+    locBadge2Val: "5 min",  locBadge2Lbl: "Centro di Nabeul & Mercati",
+    locBadge3Val: "45 min", locBadge3Lbl: "Aeroporto di Enfidha / Tunisi",
+    mapPinTitle: "Résidence Le Jacaranda",
+    mapPinAddr: "Mrezgua, Nabeul, Tunisia · A 300m dalla spiaggia",
+    gpsLabel: "Indicazioni dalla mia posizione",
+    conTag: "Ufficio Commerciale & Amministrazione",
+    conTitle: "Scrivici,<br /><em>Incontriamoci</em>",
+    conSub: "Il nostro team commerciale e di gestione è a vostra disposizione per organizzare una visita privata o rispondere a ogni domanda.",
+    conLabel1: "Email Ufficiale", conLabel2: "Telefono Diretto", conLabel3: "Indirizzo", conLabel4: "Accesso Spiaggia",
+    conAddr: "Avenue Habib Bourguiba, Mrezgua, Nabeul", conBeach: "A 300 metri dal mare",
+    fnameLabel: "Nome", lnameLabel: "Cognome", emailLabel: "Email", phoneLabel: "Telefono / WhatsApp", msgLabel: "Messaggio / Tipologia richiesta",
+    fnamePh: "Il tuo nome", lnamePh: "Il tuo cognome", emailPh: "tua@email.com", phonePh: "+216 ...", msgPh: "Il tuo messaggio...",
+    formSubmit: "Invia il Messaggio",
+    successMsg: "Messaggio inviato con successo. Il nostro team vi contatterà entro 24 ore.",
     footerTagline: "L'eccellenza in ogni dettaglio.",
-    footerCopy: 'آ© 2024 - 2026 Rأ©sidence Le Jacaranda. Tutti i diritti riservati.',
-    navAbout: 'Chi Siamo', navAmen: 'Servizi', navTour: 'Visita 360آ°', navGal: 'Galleria', navApp: 'App Residenti', navLoc: 'Posizione', navCon: 'Contatti',
-    ctaNav: 'Contattaci',
-    heroCta1: 'Scopri', heroCta2: 'Visita 360آ°',
+    footerCopy: "© 2024 - 2026 Résidence Le Jacaranda. Tutti i diritti riservati.",
+    navAbout: "Chi Siamo", navAmen: "Servizi", navTour: "Visita 360°", navGal: "Galleria", navQuartier: "Quartiere", navApp: "App Residenti", navCon: "Contatti",
+    heroCta1: "Scopri gli Alloggi", heroCta2: "Visita Virtuale 360°"
   },
 
-  /* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ DEUTSCH â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+  /* ════════ DEUTSCH ════════ */
   de: {
-    heroEyebrow: 'Mrezgua آ· Nabeul آ· Tunesien',
-    heroTagline: 'Die Kunst des Wohnens in schأ¶nster Vollendung',
-    scrollText: 'Scrollen',
-    stat1: 'Gebأ¤ude', stat2: 'Pools', stat3: 'vom Strand', stat4: 'Concierge',
-    aboutTag: 'أœber Uns',
-    aboutTitle: 'Ein Auأںergewأ¶hnliches<br /><em>Lebensgefأ¼hl</em>',
-    aboutBody: 'Im Herzen von Mrezgua, nur 300 Meter vom Strand von Nabeul entfernt, ist die Rأ©sidence Le Jacaranda das Ergebnis einer anspruchsvollen architektonischen Vision: Modernitأ¤t, Eleganz und Ruhe harmonisch zu vereinen.',
-    aboutBody2: 'Strahlend weiأںe Fassaden, groأںzأ¼gige Balkone und liebevoll gestaltete Gemeinschaftsbereiche machen diese Residenz zu einer Oase im zeitgenأ¶ssischen Design.',
-    aboutFeatures: ['Hochwertige zeitgenأ¶ssische Architektur', 'Erstklassige Ausstattungsqualitأ¤t', 'Mediterran gestaltete Grأ¼nflأ¤chen', 'Nur 300 m vom Meer entfernt'],
-    badgeLabel: 'أœbergabe', floatTitle: 'Premium-Architektur', floatSub: 'Prestigetrأ¤chtiges Design',
-    aboutCtaText: '360آ° Rundgang',
-    amenTag: 'Ausstattung',
-    amenTitle: 'Exklusiver Luxus<br /><em>an einem Ort</em>',
-    amen1: 'Schwimmbأ¤der',   amen1d: 'Zwei beleuchtete, kristallklare Pools fأ¼r unvergleichliche Entspannungsmomente zu jeder Tageszeit.',
-    amen2: '24/7 Sicherheit', amen2d: 'Gesicherter Zugang, permanente أœberwachung und modernste Kontrollsysteme fأ¼r Ihre vollkommene Ruhe.',
-    amen3: 'Privatparkplatz', amen3d: 'أœberdachte und gesicherte Stellplأ¤tze exklusiv fأ¼r die Bewohner der Residenz.',
-    amen4: 'Grأ¼nanlagen',    amen4d: 'Angelegte Gأ¤rten und mediterrane Bepflanzung fأ¼r eine wohltuende, erholsame Atmosphأ¤re.',
-    amen5: 'Edle Materialien', amen5d: 'Hochwertige Baustoffe, groأںformatige Fliesen, Aluminium-Fensterelemente â€” auأںergewأ¶hnliche Standards.',
-    amen6: 'Concierge-Service', amen6d: 'Verlأ¤sslicher Service zur diskreten Erfأ¼llung all Ihrer Anliegen.',
-    tourTag: 'Virtueller Rundgang',
-    tourTitle: 'Entdecken Sie die Residenz<br /><em>in 360آ°</em>',
-    tourSub: 'Bewegen Sie sich frei durch unsere Rأ¤umlichkeiten. Klicken und ziehen Sie, um jede Ecke zu erkunden.',
-    tabInteriorText: 'Wohnung', tabPoolText: 'Pool & Gأ¤rten',
-    hintText: 'Klicken und ziehen zum Umschauen',
-    galTag: 'Galerie',
-    galTitle: 'Die Residenz<br /><em>in Bildern</em>',
-    galCap1: 'Auأںenansicht', galCap2: 'Wohnungen', galCap3: 'Pool bei Nacht', galCap4: 'Luftaufnahme',
-    appTag: 'Mobile App',
-    appTitle: 'Verwalten Sie Ihr Zuhause<br /><em>direkt per Smartphone</em>',
-    appBody: 'Pool reservieren, Concierge kontaktieren, wichtige Hausmitteilungen und Benachrichtigungen empfangen â€” alles in der offiziellen Le Jacaranda App.',
-    appFeatures: ['Zugangskontrolle & Eingangstأ¼r', 'Reservierung von Pool & Gemeinschaftsbereichen', 'Direktkontakt mit der Hausverwaltung', 'Hausmitteilungen in Echtzeit'],
-    appStoreSub: 'Laden im', playStoreSub: 'Jetzt bei',
-    locTag: 'Lage',
-    locTitle: 'Mrezgua, Nabeul<br /><em>300m vom Meer entfernt</em>',
-    locBadge1Val: '300m',   locBadge1Lbl: 'vom Strand',
-    locBadge2Val: 'Nabeul', locBadge2Lbl: 'Stadtzentrum',
-    locBadge3Val: 'Enfidha', locBadge3Lbl: 'Flughafen in der Nأ¤he',
-    mapPinTitle: 'Rأ©sidence Le Jacaranda',
-    mapPinAddr: 'Mrezgua, Nabeul, Tunesien آ· 300m vom Strand',
-    conTag: 'Kontakt',
-    conTitle: 'Schreiben Sie uns,<br /><em>Lernen wir uns kennen</em>',
-    conSub: 'Unser Team steht Ihnen gerne zur Seite, um Ihr Wohnprojekt in der Rأ©sidence Le Jacaranda zu verwirklichen.',
-    conLabel1: 'E-Mail', conLabel2: 'Telefon', conLabel3: 'Adresse', conLabel4: 'Strandzugang',
-    conAddr: 'Mrezgua, Nabeul, Tunesien', conBeach: '300 Meter vom Meer entfernt',
-    fnameLabel: 'Vorname', lnameLabel: 'Nachname', emailLabel: 'E-Mail', phoneLabel: 'Telefon', msgLabel: 'Nachricht',
-    fnamePh: 'Ihr Vorname', lnamePh: 'Ihr Nachname', emailPh: 'ihre@email.de', phonePh: '+216 ...', msgPh: 'Ihre Nachricht...',
-    formSubmit: 'Nachricht Senden',
-    successMsg: 'Nachricht erfolgreich gesendet. Wir werden uns schnellstmأ¶glich bei Ihnen melden.',
-    footerTagline: 'Exzellenz bis ins kleinste Detail.',
-    footerCopy: 'آ© 2024 - 2026 Rأ©sidence Le Jacaranda. Alle Rechte vorbehalten.',
-    navAbout: 'أœber Uns', navAmen: 'Ausstattung', navTour: '360آ° Rundgang', navGal: 'Galerie', navApp: 'Bewohner-App', navLoc: 'Lage', navCon: 'Kontakt',
-    ctaNav: 'Kontaktieren Sie Uns',
-    heroCta1: 'Entdecken', heroCta2: '360آ° Rundgang',
-  },
+    heroBadgeText: "Außergewöhnliche Residenz · Mrezgua Nabeul · 300m vom Strand",
+    heroEyebrowText: "Mrezgua · Nabeul · Tunesien",
+    heroTagline: "Die Kunst des Wohnens in schönster Vollendung",
+    scrollText: "Scrollen zum Erkunden",
+    stat1: "Wohnblöcke", stat2: "Kristallklare Pools", stat3: "vom Mittelmeerstrand", stat4: "24/7 Concierge & Sicherheit",
+    badgeLabel: "Sofortige Übergabe", floatTitle: "Zeitgenössische Architektur", floatSub: "Mediterranes Design & Luxusausstattung",
+    aboutTag: "Über das Projekt",
+    aboutTitle: "Ein Außergewöhnliches<br /><em>Lebensgefühl</em>",
+    aboutBody: "Im Herzen von Mrezgua, nur 300 Meter vom herrlichen Strand von Nabeul entfernt, vereint die Résidence Le Jacaranda Modernität, Eleganz und Ruhe in höchster Vollendung.",
+    aboutBody2: "Strahlend weiße Fassaden, großzügige Balkone und liebevoll gestaltete Grünanlagen machen diese Residenz zu einer friedvollen Oase im gehobenen zeitgenössischen Design.",
+    aboutFeatures: ["Prestigeträchtige zeitgenössische Architektur", "Erstklassige Ausführungen in Marmor und Aluminium", "Mediterrane Grünflächen und angelegte Gärten", "Umzäunte, rund um die Uhr bewachte Residenz mit Zutrittskontrolle"],
+    aboutCtaText: "360° Rundgang",
+    amenTag: "Ausstattung & Service",
+    amenTitle: "Exklusiver Luxus<br /><em>an einem Ort</em>",
+    amen1: "Schwimmbäder",   amen1d: "Zwei beleuchtete, kristallklare Pools für unvergleichliche Entspannungsmomente zu jeder Tageszeit.",
+    amen2: "24/7 Sicherheit", amen2d: "Gesicherter Zugang, permanente Überwachung und modernste Kontrollsysteme für Ihre vollkommene Ruhe.",
+    amen3: "Privatparkplatz", amen3d: "Überdachte und gesicherte Stellplätze exklusiv für die Bewohner der Residenz.",
+    amen4: "Grünanlagen",    amen4d: "Angelegte Gärten und mediterrane Bepflanzung für eine wohltuende, erholsame Atmosphäre.",
+    amen5: "Edle Materialien", amen5d: "Hochwertige Baustoffe, großformatige Fliesen, Aluminiumelemente — außergewöhnliche Standards.",
+    amen6: "Concierge-Service", amen6d: "Verlässlicher Service zur diskreten Erfüllung all Ihrer Anliegen.",
+    typoTag: "Wohnungen & Grundrisse",
+    typoTitle: "Lebensräume<br /><em>Für Exzellenz gestaltet</em>",
+    typoSub: "Harmonische Grundrisse von optimierten 2-Zimmer-Wohnungen bis hin zu exklusiven Penthouses mit Panoramablick auf das Meer.",
+    tourTag: "Virtueller Rundgang",
+    tourTitle: "Entdecken Sie die Residenz<br /><em>in 360°</em>",
+    tourSub: "Bewegen Sie sich frei durch unsere Räumlichkeiten. Klicken und ziehen Sie, um jede Ecke zu erkunden.",
+    tabInteriorText: "Wohnung", tabPoolText: "Pool & Gärten",
+    hintText: "Klicken und ziehen zum Umschauen",
+    galTag: "Fotogalerie",
+    galTitle: "Die Residenz<br /><em>in Bildern</em>",
+    galFilterAll: "Alle", galFilterExt: "Außenbereich", galFilterInt: "Innenräume", galFilterNight: "Pool & Nacht", galFilterCommon: "Gemeinschaftsbereiche",
+    galCap1: "Zeitgenössische Fassade", galCap2: "Nachtansicht", galCap3: "Marmoraufzüge & Foyer", galCap4: "Tiefgarage",
+    galCap5: "Elegante Korridore", galCap6: "Panoramablick", galCap7: "Pool & Lobby", galCap8: "Große Halle & Kronleuchter",
+    galCap9: "Erdgeschossfoyer", galCap10: "Pool & Gärten",
+    quartierTag: "Mediterraner Lebensstil",
+    quartierTitle: "Mrezgua & Seine Schätze<br /><em>Zwischen Meer, Kultur und Erholung</em>",
+    quartierSub: "Eine privilegierte Lage zwischen Nabeul und Hammamet, die mediterrane Ruhe mit urbaner Lebensqualität verbindet.",
+    qCard1Title: "Strand von Mrezgua", qCard1Desc: "Feiner weißer Sand, ruhiges türkisfarbenes Wasser und zauberhafte Sonnenuntergänge über dem Golf von Hammamet.",
+    qCard2Title: "Nabeul & Kunsthandwerk", qCard2Desc: "Tunesische Hauptstadt der Keramik, traditionelle Gewürzmärkte und historische Orangenblüten-Destillerien.",
+    qCard3Title: "Nord-Hammamet & Marina", qCard3Desc: "Exklusive Restaurants am Meer, traditionsreiche Cafés in der Medina und erstklassige Wassersport-Clubs.",
+    qCard4Title: "Golfplätze Citrus & Yasmine", qCard4Desc: "Internationale 45-Loch-Meisterschaftsplätze inmitten von Olivenhainen und sanften Hügeln.",
+    appTag: "Vernetztes Ökosystem",
+    appTitle: "Verwalten Sie Ihr Zuhause<br /><em>direkt per Smartphone</em>",
+    appBody: "Schadensmeldungen mit einem Klick, direkter Kontakt zur Hausverwaltung und zum Concierge, offizielle Mitteilungen in Echtzeit und Statusverfolgung.",
+    appFeatures: ["Echtzeit-Verfolgung von Anfragen & Vorschlägen", "Direkter Chat mit Verwaltung & Concierge", "Zahlungserinnerungen & geteilte PDF-Berichte", "Prioritäre Benachrichtigungen der Residenz"],
+    appStoreSub: "Laden im", playStoreSub: "Jetzt bei",
+    locTag: "Strategische Lage",
+    locTitle: "Mrezgua, Nabeul<br /><em>300m vom Meer entfernt</em>",
+    locBadge1Val: "300m",   locBadge1Lbl: "Feiner Sandstrand (3 Min. zu Fuß)",
+    locBadge2Val: "5 Min.", locBadge2Lbl: "Stadtzentrum Nabeul & Märkte",
+    locBadge3Val: "45 Min.", locBadge3Lbl: "Flughafen Enfidha / Tunis",
+    mapPinTitle: "Résidence Le Jacaranda",
+    mapPinAddr: "Mrezgua, Nabeul, Tunesien · 300m vom Strand",
+    gpsLabel: "Route von meinem Standort",
+    conTag: "Verkaufsbüro & Verwaltung",
+    conTitle: "Schreiben Sie uns,<br /><em>Lernen wir uns kennen</em>",
+    conSub: "Unser Vertriebs- und Verwaltungsteam steht Ihnen gerne zur Seite, um eine private Besichtigung zu vereinbaren oder Ihre Fragen zu beantworten.",
+    conLabel1: "Offizielle E-Mail", conLabel2: "Direktrufnummer", conLabel3: "Adresse", conLabel4: "Strandzugang",
+    conAddr: "Avenue Habib Bourguiba, Mrezgua, Nabeul", conBeach: "300 Meter vom Meer entfernt",
+    fnameLabel: "Vorname", lnameLabel: "Nachname", emailLabel: "E-Mail", phoneLabel: "Telefon / WhatsApp", msgLabel: "Nachricht / Gewünschter Wohnungstyp",
+    fnamePh: "Ihr Vorname", lnamePh: "Ihr Nachname", emailPh: "ihre@email.de", phonePh: "+216 ...", msgPh: "Ihre Nachricht...",
+    formSubmit: "Nachricht Senden",
+    successMsg: "Nachricht erfolgreich gesendet. Unser Team wird sich innerhalb von 24 Stunden bei Ihnen melden.",
+    footerTagline: "Exzellenz bis ins kleinste Detail.",
+    footerCopy: "© 2024 - 2026 Résidence Le Jacaranda. Alle Rechte vorbehalten.",
+    navAbout: "Über Uns", navAmen: "Ausstattung", navTour: "360° Rundgang", navGal: "Galerie", navQuartier: "Quartier", navApp: "Bewohner-App", navCon: "Kontakt",
+    heroCta1: "Wohnungen entdecken", heroCta2: "360° Rundgang"
+  }
 };
 
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+/* ═══════════════════════════════════════════════════
    APPLY TRANSLATION
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+═══════════════════════════════════════════════════ */
 let currentLang = 'fr';
 
 function applyTranslation(lang) {
@@ -383,50 +461,54 @@ function applyTranslation(lang) {
   /* update dropdown button */
   const langCurrentEl = document.getElementById('langCurrent');
   if (langCurrentEl) {
-    langCurrentEl.querySelector('.lang-flag').textContent = lm.flag;
-    langCurrentEl.querySelector('.lang-code').textContent = lm.code;
+    const flagEl = langCurrentEl.querySelector('.lang-flag');
+    const codeEl = langCurrentEl.querySelector('.lang-code');
+    if (flagEl) flagEl.textContent = lm.flag;
+    if (codeEl) codeEl.textContent = lm.code;
   }
   document.querySelectorAll('.lang-option').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
 
-  /* â”€â”€ simple text IDs â”€â”€ */
+  /* simple text IDs */
   const textIds = [
-    'heroEyebrowText','heroTagline','scrollText',
+    'heroBadgeText','heroEyebrowText','heroTagline','scrollText',
     'stat1','stat2','stat3','stat4',
     'badgeLabel','floatTitle','floatSub','aboutCtaText',
     'amen1','amen1d','amen2','amen2d','amen3','amen3d',
     'amen4','amen4d','amen5','amen5d','amen6','amen6d',
-    'tourSub','tabInteriorText','tabPoolText','hintText',
-    'galCap1','galCap2','galCap3','galCap4',
+    'typoSub','tourSub','tabInteriorText','tabPoolText','hintText',
+    'galFilterAll','galFilterExt','galFilterInt','galFilterNight','galFilterCommon',
+    'galCap1','galCap2','galCap3','galCap4','galCap5','galCap6','galCap7','galCap8','galCap9','galCap10',
+    'quartierSub','qCard1Title','qCard1Desc','qCard2Title','qCard2Desc','qCard3Title','qCard3Desc','qCard4Title','qCard4Desc',
     'appBody','appStoreSub','playStoreSub',
     'locBadge1Val','locBadge1Lbl','locBadge2Val','locBadge2Lbl','locBadge3Val','locBadge3Lbl',
-    'mapPinTitle','mapPinAddr',
+    'mapPinTitle','mapPinAddr','gpsLabel',
     'conSub','conLabel1','conLabel2','conLabel3','conLabel4','conAddr','conBeach',
     'fnameLabel','lnameLabel','emailLabel','phoneLabel','msgLabel',
     'formSubmit','successMsg','footerTagline','footerCopy',
-    'aboutTag','amenTag','typoTag','tourTag','galTag','calcTag','quartierTag','appTag','locTag','faqTag','conTag',
-    'ctaNav','heroCta1','heroCta2',
-    'navAbout','navAmen','navTypo','navTour','navGal','navCalc','navQuartier','navApp','navFaq','navCon'
+    'aboutTag','amenTag','typoTag','tourTag','galTag','quartierTag','appTag','locTag','conTag',
+    'heroCta1','heroCta2',
+    'navAbout','navAmen','navTour','navGal','navQuartier','navApp','navCon'
   ];
   textIds.forEach(id => {
     const el = document.getElementById(id);
     if (el && t[id] !== undefined) el.textContent = t[id];
   });
 
-  /* ── innerHTML titles ── */
-  ['aboutTitle','amenTitle','typoTitle','tourTitle','galTitle','calcTitle','quartierTitle','appTitle','locTitle','faqTitle','conTitle'].forEach(id => {
+  /* innerHTML titles */
+  ['aboutTitle','amenTitle','typoTitle','tourTitle','galTitle','quartierTitle','appTitle','locTitle','conTitle'].forEach(id => {
     const el = document.getElementById(id);
     if (el && t[id]) el.innerHTML = t[id];
   });
 
-  /* ── about body ── */
+  /* about body */
   const ab = document.getElementById('aboutBody');
   const ab2 = document.getElementById('aboutBody2');
-  if (ab)  ab.textContent  = t.aboutBody;
-  if (ab2) ab2.textContent = t.aboutBody2;
+  if (ab && t.aboutBody)   ab.textContent  = t.aboutBody;
+  if (ab2 && t.aboutBody2) ab2.textContent = t.aboutBody2;
 
-  /* ── about features ── */
+  /* about features */
   const featureItems = document.querySelectorAll('#aboutFeatures li');
   featureItems.forEach((li, i) => {
     if (!t.aboutFeatures || !t.aboutFeatures[i]) return;
@@ -436,7 +518,7 @@ function applyTranslation(lang) {
     li.appendChild(document.createTextNode(' ' + t.aboutFeatures[i]));
   });
 
-  /* ── app features ── */
+  /* app features */
   const appFeatureItems = document.querySelectorAll('#appFeatures li');
   appFeatureItems.forEach((li, i) => {
     if (!t.appFeatures || !t.appFeatures[i]) return;
@@ -446,16 +528,16 @@ function applyTranslation(lang) {
     li.appendChild(document.createTextNode(' ' + t.appFeatures[i]));
   });
 
-  /* ── form placeholders ── */
+  /* form placeholders */
   [['fname', 'fnamePh'], ['lname','lnamePh'], ['email','emailPh'], ['phone','phonePh'], ['message','msgPh']].forEach(([id, key]) => {
     const el = document.getElementById(id);
     if (el && t[key]) el.placeholder = t[key];
   });
 }
 
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+/* ═══════════════════════════════════════════════════
    LANGUAGE DROPDOWN
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+═══════════════════════════════════════════════════ */
 const langDropdown = document.getElementById('langDropdown');
 const langCurrent  = document.getElementById('langCurrent');
 const langMenu     = document.getElementById('langMenu');
@@ -499,33 +581,37 @@ if (langCurrent && langMenu) {
   });
 }
 
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+/* ═══════════════════════════════════════════════════
    NAVBAR SCROLL
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+═══════════════════════════════════════════════════ */
 const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 60);
-}, { passive: true });
+if (navbar) {
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+}
 
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+/* ═══════════════════════════════════════════════════
    HAMBURGER MENU
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+═══════════════════════════════════════════════════ */
 const hamburger  = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 let menuOpen = false;
 
-hamburger.addEventListener('click', () => {
-  menuOpen = !menuOpen;
-  mobileMenu.classList.toggle('open', menuOpen);
-  hamburger.setAttribute('aria-expanded', menuOpen);
-});
-document.querySelectorAll('.mob-link').forEach(link => {
-  link.addEventListener('click', () => { menuOpen = false; mobileMenu.classList.remove('open'); });
-});
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    mobileMenu.classList.toggle('open', menuOpen);
+    hamburger.setAttribute('aria-expanded', menuOpen);
+  });
+  document.querySelectorAll('.mob-link').forEach(link => {
+    link.addEventListener('click', () => { menuOpen = false; mobileMenu.classList.remove('open'); });
+  });
+}
 
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+/* ═══════════════════════════════════════════════════
    SMOOTH NAV CLICKS
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+═══════════════════════════════════════════════════ */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.getElementById(a.getAttribute('href').slice(1));
@@ -533,26 +619,33 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+/* ═══════════════════════════════════════════════════
    CONTACT FORM
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
-document.getElementById('contactForm').addEventListener('submit', e => {
-  e.preventDefault();
-  const btn = document.getElementById('formSubmit');
-  btn.style.opacity = '0.6';
-  btn.style.pointerEvents = 'none';
-  setTimeout(() => {
-    document.getElementById('formSuccess').classList.add('visible');
-    document.getElementById('contactForm').reset();
-    btn.style.opacity = '';
-    btn.style.pointerEvents = '';
-  }, 900);
-});
+═══════════════════════════════════════════════════ */
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const btn = document.getElementById('formSubmit');
+    if (btn) {
+      btn.style.opacity = '0.6';
+      btn.style.pointerEvents = 'none';
+    }
+    setTimeout(() => {
+      const formSuccess = document.getElementById('formSuccess');
+      if (formSuccess) formSuccess.classList.add('visible');
+      contactForm.reset();
+      if (btn) {
+        btn.style.opacity = '';
+        btn.style.pointerEvents = '';
+      }
+    }, 900);
+  });
+}
 
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+/* ═══════════════════════════════════════════════════
    LIGHTBOX
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+═══════════════════════════════════════════════════ */
 const lightbox      = document.getElementById('lightbox');
 const lightboxImg   = document.getElementById('lightboxImg');
 const lightboxCount = document.getElementById('lightboxCounter');
@@ -566,45 +659,61 @@ document.querySelectorAll('.gallery-item').forEach((item, i) => {
 });
 
 function openLightbox(idx) {
+  if (!lightbox || !lightboxImg) return;
   lightboxImg.src = galImages[idx].src;
   lightboxImg.alt = galImages[idx].alt;
-  if (lightboxCount) lightboxCount.textContent = `${idx + 1} / ${galImages.length}`;
+  if (lightboxCount) lightboxCount.textContent = (idx + 1) + ' / ' + galImages.length;
   lightbox.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
 function closeLightbox() {
+  if (!lightbox) return;
   lightbox.classList.remove('open');
   document.body.style.overflow = '';
 }
 
-document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
-lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
-document.getElementById('lightboxPrev').addEventListener('click', () => {
-  currentGalIdx = (currentGalIdx - 1 + galImages.length) % galImages.length;
-  openLightbox(currentGalIdx);
-});
-document.getElementById('lightboxNext').addEventListener('click', () => {
-  currentGalIdx = (currentGalIdx + 1) % galImages.length;
-  openLightbox(currentGalIdx);
-});
+const lbClose = document.getElementById('lightboxClose');
+if (lbClose) lbClose.addEventListener('click', closeLightbox);
+if (lightbox) lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+
+const lbPrev = document.getElementById('lightboxPrev');
+if (lbPrev) {
+  lbPrev.addEventListener('click', () => {
+    if (galImages.length === 0) return;
+    currentGalIdx = (currentGalIdx - 1 + galImages.length) % galImages.length;
+    openLightbox(currentGalIdx);
+  });
+}
+
+const lbNext = document.getElementById('lightboxNext');
+if (lbNext) {
+  lbNext.addEventListener('click', () => {
+    if (galImages.length === 0) return;
+    currentGalIdx = (currentGalIdx + 1) % galImages.length;
+    openLightbox(currentGalIdx);
+  });
+}
+
 document.addEventListener('keydown', e => {
-  if (!lightbox.classList.contains('open')) return;
+  if (!lightbox || !lightbox.classList.contains('open')) return;
   if (e.key === 'Escape') closeLightbox();
-  if (e.key === 'ArrowLeft')  { currentGalIdx = (currentGalIdx - 1 + galImages.length) % galImages.length; openLightbox(currentGalIdx); }
-  if (e.key === 'ArrowRight') { currentGalIdx = (currentGalIdx + 1) % galImages.length; openLightbox(currentGalIdx); }
+  if (e.key === 'ArrowLeft' && galImages.length > 0)  { currentGalIdx = (currentGalIdx - 1 + galImages.length) % galImages.length; openLightbox(currentGalIdx); }
+  if (e.key === 'ArrowRight' && galImages.length > 0) { currentGalIdx = (currentGalIdx + 1) % galImages.length; openLightbox(currentGalIdx); }
 });
 
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+/* ═══════════════════════════════════════════════════
    PARALLAX HERO
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+═══════════════════════════════════════════════════ */
 const heroImg = document.querySelector('#heroParallaxImg');
-window.addEventListener('scroll', () => {
-  if (heroImg) heroImg.style.transform = `translateY(${window.scrollY * 0.25}px)`;
-}, { passive: true });
+if (heroImg) {
+  window.addEventListener('scroll', () => {
+    heroImg.style.transform = 'translateY(' + (window.scrollY * 0.25) + 'px)';
+  }, { passive: true });
+}
 
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+/* ═══════════════════════════════════════════════════
    ANIMATED STAT COUNTERS
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+═══════════════════════════════════════════════════ */
 function animateCounter(el, target, duration = 1800) {
   let start = 0;
   const step = (timestamp) => {
@@ -624,7 +733,7 @@ if (statsSection) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         document.querySelectorAll('.stat-number[data-target]').forEach(el => {
-          animateCounter(el, parseInt(el.dataset.target));
+          animateCounter(el, parseInt(el.dataset.target, 10));
         });
         counterObserver.unobserve(entry.target);
       }
@@ -633,9 +742,9 @@ if (statsSection) {
   counterObserver.observe(statsSection);
 }
 
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+/* ═══════════════════════════════════════════════════
    SCROLL REVEAL
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+═══════════════════════════════════════════════════ */
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -649,9 +758,9 @@ document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .tilt-card')
   revealObserver.observe(el);
 });
 
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+/* ═══════════════════════════════════════════════════
    3D TILT ON AMENITY CARDS
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+═══════════════════════════════════════════════════ */
 document.querySelectorAll('.tilt-card').forEach(card => {
   card.addEventListener('mousemove', (e) => {
     const rect   = card.getBoundingClientRect();
@@ -659,7 +768,7 @@ document.querySelectorAll('.tilt-card').forEach(card => {
     const y      = e.clientY - rect.top  - rect.height / 2;
     const rotY   = (x / rect.width)  * 12;
     const rotX   = -(y / rect.height) * 12;
-    card.style.transform = `perspective(800px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-6px)`;
+    card.style.transform = 'perspective(800px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) translateY(-6px)';
   });
   card.addEventListener('mouseleave', () => {
     card.style.transform = '';
@@ -668,21 +777,21 @@ document.querySelectorAll('.tilt-card').forEach(card => {
   });
 });
 
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+/* ═══════════════════════════════════════════════════
    SCROLL PROGRESS BAR
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+═══════════════════════════════════════════════════ */
 const progressBar = document.getElementById('scrollProgress');
 if (progressBar) {
   window.addEventListener('scroll', () => {
     const scrollTop  = window.scrollY;
     const docHeight  = document.documentElement.scrollHeight - window.innerHeight;
-    progressBar.style.width = `${(scrollTop / docHeight) * 100}%`;
+    progressBar.style.width = ((scrollTop / docHeight) * 100) + '%';
   }, { passive: true });
 }
 
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+/* ═══════════════════════════════════════════════════
    CUSTOM CURSOR
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+═══════════════════════════════════════════════════ */
 const cursor         = document.getElementById('cursor');
 const cursorFollower = document.getElementById('cursorFollower');
 if (cursor && cursorFollower && window.innerWidth > 768) {
@@ -706,9 +815,9 @@ if (cursor && cursorFollower && window.innerWidth > 768) {
   });
 }
 
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
-   PANNELLUM 360آ° VIEWER
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+/* ═══════════════════════════════════════════════════
+   PANNELLUM 360° VIEWER
+═══════════════════════════════════════════════════ */
 const scenes = {
   interior: { src: 'panorama_interior.jpg', title: 'Appartement' },
   pool:     { src: 'panorama_pool.jpg',     title: 'Piscine & Jardins' },
@@ -745,7 +854,6 @@ document.querySelectorAll('.tour-tab').forEach(tab => {
   });
 });
 
-/* init 360 when section enters viewport */
 const tour360Section = document.getElementById('tour360');
 if (tour360Section) {
   const tourObserver = new IntersectionObserver((entries) => {
@@ -760,9 +868,9 @@ if (tour360Section) {
   tourObserver.observe(tour360Section);
 }
 
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+/* ═══════════════════════════════════════════════════
    GOLD PARTICLES CANVAS
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+═══════════════════════════════════════════════════ */
 const canvas = document.getElementById('particles');
 if (canvas) {
   const ctx = canvas.getContext('2d');
@@ -800,7 +908,7 @@ if (canvas) {
       if (p.x < 0) p.x = width;
       if (p.x > width) p.x = 0;
 
-      ctx.fillStyle = `hsla(43, 68%, 52%, ${Math.max(0.05, Math.min(0.7, p.opacity))})`;
+      ctx.fillStyle = 'hsla(43, 68%, 52%, ' + Math.max(0.05, Math.min(0.7, p.opacity)) + ')';
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
       ctx.fill();
@@ -810,15 +918,15 @@ if (canvas) {
   renderParticles();
 }
 
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+/* ═══════════════════════════════════════════════════
    MAGNETIC BUTTONS
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+═══════════════════════════════════════════════════ */
 document.querySelectorAll('.magnetic').forEach(btn => {
   btn.addEventListener('mousemove', (e) => {
     const rect = btn.getBoundingClientRect();
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
-    btn.style.transform = `translate(${x * 0.22}px, ${y * 0.22}px)`;
+    btn.style.transform = 'translate(' + (x * 0.22) + 'px, ' + (y * 0.22) + 'px)';
   });
   btn.addEventListener('mouseleave', () => {
     btn.style.transform = 'translate(0, 0)';
@@ -827,11 +935,9 @@ document.querySelectorAll('.magnetic').forEach(btn => {
   });
 });
 
-
-
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+/* ═══════════════════════════════════════════════════
    GALLERY FILTERING
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+═══════════════════════════════════════════════════ */
 const galFilterBtns = document.querySelectorAll('.gal-filter-btn');
 const galleryItems = document.querySelectorAll('.gallery-item');
 if (galFilterBtns.length > 0) {
@@ -854,22 +960,22 @@ if (galFilterBtns.length > 0) {
   });
 }
 
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+/* ═══════════════════════════════════════════════════
    AMBIENCE (DAY / NIGHT) MODE
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+═══════════════════════════════════════════════════ */
 const ambienceToggle = document.getElementById('ambienceToggle');
 const ambienceIcon = document.getElementById('ambienceIcon');
 if (ambienceToggle) {
   ambienceToggle.addEventListener('click', () => {
     document.body.classList.toggle('theme-day');
     const isDay = document.body.classList.contains('theme-day');
-    if (ambienceIcon) ambienceIcon.textContent = isDay ? 'âک€ï¸ڈ' : 'ًںŒ™';
+    if (ambienceIcon) ambienceIcon.textContent = isDay ? '☀️' : '🌙';
   });
 }
 
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+/* ═══════════════════════════════════════════════════
    BACK TO TOP BUTTON
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+═══════════════════════════════════════════════════ */
 const backToTop = document.getElementById('backToTop');
 if (backToTop) {
   window.addEventListener('scroll', () => {
@@ -880,9 +986,9 @@ if (backToTop) {
   });
 }
 
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+/* ═══════════════════════════════════════════════════
    INTERACTIVE RESIDENT SIMULATOR MODAL
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+═══════════════════════════════════════════════════ */
 const appDemoModal = document.getElementById('appDemoModal');
 const modalClose = document.getElementById('modalClose');
 const btnTryAppModal = document.getElementById('btnTryAppModal');
@@ -920,19 +1026,19 @@ if (btnSimulateSubmit) {
   btnSimulateSubmit.addEventListener('click', () => {
     btnSimulateSubmit.textContent = 'Transmission en cours...';
     setTimeout(() => {
-      btnSimulateSubmit.textContent = 'Transmettre au Syndic (Dأ©mo)';
+      btnSimulateSubmit.textContent = 'Transmettre au Syndic (Démo)';
       if (demoResult) demoResult.classList.add('visible');
     }, 600);
   });
 }
 
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
-   GPS â€” DIRECTIONS FROM CURRENT POSITION
-   Destination: Rأ©sidence Le Jacaranda, Mrezgua Nabeul
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
+/* ═══════════════════════════════════════════════════
+   GPS — DIRECTIONS FROM CURRENT POSITION
+   Destination: Résidence Le Jacaranda, Mrezgua Nabeul
+═══════════════════════════════════════════════════ */
 const DEST_LAT  = 36.4508;
 const DEST_LNG  = 10.7370;
-const DEST_NAME = 'Rأ©sidence Le Jacaranda, Mrezgua, Nabeul, Tunisie';
+const DEST_NAME = 'Résidence Le Jacaranda, Mrezgua, Nabeul, Tunisie';
 
 const btnGps    = document.getElementById('btnGpsDirections');
 const gpsSpinner = document.getElementById('gpsSpinner');
@@ -949,35 +1055,35 @@ function setGpsState(state, msg) {
   if (gpsIconWrap) gpsIconWrap.hidden  = (state === 'loading');
   if (state === 'loading') {
     btnGps.classList.add('loading');
-    if (gpsLabel) gpsLabel.textContent = 'Localisation en coursâ€¦';
-    if (gpsStatus) { gpsStatus.className = 'gps-status'; gpsStatus.textContent = 'Veuillez autoriser l\'accأ¨s أ  votre position.'; }
+    if (gpsLabel) gpsLabel.textContent = 'Localisation en cours…';
+    if (gpsStatus) { gpsStatus.className = 'gps-status'; gpsStatus.textContent = "Veuillez autoriser l'accès à votre position."; }
   } else if (state === 'success') {
     btnGps.classList.add('success');
-    if (gpsLabel) gpsLabel.textContent = 'âœ“ Itinأ©raire ouvert dans Google Maps';
+    if (gpsLabel) gpsLabel.textContent = '✓ Itinéraire ouvert dans Google Maps';
     if (gpsStatus) { gpsStatus.className = 'gps-status ok'; gpsStatus.textContent = msg || ''; }
     setTimeout(() => {
       btnGps.classList.remove('success');
-      if (gpsLabel) gpsLabel.textContent = 'M\'y rendre depuis ma position';
+      if (gpsLabel) gpsLabel.textContent = "M'y rendre depuis ma position";
       if (gpsStatus) { gpsStatus.className = 'gps-status'; gpsStatus.textContent = ''; }
     }, 4000);
   } else if (state === 'error') {
     btnGps.classList.add('error');
     if (gpsLabel) gpsLabel.textContent = 'Impossible de localiser';
-    if (gpsStatus) { gpsStatus.className = 'gps-status err'; gpsStatus.textContent = msg || 'Permission refusأ©e ou GPS indisponible.'; }
+    if (gpsStatus) { gpsStatus.className = 'gps-status err'; gpsStatus.textContent = msg || 'Permission refusée ou GPS indisponible.'; }
     setTimeout(() => {
       btnGps.classList.remove('error');
-      if (gpsLabel) gpsLabel.textContent = 'M\'y rendre depuis ma position';
+      if (gpsLabel) gpsLabel.textContent = "M'y rendre depuis ma position";
       if (gpsStatus) { gpsStatus.className = 'gps-status'; gpsStatus.textContent = ''; }
     }, 5000);
   } else {
-    if (gpsLabel) gpsLabel.textContent = 'M\'y rendre depuis ma position';
+    if (gpsLabel) gpsLabel.textContent = "M'y rendre depuis ma position";
   }
 }
 
 if (btnGps) {
   btnGps.addEventListener('click', () => {
     if (!navigator.geolocation) {
-      setGpsState('error', 'Gأ©olocalisation non supportأ©e par ce navigateur.');
+      setGpsState('error', 'Géolocalisation non supportée par ce navigateur.');
       return;
     }
     setGpsState('loading');
@@ -987,42 +1093,35 @@ if (btnGps) {
         const lat = pos.coords.latitude.toFixed(6);
         const lng = pos.coords.longitude.toFixed(6);
 
-        /* 1. Update the map iframe to show route */
         const dirEmbed =
           `https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d50000!2d${DEST_LNG}!3d${DEST_LAT}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s!2sMA+position!3m2!1d${lat}!2d${lng}!4m5!1s0x12fd4a2b3e8d9f05%3A0x7e1c3a5b4f20a681!2s${encodeURIComponent(DEST_NAME)}!3m2!1d${DEST_LAT}!2d${DEST_LNG}!5e0!3m2!1sfr!2sfr!4v1724000000001!5m2!1sfr!2sfr`;
 
         if (mapIframe) mapIframe.src = dirEmbed;
 
-        /* 2. Update "Ouvrir dans Maps" link to show walking/driving directions */
         const dirUrl = `https://www.google.com/maps/dir/${lat},${lng}/${DEST_LAT},${DEST_LNG}`;
         if (mapOpenBtn) {
           mapOpenBtn.href = dirUrl;
           mapOpenBtn.textContent = '';
           mapOpenBtn.insertAdjacentHTML('afterbegin',
-            `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Voir l'itinأ©raire complet`);
+            `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Voir l'itinéraire complet`);
         }
 
-        setGpsState('success', `Position dأ©tectأ©e آ· Itinأ©raire vers Mrezgua, Nabeul`);
-
-        /* 3. Also open Google Maps directions in a new tab */
+        setGpsState('success', `Position détectée · Itinéraire vers Mrezgua, Nabeul`);
         window.open(dirUrl, '_blank', 'noopener,noreferrer');
       },
       (err) => {
         const msgs = {
-          1: 'Permission d\'accأ¨s أ  la position refusأ©e.',
-          2: 'Position indisponible (GPS hors portأ©e).',
-          3: 'La demande de position a expirأ©.',
+          1: 'Permission d\'accès à la position refusée.',
+          2: 'Position indisponible (GPS hors portée).',
+          3: 'La demande de position a expiré.',
         };
-        setGpsState('error', msgs[err.code] || 'Erreur de gأ©olocalisation.');
+        setGpsState('error', msgs[err.code] || 'Erreur de géolocalisation.');
       },
       { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
     );
   });
 }
 
-/* â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
-   INIT
-â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ */
 /* ═══════════════════════════════════════════════════
    TYPOLOGIES INTERACTIVE HANDLER
 ═══════════════════════════════════════════════════ */
@@ -1162,5 +1261,3 @@ function initTypologies() {
 ═══════════════════════════════════════════════════ */
 applyTranslation('fr');
 initTypologies();
-
-

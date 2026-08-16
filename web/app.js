@@ -823,7 +823,7 @@ if (cursor && cursorFollower && window.innerWidth > 768) {
 }
 
 /* ═══════════════════════════════════════════════════
-   PANNELLUM 360° VIEWER
+   ROBUST 360° VR PANORAMA VIEWER (PANNELLUM + CANVAS ENGINE)
 ═══════════════════════════════════════════════════ */
 const scenes = {
   facade:   { src: 'panorama_facade_night.jpg', title: 'Façade & Nuit' },
@@ -832,25 +832,201 @@ const scenes = {
   beach:    { src: 'panorama_beach.jpg',        title: 'Plage de Mrezgua' },
 };
 
+let currentSceneKey = 'facade';
 let pnlViewer = null;
+let custom360Engine = null;
+
+class Canvas360Engine {
+  constructor(containerId, initialSrc) {
+    this.container = document.getElementById(containerId);
+    if (!this.container) return;
+    this.container.innerHTML = '';
+    
+    this.canvas = document.createElement('canvas');
+    this.canvas.style.width = '100%';
+    this.canvas.style.height = '100%';
+    this.canvas.style.display = 'block';
+    this.canvas.style.cursor = 'grab';
+    this.container.appendChild(this.canvas);
+    
+    this.ctx = this.canvas.getContext('2d');
+    this.img = new Image();
+    this.isLoaded = false;
+    this.yaw = 0;
+    this.pitch = 0;
+    this.fov = 95;
+    this.autoRotate = -0.06;
+    this.isUserInteracting = false;
+    this.startX = 0;
+    this.startY = 0;
+    this.startYaw = 0;
+    this.startPitch = 0;
+    this.rafId = null;
+
+    this.initEvents();
+    this.load(initialSrc);
+    this.render();
+  }
+
+  load(src) {
+    this.isLoaded = false;
+    this.img = new Image();
+    this.img.crossOrigin = 'anonymous';
+    this.img.onload = () => {
+      this.isLoaded = true;
+    };
+    this.img.src = src;
+  }
+
+  resize() {
+    const rect = this.container.getBoundingClientRect();
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const targetW = Math.floor(rect.width * dpr);
+    const targetH = Math.floor(rect.height * dpr);
+    if (this.canvas.width !== targetW || this.canvas.height !== targetH) {
+      this.canvas.width = targetW || 800;
+      this.canvas.height = targetH || 500;
+    }
+  }
+
+  initEvents() {
+    const onDown = (x, y) => {
+      this.isUserInteracting = true;
+      this.startX = x;
+      this.startY = y;
+      this.startYaw = this.yaw;
+      this.startPitch = this.pitch;
+      this.canvas.style.cursor = 'grabbing';
+    };
+
+    const onMove = (x, y) => {
+      if (!this.isUserInteracting) return;
+      const dx = x - this.startX;
+      const dy = y - this.startY;
+      const sensitivity = 0.22;
+      this.yaw = (this.startYaw - dx * sensitivity) % 360;
+      this.pitch = Math.max(-45, Math.min(45, this.startPitch + dy * sensitivity * 0.6));
+    };
+
+    const onUp = () => {
+      this.isUserInteracting = false;
+      this.canvas.style.cursor = 'grab';
+    };
+
+    this.canvas.addEventListener('mousedown', e => onDown(e.clientX, e.clientY));
+    window.addEventListener('mousemove', e => onMove(e.clientX, e.clientY));
+    window.addEventListener('mouseup', onUp);
+
+    this.canvas.addEventListener('touchstart', e => {
+      if (e.touches.length === 1) onDown(e.touches[0].clientX, e.touches[0].clientY);
+    }, { passive: true });
+    window.addEventListener('touchmove', e => {
+      if (e.touches.length === 1) onMove(e.touches[0].clientX, e.touches[0].clientY);
+    }, { passive: true });
+    window.addEventListener('touchend', onUp);
+
+    this.canvas.addEventListener('wheel', e => {
+      e.preventDefault();
+      this.fov = Math.max(50, Math.min(120, this.fov + e.deltaY * 0.05));
+    }, { passive: false });
+  }
+
+  render() {
+    this.resize();
+    const ctx = this.ctx;
+    const cw = this.canvas.width;
+    const ch = this.canvas.height;
+
+    if (!this.isUserInteracting) {
+      this.yaw = (this.yaw + this.autoRotate) % 360;
+    }
+
+    if (this.isLoaded && this.img.naturalWidth > 0) {
+      const iw = this.img.naturalWidth;
+      const ih = this.img.naturalHeight;
+
+      const normalizedYaw = ((this.yaw % 360) + 360) % 360;
+      const srcCenterX = (normalizedYaw / 360) * iw;
+      const fovFraction = this.fov / 360;
+      const srcWidth = iw * fovFraction;
+      
+      const pitchRatio = this.pitch / 90;
+      const srcCenterY = (ih / 2) - (pitchRatio * (ih * 0.25));
+      const srcHeight = ih * (fovFraction * (ch / cw));
+
+      const sx = srcCenterX - srcWidth / 2;
+      const sy = srcCenterY - srcHeight / 2;
+
+      ctx.clearRect(0, 0, cw, ch);
+      
+      if (sx < 0) {
+        const leftPart = -sx;
+        ctx.drawImage(this.img, iw - leftPart, sy, leftPart, srcHeight, 0, 0, (leftPart / srcWidth) * cw, ch);
+        ctx.drawImage(this.img, 0, sy, srcWidth - leftPart, srcHeight, (leftPart / srcWidth) * cw, 0, ((srcWidth - leftPart) / srcWidth) * cw, ch);
+      } else if (sx + srcWidth > iw) {
+        const rightPart = (sx + srcWidth) - iw;
+        const mainPart = srcWidth - rightPart;
+        ctx.drawImage(this.img, sx, sy, mainPart, srcHeight, 0, 0, (mainPart / srcWidth) * cw, ch);
+        ctx.drawImage(this.img, 0, sy, rightPart, srcHeight, (mainPart / srcWidth) * cw, 0, (rightPart / srcWidth) * cw, ch);
+      } else {
+        ctx.drawImage(this.img, sx, sy, srcWidth, srcHeight, 0, 0, cw, ch);
+      }
+    } else {
+      ctx.fillStyle = '#13171f';
+      ctx.fillRect(0, 0, cw, ch);
+      ctx.fillStyle = '#d4af37';
+      ctx.font = '16px Montserrat, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('Chargement de la visite 360°...', cw / 2, ch / 2);
+    }
+
+    this.rafId = requestAnimationFrame(() => this.render());
+  }
+
+  destroy() {
+    if (this.rafId) cancelAnimationFrame(this.rafId);
+  }
+}
+
 function initPanorama(sceneKey) {
-  if (pnlViewer) { try { pnlViewer.destroy(); } catch(e){} }
-  const s = scenes[sceneKey];
-  if (!s || typeof pannellum === 'undefined') return;
-  pnlViewer = pannellum.viewer('panorama360', {
-    type: 'equirectangular',
-    panorama: s.src,
-    autoLoad: true,
-    autoRotate: -2,
-    compass: false,
-    showControls: false,
-    mouseZoom: true,
-    hfov: 100,
-    minHfov: 60,
-    maxHfov: 120,
-    pitch: 0,
-    yaw: 0,
-  });
+  currentSceneKey = sceneKey || 'facade';
+  const s = scenes[currentSceneKey];
+  if (!s) return;
+
+  const container = document.getElementById('panorama360');
+  if (!container) return;
+
+  if (typeof pannellum !== 'undefined') {
+    try {
+      if (pnlViewer) {
+        try { pnlViewer.destroy(); } catch(e){}
+      }
+      container.innerHTML = '';
+      pnlViewer = pannellum.viewer('panorama360', {
+        type: 'equirectangular',
+        panorama: s.src,
+        autoLoad: true,
+        autoRotate: -2,
+        compass: false,
+        showControls: false,
+        mouseZoom: true,
+        hfov: 100,
+        minHfov: 60,
+        maxHfov: 120,
+        pitch: 0,
+        yaw: 0,
+      });
+      return;
+    } catch(err) {
+      console.warn('Pannellum fallback to custom 360 engine:', err);
+    }
+  }
+
+  if (!custom360Engine) {
+    custom360Engine = new Canvas360Engine('panorama360', s.src);
+  } else {
+    custom360Engine.load(s.src);
+  }
 }
 
 document.querySelectorAll('.tour-tab').forEach(tab => {
@@ -863,18 +1039,11 @@ document.querySelectorAll('.tour-tab').forEach(tab => {
   });
 });
 
-const tour360Section = document.getElementById('tour360');
-if (tour360Section) {
-  const tourObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !pnlViewer) {
-        initPanorama('facade');
-        const hint = document.getElementById('viewerHint');
-        if (hint) setTimeout(() => { hint.style.opacity = '0'; }, 3500);
-      }
-    });
-  }, { threshold: 0.3 });
-  tourObserver.observe(tour360Section);
+// Immediately initialize 360 Tour on DOM ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => initPanorama('facade'));
+} else {
+  initPanorama('facade');
 }
 
 /* ═══════════════════════════════════════════════════
@@ -1266,7 +1435,125 @@ function initTypologies() {
 }
 
 /* ═══════════════════════════════════════════════════
+   SMOOTH CLASSY JAZZ LOUNGE AUDIO SYSTEM
+═══════════════════════════════════════════════════ */
+class JazzLoungeAudio {
+  constructor() {
+    this.isPlaying = false;
+    this.audio = new Audio('jazz_lounge.mp3');
+    this.audio.loop = true;
+    this.audio.volume = 0.5;
+    this.audio.preload = 'auto';
+    this.toggleBtn = document.getElementById('soundscapeToggle');
+    this.init();
+  }
+
+  init() {
+    if (!this.toggleBtn) return;
+    this.toggleBtn.addEventListener('click', () => this.toggle());
+
+    this.audio.addEventListener('play', () => {
+      this.isPlaying = true;
+      if (this.toggleBtn) {
+        this.toggleBtn.classList.add('active');
+        this.toggleBtn.title = 'Mettre en pause la musique Jazz';
+      }
+    });
+
+    this.audio.addEventListener('pause', () => {
+      this.isPlaying = false;
+      if (this.toggleBtn) {
+        this.toggleBtn.classList.remove('active');
+        this.toggleBtn.title = 'Lancer l\'ambiance Jazz Lounge';
+      }
+    });
+  }
+
+  toggle() {
+    if (this.isPlaying) {
+      this.pause();
+    } else {
+      this.play();
+    }
+  }
+
+  play() {
+    this.audio.play().then(() => {
+      this.isPlaying = true;
+      if (this.toggleBtn) {
+        this.toggleBtn.classList.add('active');
+        this.toggleBtn.title = 'Mettre en pause la musique Jazz';
+      }
+    }).catch(err => {
+      console.warn('Audio play restricted / user gesture needed:', err);
+    });
+  }
+
+  pause() {
+    this.audio.pause();
+    this.isPlaying = false;
+    if (this.toggleBtn) {
+      this.toggleBtn.classList.remove('active');
+      this.toggleBtn.title = 'Lancer l\'ambiance Jazz Lounge';
+    }
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   LIVE MREZGUA WEATHER & REAL-TIME CLOCK
+═══════════════════════════════════════════════════ */
+function updateLiveClock() {
+  const timeEl = document.getElementById('resortTime');
+  if (!timeEl) return;
+  try {
+    const now = new Date();
+    const tunisTime = new Intl.DateTimeFormat('fr-FR', {
+      timeZone: 'Africa/Tunis',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false
+    }).format(now);
+    timeEl.textContent = tunisTime;
+  } catch(e) {
+    const now = new Date();
+    const h = String(now.getHours()).padStart(2, '0');
+    const m = String(now.getMinutes()).padStart(2, '0');
+    const s = String(now.getSeconds()).padStart(2, '0');
+    timeEl.textContent = `${h}:${m}:${s}`;
+  }
+}
+
+async function fetchLiveWeather() {
+  const tempEl = document.getElementById('resortTemp');
+  const humEl = document.getElementById('resortHumidity');
+  try {
+    // Mrezgua, Nabeul coordinates: 36.45° N, 10.74° E
+    const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=36.45&longitude=10.74&current=temperature_2m,relative_humidity_2m,weather_code,is_day&timezone=Africa%2FTunis');
+    if (!res.ok) throw new Error('Weather API error');
+    const data = await res.json();
+    if (data && data.current) {
+      if (tempEl && data.current.temperature_2m !== undefined) {
+        tempEl.textContent = `${Math.round(data.current.temperature_2m)}°C`;
+      }
+      if (humEl && data.current.relative_humidity_2m !== undefined) {
+        humEl.textContent = `💧 ${Math.round(data.current.relative_humidity_2m)}%`;
+      }
+    }
+  } catch (err) {
+    console.warn('Live weather fallback:', err);
+    if (tempEl) tempEl.textContent = '26°C';
+    if (humEl) humEl.textContent = '💧 85%';
+  }
+}
+
+/* ═══════════════════════════════════════════════════
    INIT ALL
 ═══════════════════════════════════════════════════ */
 applyTranslation('fr');
 initTypologies();
+new JazzLoungeAudio();
+fetchLiveWeather();
+setInterval(fetchLiveWeather, 600000); // refresh weather every 10 min
+updateLiveClock();
+setInterval(updateLiveClock, 1000); // refresh clock every second

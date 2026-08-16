@@ -1437,25 +1437,51 @@ function initTypologies() {
 /* ═══════════════════════════════════════════════════
    SMOOTH CLASSY JAZZ LOUNGE AUDIO SYSTEM
 ═══════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════
+   LUXURY ENTRY OVERLAY — Garantit la lecture automatique
+═══════════════════════════════════════════════════ */
+(function() {
+  const overlay  = document.getElementById('entryOverlay');
+  const enterBtn = document.getElementById('entryBtn');
+  const skipBtn  = document.getElementById('entrySkip');
+
+  if (!overlay) return;
+
+  function dismissOverlay(withMusic) {
+    overlay.classList.add('hidden');
+    // remove from DOM after animation
+    setTimeout(() => overlay.remove(), 950);
+
+    if (withMusic) {
+      jazzPlayer.play();
+    }
+  }
+
+  if (enterBtn) enterBtn.addEventListener('click', () => dismissOverlay(true));
+  if (skipBtn)  skipBtn.addEventListener('click',  () => dismissOverlay(false));
+})();
+
+/* ═══════════════════════════════════════════════════
+   JAZZ LOUNGE AUDIO PLAYER
+═══════════════════════════════════════════════════ */
 class JazzLoungeAudio {
   constructor() {
     this.isPlaying = false;
-    this.userPaused = false;
     this.audio = new Audio('jazz_lounge.mp3');
     this.audio.loop = true;
     this.audio.volume = 0.45;
     this.audio.preload = 'auto';
     this.toggleBtn = document.getElementById('soundscapeToggle');
     this.init();
-    this.attemptAutoplay();
   }
 
   init() {
-    if (!this.toggleBtn) return;
-    this.toggleBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      this.toggle();
-    });
+    if (this.toggleBtn) {
+      this.toggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.isPlaying ? this.pause() : this.play();
+      });
+    }
 
     this.audio.addEventListener('play', () => {
       this.isPlaying = true;
@@ -1474,79 +1500,35 @@ class JazzLoungeAudio {
     });
   }
 
-  attemptAutoplay() {
-    // 1. Try immediate autoplay
-    const promise = this.audio.play();
-    if (promise !== undefined) {
-      promise.then(() => {
-        this.fadeInVolume();
-      }).catch(() => {
-        // 2. If browser autoplay policy blocks unprompted audio,
-        // trigger smoothly on the very first user interaction (click, scroll, touch, key)
-        const startOnFirstInteraction = () => {
-          if (this.userPaused || this.isPlaying) return;
-          this.play();
-          ['click', 'touchstart', 'scroll', 'keydown', 'pointerdown'].forEach(evt => {
-            window.removeEventListener(evt, startOnFirstInteraction, { passive: true });
-            document.removeEventListener(evt, startOnFirstInteraction, { passive: true });
-          });
-        };
-
-        ['click', 'touchstart', 'scroll', 'keydown', 'pointerdown'].forEach(evt => {
-          window.addEventListener(evt, startOnFirstInteraction, { once: true, passive: true });
-          document.addEventListener(evt, startOnFirstInteraction, { once: true, passive: true });
-        });
-      });
-    }
-  }
-
-  fadeInVolume(targetVol = 0.45, duration = 1500) {
-    this.audio.volume = 0.05;
-    const stepTime = 50;
-    const stepCount = duration / stepTime;
-    const volStep = (targetVol - 0.05) / stepCount;
-    const fadeInterval = setInterval(() => {
-      if (this.audio.volume + volStep >= targetVol) {
+  fadeInVolume(targetVol = 0.45, duration = 2000) {
+    this.audio.volume = 0.02;
+    const stepTime = 60;
+    const steps = duration / stepTime;
+    const step = (targetVol - 0.02) / steps;
+    const iv = setInterval(() => {
+      if (this.audio.volume + step >= targetVol) {
         this.audio.volume = targetVol;
-        clearInterval(fadeInterval);
+        clearInterval(iv);
       } else {
-        this.audio.volume = Math.min(targetVol, this.audio.volume + volStep);
+        this.audio.volume = Math.min(targetVol, this.audio.volume + step);
       }
     }, stepTime);
   }
 
-  toggle() {
-    if (this.isPlaying) {
-      this.userPaused = true;
-      this.pause();
-    } else {
-      this.userPaused = false;
-      this.play();
-    }
-  }
-
   play() {
     this.audio.play().then(() => {
-      this.isPlaying = true;
       this.fadeInVolume();
-      if (this.toggleBtn) {
-        this.toggleBtn.classList.add('active');
-        this.toggleBtn.title = 'Mettre en pause la musique Jazz';
-      }
     }).catch(err => {
-      console.warn('Audio play restricted:', err);
+      console.warn('Audio play blocked:', err);
     });
   }
 
   pause() {
     this.audio.pause();
-    this.isPlaying = false;
-    if (this.toggleBtn) {
-      this.toggleBtn.classList.remove('active');
-      this.toggleBtn.title = 'Lancer l\'ambiance Jazz Lounge';
-    }
   }
 }
+
+const jazzPlayer = new JazzLoungeAudio();
 
 /* ═══════════════════════════════════════════════════
    LIVE MREZGUA WEATHER & REAL-TIME CLOCK
@@ -1601,7 +1583,6 @@ async function fetchLiveWeather() {
 ═══════════════════════════════════════════════════ */
 applyTranslation('fr');
 initTypologies();
-new JazzLoungeAudio();
 fetchLiveWeather();
 setInterval(fetchLiveWeather, 600000); // refresh weather every 10 min
 updateLiveClock();

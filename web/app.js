@@ -1440,17 +1440,22 @@ function initTypologies() {
 class JazzLoungeAudio {
   constructor() {
     this.isPlaying = false;
+    this.userPaused = false;
     this.audio = new Audio('jazz_lounge.mp3');
     this.audio.loop = true;
-    this.audio.volume = 0.5;
+    this.audio.volume = 0.45;
     this.audio.preload = 'auto';
     this.toggleBtn = document.getElementById('soundscapeToggle');
     this.init();
+    this.attemptAutoplay();
   }
 
   init() {
     if (!this.toggleBtn) return;
-    this.toggleBtn.addEventListener('click', () => this.toggle());
+    this.toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.toggle();
+    });
 
     this.audio.addEventListener('play', () => {
       this.isPlaying = true;
@@ -1469,10 +1474,53 @@ class JazzLoungeAudio {
     });
   }
 
+  attemptAutoplay() {
+    // 1. Try immediate autoplay
+    const promise = this.audio.play();
+    if (promise !== undefined) {
+      promise.then(() => {
+        this.fadeInVolume();
+      }).catch(() => {
+        // 2. If browser autoplay policy blocks unprompted audio,
+        // trigger smoothly on the very first user interaction (click, scroll, touch, key)
+        const startOnFirstInteraction = () => {
+          if (this.userPaused || this.isPlaying) return;
+          this.play();
+          ['click', 'touchstart', 'scroll', 'keydown', 'pointerdown'].forEach(evt => {
+            window.removeEventListener(evt, startOnFirstInteraction, { passive: true });
+            document.removeEventListener(evt, startOnFirstInteraction, { passive: true });
+          });
+        };
+
+        ['click', 'touchstart', 'scroll', 'keydown', 'pointerdown'].forEach(evt => {
+          window.addEventListener(evt, startOnFirstInteraction, { once: true, passive: true });
+          document.addEventListener(evt, startOnFirstInteraction, { once: true, passive: true });
+        });
+      });
+    }
+  }
+
+  fadeInVolume(targetVol = 0.45, duration = 1500) {
+    this.audio.volume = 0.05;
+    const stepTime = 50;
+    const stepCount = duration / stepTime;
+    const volStep = (targetVol - 0.05) / stepCount;
+    const fadeInterval = setInterval(() => {
+      if (this.audio.volume + volStep >= targetVol) {
+        this.audio.volume = targetVol;
+        clearInterval(fadeInterval);
+      } else {
+        this.audio.volume = Math.min(targetVol, this.audio.volume + volStep);
+      }
+    }, stepTime);
+  }
+
   toggle() {
     if (this.isPlaying) {
+      this.userPaused = true;
       this.pause();
     } else {
+      this.userPaused = false;
       this.play();
     }
   }
@@ -1480,12 +1528,13 @@ class JazzLoungeAudio {
   play() {
     this.audio.play().then(() => {
       this.isPlaying = true;
+      this.fadeInVolume();
       if (this.toggleBtn) {
         this.toggleBtn.classList.add('active');
         this.toggleBtn.title = 'Mettre en pause la musique Jazz';
       }
     }).catch(err => {
-      console.warn('Audio play restricted / user gesture needed:', err);
+      console.warn('Audio play restricted:', err);
     });
   }
 

@@ -50,10 +50,8 @@ const translations = {
     galFilterAll: "Toutes", galFilterExt: "Extérieur", galFilterInt: "Intérieurs", galFilterNight: "Piscine & Nuit", galFilterCommon: "Espaces Communs", galFilterBeach: "Plage & Mer", galFilterNabeul: "Nabeul & Ville", galFilterHammamet: "Hammamet & Loisirs",
     galCap1: "Façade Contemporaine", galCap2: "Vue Nocturne", galCap3: "Ascenseurs & Marbre", galCap4: "Parking Souterrain",
     galCap5: "Couloirs élégants", galCap6: "Angle Panoramique", galCap7: "Piscine & Lobby", galCap8: "Grand Hall & Lustre",
-    galCap9: "Hall Rez-de-Chaussée", galCap10: "Piscine & Jardins",
-    galCapBeach1: "Plage de Mrezgua & Parasols", galCapBeach2: "Rivage Doré & Mer Émeraude", galCapBeach3: "Eaux Cristallines Méditerranée", galCapBeach4: "Horizon Côtier & Sable Blanc",
-    galCapNabeul1: "Jarre Monumentale de Nabeul", galCapNabeul2: "Souk Artisanal & Palmiers", galCapNabeul3: "Médina & Ruelles Artisanales", galCapNabeul4: "Monument des Oranges & Mosaïque",
-    galCapHam1: "Médina Yasmine & Chevaux Dorés", galCapHam2: "Souk Couvert & Artisanat", galCapHam3: "Carthage Land Aquapark", galCapHam4: "Safari Aventure & Parcs",
+    galCap9: "Hall Rez-de-Chaussée", galCap10    galCapHam1: "Médina Yasmine & Chevaux Dorés", galCapHam2: "Souk Couvert & Artisanat", galCapHam3: "Carthage Land Aquapark", galCapHam4: "Safari Aventure & Parcs",
+    galCapGolf1: "Golf Citrus & Fairways Palmés", galCapGolf2: "Golf Yasmine & Lac Panoramique",
     quartierTag: "Art de Vivre Méditerranéen",
     quartierTitle: "Mrezgua & Ses Trésors<br /><em>Entre Mer, Culture & Détente</em>",
     quartierSub: "Une situation d'exception à la croisée de Nabeul et d'Hammamet, alliant sérénité côtière et dynamisme.",
@@ -128,6 +126,7 @@ const translations = {
     galCapBeach1: "Mrezgua Beach & Parasols", galCapBeach2: "Golden Shore & Emerald Sea", galCapBeach3: "Mediterranean Crystal Waters", galCapBeach4: "Coastal Horizon & White Sand",
     galCapNabeul1: "Monumental Jar of Nabeul", galCapNabeul2: "Artisan Souk & Palm Trees", galCapNabeul3: "Medina & Leather Craft Alleys", galCapNabeul4: "Orange Monument & Mosaic",
     galCapHam1: "Yasmine Medina & Golden Horses", galCapHam2: "Covered Souk & Crafts", galCapHam3: "Carthage Land Aquapark", galCapHam4: "Safari Adventure & Parks",
+    galCapGolf1: "Golf Citrus & Palm Fairways", galCapGolf2: "Golf Yasmine & Scenic Lake",
     quartierTag: "Mediterranean Lifestyle",
     quartierTitle: "Mrezgua & Its Treasures<br /><em>Between Sea, Culture & Leisure</em>",
     quartierSub: "An exceptional location bridging Nabeul and Hammamet, combining coastal serenity and vibrant culture.",
@@ -202,6 +201,7 @@ const translations = {
     galCapBeach1: "شاطئ المرازقة ومظلات القش", galCapBeach2: "الرمال الذهبية والمياه الفيروزية", galCapBeach3: "مياه البحر الأبيض المتوسط الكريستالية", galCapBeach4: "الأفق البحري والرمال البيضاء",
     galCapNabeul1: "جرة نابل التذكارية العريقة", galCapNabeul2: "السوق الحرفي وشارع النخيل", galCapNabeul3: "المدينة العتيقة والصناعات الجلدية", galCapNabeul4: "معلم البرتقال والموزاييك",
     galCapHam1: "مدينة ياسمين الحمامات والخيول الذهبية", galCapHam2: "السوق المسقوف والحرف التقليدية", galCapHam3: "مدينة قرطاج لاند المائية", galCapHam4: "منتزه سفاري والمغامرات المائية",
+    galCapGolf1: "ملعب سيتراس للجولف والنخيل", galCapGolf2: "ملعب ياسمين للجولف والبحيرة البانورامية",
     quartierTag: "أسلوب العيش المتوسطي",
     quartierTitle: "مـرزقة والـمـنـطـقـة<br /><em>بين البحر، الثقافة والاسترخاء</em>",
     quartierSub: "موقع استثنائي بين نابل والحمامات، يجمع بين هدوء الساحل وحيوية الثقافة المتوسطية.",
@@ -276,6 +276,7 @@ const translations = {
     galCapBeach1: "Playa de Mrezgua y Sombrillas", galCapBeach2: "Costa Dorada y Mar Esmeralda", galCapBeach3: "Aguas Cristalinas Mediterráneas", galCapBeach4: "Horizonte Costero y Arena Blanca",
     galCapNabeul1: "Jarra Monumental de Nabeul", galCapNabeul2: "Zoco Artesanal y Palmeras", galCapNabeul3: "Medina y Callejuelas de Cuero", galCapNabeul4: "Monumento de las Naranjas y Mosaico",
     galCapHam1: "Medina Yasmine y Caballos Dorados", galCapHam2: "Zoco Cubierto y Artesanía", galCapHam3: "Carthage Land Aquapark", galCapHam4: "Safari Aventura y Parques",
+    galCapGolf1: "Golf Citrus y Calles con Palmeras", galCapGolf2: "Golf Yasmine y Lago Panorámico",
     quartierTag: "Estilo de Vida Mediterráneo",
     quartierTitle: "Mrezgua y sus Tesoros<br /><em>Entre Mar, Cultura y Ocio</em>",
     quartierSub: "Una ubicación excepcional entre Nabeul y Hammamet, que combina la tranquilidad costera con una cultura vibrante.",
@@ -345,11 +346,12 @@ const translations = {
     galTitle: "La Residenza<br /><em>in Immagini</em>",
     galFilterAll: "Tutte", galFilterExt: "Esterno", galFilterInt: "Interni", galFilterNight: "Piscina & Notte", galFilterCommon: "Spazi Comuni", galFilterBeach: "Spiaggia e Mare", galFilterNabeul: "Nabeul & Città", galFilterHammamet: "Hammamet & Svago",
     galCap1: "Facciata Contemporanea", galCap2: "Vista Notturna", galCap3: "Ascensori in Marmo", galCap4: "Parcheggio Sotterraneo",
-    galCap5: "Corridoi Eleganti", galCap6: "Angolo Panoramico", galCap7: "Piscina & Lobby", galCap8: "Grande Atrio & Lampadario",
+    galCap5: "Corridoi Eleganti", galCap6: "Angolo Panoramico", galCap7: "Piscine & Lobby", galCap8: "Grande Atrio & Lampadario",
     galCap9: "Atrio Piano Terra", galCap10: "Piscina & Giardini",
     galCapBeach1: "Spiaggia di Mrezgua e Ombrelloni", galCapBeach2: "Riva Dorata e Mare Smeraldo", galCapBeach3: "Acque Cristalline del Mediterraneo", galCapBeach4: "Orizzonte Costiero e Sabbia Bianca",
     galCapNabeul1: "Giara Monumentale di Nabeul", galCapNabeul2: "Souk Artigianale e Palme", galCapNabeul3: "Medina e Vicoli del Cuoio", galCapNabeul4: "Monumento delle Arance & Mosaico",
     galCapHam1: "Medina Yasmine & Cavalli Dorati", galCapHam2: "Souk Coperto & Artigianato", galCapHam3: "Carthage Land Aquapark", galCapHam4: "Safari Avventura & Parchi",
+    galCapGolf1: "Golf Citrus & Fairway con Palme", galCapGolf2: "Golf Yasmine & Lago Panoramico",
     quartierTag: "Stile di Vita Mediterraneo",
     quartierTitle: "Mrezgua & i Suoi Tesori<br /><em>Tra Mare, Cultura e Relax</em>",
     quartierSub: "Una posizione privilegiata tra Nabeul e Hammamet, che unisce la quiete marina alla vivacità culturale.",
@@ -424,6 +426,7 @@ const translations = {
     galCapBeach1: "Mrezgua Strand & Sonnenschirme", galCapBeach2: "Goldenes Ufer & Smaragdmeer", galCapBeach3: "Mediterranes Kristallklares Wasser", galCapBeach4: "Küstenhorizont & Weißer Sand",
     galCapNabeul1: "Monumentale Vase von Nabeul", galCapNabeul2: "Kunsthandwerksmarkt & Palmen", galCapNabeul3: "Medina & Lederhandwerker-Gassen", galCapNabeul4: "Orangen-Monument & Mosaik",
     galCapHam1: "Medina Yasmine & Goldene Pferde", galCapHam2: "Überdachter Souk & Kunsthandwerk", galCapHam3: "Carthage Land Aquapark", galCapHam4: "Safari-Abenteuer & Freizeitparks",
+    galCapGolf1: "Golf Citrus & Palmen-Fairways", galCapGolf2: "Golf Yasmine & Panoramasee",
     quartierTag: "Mediterraner Lebensstil",
     quartierTitle: "Mrezgua & Seine Schätze<br /><em>Zwischen Meer, Kultur und Erholung</em>",
     quartierSub: "Eine privilegierte Lage zwischen Nabeul und Hammamet, die mediterrane Ruhe mit urbaner Lebensqualität verbindet.",
@@ -440,6 +443,79 @@ const translations = {
     locTitle: "Mrezgua, Nabeul<br /><em>300m vom Meer entfernt</em>",
     locBadge1Val: "300m",   locBadge1Lbl: "Feiner Sandstrand (3 Min. zu Fuß)",
     locBadge2Val: "5 Min.", locBadge2Lbl: "Stadtzentrum Nabeul & Märkte",
+    locBadge3Val: "45 Min.", locBadge3Lbl: "Flughafen Enfidha / Tunis",
+    mapPinTitle: "Résidence Le Jacaranda",
+    mapPinAddr: "Mrezgua, Nabeul, Tunesien · 300m vom Strand",
+    gpsLabel: "Route von meinem Standort",
+    conTag: "Verkaufsbüro & Verwaltung",
+    conTitle: "Schreiben Sie uns,<br /><em>Lernen wir uns kennen</em>",
+    conSub: "Unser Vertriebs- und Verwaltungsteam steht Ihnen gerne zur Seite, um eine private Besichtigung zu vereinbaren oder Ihre Fragen zu beantworten.",
+    conLabel1: "Offizielle E-Mail", conLabel2: "Direktrufnummer", conLabel3: "Adresse", conLabel4: "Strandzugang",
+    conAddr: "Avenue Habib Bourguiba, Mrezgua, Nabeul", conBeach: "300 Meter vom Meer entfernt",
+    fnameLabel: "Vorname", lnameLabel: "Nachname", emailLabel: "E-Mail", phoneLabel: "Telefon / WhatsApp", msgLabel: "Nachricht / Gewünschter Wohnungstyp",
+    fnamePh: "Ihr Vorname", lnamePh: "Ihr Nachname", emailPh: "ihre@email.de", phonePh: "+216 ...", msgPh: "Ihre Nachricht...",
+    formSubmit: "Nachricht Senden",
+    successMsg: "Nachricht erfolgreich gesendet. Unser Team wird sich innerhalb von 24 Stunden bei Ihnen melden.",
+    footerTagline: "Exzellenz bis ins kleinste Detail.",
+    footerCopy: "© 2024 - 2026 Résidence Le Jacaranda. Alle Rechte vorbehalten.",
+    navAbout: "Über Uns", navAmen: "Ausstattung", navTour: "360° Rundgang", navGal: "Galerie", navQuartier: "Quartier", navApp: "Bewohner-App", navCon: "Kontakt",
+    heroCta1: "Residenz entdecken", heroCta2: "360° Rundgang"
+  }
+};
+
+/* ═══════════════════════════════════════════════════
+   APPLY TRANSLATION
+═══════════════════════════════════════════════════ */
+let currentLang = 'fr';
+
+function applyTranslation(lang) {
+  const t  = translations[lang];
+  const lm = langMeta[lang];
+  if (!t || !lm) return;
+  currentLang = lang;
+
+  /* document dir + lang */
+  document.documentElement.lang = lang;
+  document.documentElement.setAttribute('dir', lm.dir);
+  document.body.classList.toggle('rtl', lm.dir === 'rtl');
+
+  /* update dropdown button */
+  const langCurrentEl = document.getElementById('langCurrent');
+  if (langCurrentEl) {
+    const flagEl = langCurrentEl.querySelector('.lang-flag');
+    const codeEl = langCurrentEl.querySelector('.lang-code');
+    if (flagEl) flagEl.textContent = lm.flag;
+    if (codeEl) codeEl.textContent = lm.code;
+  }
+  document.querySelectorAll('.lang-option').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+
+  /* simple text IDs */
+  const textIds = [
+    'heroBadgeText','heroEyebrowText','heroTagline','scrollText',
+    'stat1','stat2','stat3','stat4',
+    'badgeLabel','floatTitle','floatSub','aboutCtaText',
+    'amen1','amen1d','amen2','amen2d','amen3','amen3d',
+    'amen4','amen4d','amen5','amen5d','amen6','amen6d',
+    'typoSub','tourSub','tabFacadeText','tabInteriorText','tabPoolText','tabBeachText','hintText',
+    'galFilterAll','galFilterExt','galFilterInt','galFilterNight','galFilterCommon','galFilterBeach','galFilterNabeul','galFilterHammamet',
+    'galCap1','galCap2','galCap3','galCap4','galCap5','galCap6','galCap7','galCap8','galCap9','galCap10',
+    'galCapBeach1','galCapBeach2','galCapBeach3','galCapBeach4',
+    'galCapNabeul1','galCapNabeul2','galCapNabeul3','galCapNabeul4',
+    'galCapHam1','galCapHam2','galCapHam3','galCapHam4',
+    'galCapGolf1','galCapGolf2',
+    'quartierSub','qCard1Title','qCard1Desc','qCard2Title','qCard2Desc','qCard3Title','qCard3Desc','qCard4Title','qCard4Desc',
+    'appBody','appStoreSub','playStoreSub',
+    'locBadge1Val','locBadge1Lbl','locBadge2Val','locBadge2Lbl','locBadge3Val','locBadge3Lbl',
+    'mapPinTitle','mapPinAddr','gpsLabel',
+    'conSub','conLabel1','conLabel2','conLabel3','conLabel4','conAddr','conBeach',
+    'fnameLabel','lnameLabel','emailLabel','phoneLabel','msgLabel',
+    'formSubmit','successMsg','footerTagline','footerCopy',
+    'aboutTag','amenTag','typoTag','tourTag','galTag','quartierTag','appTag','locTag','conTag',
+    'heroCta1','heroCta2',
+    'navAbout','navAmen','navTour','navGal','navQuartier','navApp','navCon'
+  ];�rkte",
     locBadge3Val: "45 Min.", locBadge3Lbl: "Flughafen Enfidha / Tunis",
     mapPinTitle: "Résidence Le Jacaranda",
     mapPinAddr: "Mrezgua, Nabeul, Tunesien · 300m vom Strand",
